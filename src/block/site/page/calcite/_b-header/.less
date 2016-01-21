@@ -1,0 +1,98 @@
+@blue-bg: #3399cc;
+@blue-nav: rgb(102, 204, 255);
+.calcite-header{
+	position: relative;
+	color: darken(@white, 20%);
+	min-height: 645px;
+	a{
+		color: #1d8bc2;
+	}
+}
+.calcite-header__inner{
+	background: url(/img/calcite/bg-header.png) no-repeat right top;
+    min-height: 715px;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    width: 	100%;
+}
+.calcite-navpage{
+	background: fadeout(@blue-bg, 75%);
+}
+.calcite-navbar{
+	position: relative;
+	z-index: 50;
+	> li{
+		float: left;
+		margin-right: 50px; 
+		> a{
+			.mixin-headings(
+				@font-family: @proxima-bold, 
+				@font-size: 15px, 
+				@line-height: 30px, 
+				@color: @blue-nav);
+			text-transform: uppercase;
+			border-bottom: 3px solid transparent;    
+			padding: 16px 0 11px;
+			&:hover,
+			&:focus{
+				background: none;
+			}
+		}
+		&.active{
+			> a{
+				color: @white;
+				border-color: @white;
+			}
+		}
+	}
+}
+.calcite-header__content{
+	padding: 45px 0; 
+	position: relative;
+	z-index: 50;
+}
+.quote-block{
+    border-left: 10px solid @blue;
+    padding-left: 18px;	
+}
+.calcite-header__phone{
+	div{
+		margin-bottom: 10px;
+	}
+	.mixin-headings(
+		@font-family: @proxima-light, 
+		@font-size: 14px, 
+		@line-height: 14px, 
+		@color: @white);
+	    margin: 40px 0 110px;
+	.__phone{
+		color: @white;
+		font-family: @proxima-semibold;
+		font-size: 20px;
+		line-height: 22px;
+		margin-bottom: 0;
+		a{
+			color: @white;
+		}
+	}
+}
+.calcite-header__heading{
+	font-size: 48px;
+	line-height: 48px;
+}
+.calcite-header__note{
+	color: inherit;
+	.mixin-headings(
+		@font-family: @proxima-light, 
+		@font-size: 24px, 
+		@line-height: 24px, 
+		@color: inherit);
+	a{
+		text-decoration: none;
+		border-bottom: 1px solid fadeout(@blue, 50%);
+		&:hover{
+			border-color: transparent;
+		}
+	}
+}
