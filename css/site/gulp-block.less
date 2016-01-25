@@ -1,4 +1,122 @@
 
+.footer-nav-block{
+	background: url(/img/bg-footer.png) repeat center;
+	padding: 50px 0 40px;
+	color: @white;
+	font-family: @din;
+	font-size: 14px;
+	a{
+		color: lighten(@black, 60%);
+		&[href^="tel:"],
+		&[href^="mailto:"]{
+			color: @white;
+		}
+	}
+	b{
+		font-family: @din-bold;
+	}
+}
+._b-footer-nav__flex{
+	.flex-display(@display: flex);
+	.justify-content(@justify: space-between) ;
+	.align-items(@align: flex-start);
+	.flex-wrap(@wrap: wrap) ;
+}
+._b-footer-nav__contacts{
+	font-size: 16px;
+	line-height: 30px;	
+	max-width: 400px;
+	width: 100%;
+	a{
+		&[href^="tel:"]{
+			font-family: @din-bold;
+		}
+	}
+}
+._b-footer-nav__logotip{
+	margin-bottom: 50px;
+}
+._b-footer-nav__contacts-phone{
+	line-height: 20px;
+    margin: 15px 0;
+}
+._b-footer-nav__contacts-map{
+	max-width: 215px;
+	margin: 25px 0 15px;
+}
+._b-footer-nav__item{
+	padding: 0 15px;
+	ul{
+		list-style: none;
+		li{
+			line-height: 18px;
+			margin-bottom: 8px;
+			&.__heading{
+				text-transform: uppercase;
+				font-family: @din-bold;
+				font-size: 16px;
+				margin-bottom: 17px;
+			}
+			&.active{
+				a{
+					color: @white;
+					&:hover{
+						text-decoration: none;
+						cursor: default;
+					}
+				}
+			}
+		}
+	}
+	&.item1{
+		max-width: 195px;
+	}
+	&.item2{
+		max-width: 170px;
+	}
+	&.item3{
+		max-width: 185px;
+	}
+	&.item4{
+		max-width: 135px;
+	}
+	&.item5{
+		max-width: 205px;
+	}
+}
+._b-nav__item-icon{
+	width: 80px;
+	height: 80px;
+	margin-bottom: 25px;
+	&.icon1{
+		background: url(/img/footer-snippit.png) no-repeat 0px 0px; 
+	}
+	&.icon2{
+		background: url(/img/footer-snippit.png) no-repeat -252px 0px; 
+	}
+	&.icon3{
+		background: url(/img/footer-snippit.png) no-repeat -504px 0px; 
+	}
+	&.icon4{
+		background: url(/img/footer-snippit.png) no-repeat -756px 0px; 
+	}
+	&.icon5{
+		background: url(/img/footer-snippit.png) no-repeat -1008px 0px; 
+	}
+
+}
+.footer-autor-block{
+	background: lighten(@black, 16%); //#292929
+	//opacity: @opacity;
+	color: @white;
+	padding: 20px 0;
+	a{
+		color: @white;
+		&:hover{
+			color: #ccffcc;
+		}
+	}
+}
 .navbar-default{
 	//opacity: @opacity;
 	background: @white;
@@ -58,9 +176,11 @@
 			text-transform: uppercase;
 			border-bottom: 3px solid transparent;    
 			padding: 16px 0 11px;
+			.transition(@duration:0.2s, @ease:ease-out);
 			&:hover,
 			&:focus{
 				background: none;
+				border-color: @blue-nav;
 			}
 		}
 		&.active{
@@ -120,8 +240,191 @@
 		}
 	}
 }
+.calcite-reklama-block{
+	min-height: 948px;
+	background: url(/img/calcite/bg-bolus.jpg) no-repeat center top;
+	position: relative;
+	margin-bottom: 50px;
+}
+._c-reklama__inner{
+	background: url(/img/calcite/bg-bolus.png) no-repeat center bottom;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;	
+}
+._c-reklama__content{
+	 max-width: 805px;
+	 margin: 220px auto 0;
+	 text-align: center;
+}
+._c-reklama__heading{
+	.mixin-headings(
+		@font-family: @proxima-bold, 
+		@font-size: 40px, 
+		@line-height: 86px, 
+		@color: @white);
+	span{
+		font-size: 100px;
+	}
+}
+._c-reklama__note{
+	.mixin-headings(
+		@font-family: @proxima-bold, 
+		@font-size: 78px, 
+		@line-height: 62px, 
+		@color: @white);
+	.flex-display(@display: flex);
+	.blue{
+		font-size: 100px;
+		color: @blue;    
+		line-height: 74px;
+		margin-bottom: 5px;
+	}
+
+}
+._c-reklama__note-number{
+	.mixin-headings(
+		@font-family: @proxima-bold, 
+		@font-size: 400px, 
+		@line-height: 320px, 
+		@color: @blue);
+}
+._c-reklama__note-desc{
+	padding-top: 20px;
+}
+.calcite-review-block{
+	padding-top: 20px;
+}
+._c-panel{
+	margin-bottom: 120px;
+}
+._c-panel__blog{
+	border: 1px solid fadeout(#898989, 54%);
+	max-width: 835px;
+	margin: 0 auto;	
+	padding: 45px 45px;
+	border-radius: 10px;
+	.mixin-headings(
+		@font-family: @proxima-extrabold, 
+		@font-size: 32px, 
+		@line-height: 42px, 
+		@color: @white);
+	text-align: center;
+}
+._c-panel__blog-btn{
+	max-width: 200px;
+    margin: 25px auto 0;
+    padding: 15px;
+}
+._c-contacts{
+	> .row{
+		> .col-lg-4{width: 30%}
+		> .col-lg-8{width: 70%}
+	}
+}
+._c-contacts__address{
+	text-align: right;
+	color: lighten(@black, 60%);
+    padding-right: 30px;
+    padding-top: 5px;
+    a[href^='tel:']{
+    	text-decoration: none;
+		color: lighten(@black, 60%);
+    }
+	img{
+		margin-left: auto;
+	}
+}
+._c-contacts__logotip{
+	margin-bottom: 40px;
+}
+._c-contacts__orel{
+	line-height: 18px;
+	margin-bottom: 30px;
+}
+._c-contacts__heading{
+	font-weight: 700;
+}
+._c-reviews__block{
+	border-left: 3px solid lighten(@black, 20%);
+	padding-left: 30px;
+    margin-left: 5px;
+    max-width: 595px;
+    padding-bottom: 50px;
+}
+._c-reviews__heading{
+	.mixin-headings(
+		@font-family: @proxima-bold, 
+		@font-size: 25px, 
+		@line-height: 29px, 
+		@color: @white);
+    max-width: 500px;
+    margin-bottom: 35px;
+    &:after{
+    	content: '';
+    	background: @blue;
+    	display: block;
+    	width: 60px;
+    	height: 4px;
+    	margin-top: 30px;
+    }
+}
+._c-reviews__form{
+	.form-control{
+		background:lighten(@black, 20.8%); //#353535
+		border:1px solid lighten(@black, 20.8%); //#353535
+		height: 50px;
+		padding: 6px 22px;
+		margin-bottom: 35px;
+		color: @white;
+		&::-webkit-input-placeholder {			
+			.mixin-headings(
+				@font-family: @proxima-light, 
+				@font-size: 16px, 
+				@line-height: 25px, 
+				@color: darken(@white, 43.5%));
+		} 
+		&:-moz-placeholder {	
+			.mixin-headings(
+				@font-family: @proxima-light, 
+				@font-size: 16px, 
+				@line-height: 25px, 
+				@color: darken(@white, 43.5%));
+		}
+		&:focus{
+			border-color: @blue;
+		}
+		
+	}	
+	textarea.form-control{
+		max-width: 100%;
+		height: 120px; 
+	}
+}
+._c-reviews__btn{    
+	padding: 15px;
+    max-width: 200px;
+    width: 100%;
+    text-transform: capitalize;
+    font-size: 18px;
+    &:focus{
+    	outline: none;
+    }
+}
+._c-btn__top{ 
+	border: 3px solid lighten(@black, 20%);
+	background: url(/img/calcite/icon-arrow-top.png) no-repeat center;
+    display: inline-block;
+    width: 68px;
+    height: 68px;
+    border-radius: 10px;
+	.rotation-translate(@deg:0deg, @x:-40%, @y:0px);
+}
 .slider-fullpage{
 	color: darken(@white, 20%);
+	margin-bottom: 10px;
 }
 .slider-item{
 	position: relative;

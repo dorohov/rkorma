@@ -1,4 +1,5 @@
 body{
+	//min-height: 5900px;
 }
 a{
 	color: @blue;
@@ -15,7 +16,7 @@ a{
 }
 .calcite-page{
 	background: @black url(/img/calcite/bg-calcite.jpg) no-repeat center top;
-	//min-height: 4000px;
+	padding-bottom: 75px;
 	//opacity: @opacity;
 }
 .heading-block{
@@ -27,6 +28,47 @@ a{
  	);
  	margin-bottom: 20px;
 }
+.btn-blue{
+ 	text-decoration: none;
+ 	color: @white;
+ 	background: fadeout(@blue, 20%);
+ 	font-family: @proxima-bold;
+ 	text-transform: uppercase;
+ 	display: block;
+ 	text-align: center;
+ 	padding: 5px 15px 0;
+ 	font-size: 16px;
+ 	line-height: 24px;
+ 	border-radius: 10px;
+ 	border: none;
+ 	&:hover,
+ 	&:focus{
+ 		text-decoration: none;
+ 		color: @white;
+ 		background: fadeout(@blue, 40%);
+ 	}
+ }
+ .btn-footer{
+ 	@color-btn: #ccffcc;
+ 	display: block;
+ 	text-transform: uppercase;
+	.mixin-headings(
+ 		@font-family: @din-bold,
+ 		@font-size: 14px, 
+ 		@line-height: 26px, 
+ 		@color: @color-btn
+ 	);
+ 	color: @color-btn!important;
+ 	border: 2px solid @color-btn;
+	text-align: center;
+	padding: 10px 15px;
+	&:hover{
+		text-decoration: none;
+		border-color: lighten(@color-btn, 5%);
+		color: lighten(@color-btn, 5%);
+
+	}
+ }
  /* 
  h1{	
  	.mixin-headings(
