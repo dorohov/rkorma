@@ -9,8 +9,8 @@
 <link type="image/x-icon" href="/favicon.ico" rel="shortcut icon" />
 <link type="image/x-icon" href="/favicon.ico" rel="icon" />
 
-<link href="/css/bootstrap/bootstrap.css" rel="stylesheet">
-<link href="/css/site.css" rel="stylesheet">
+<link href="css/bootstrap/bootstrap.css" rel="stylesheet">
+<link href="css/site.css" rel="stylesheet">
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -19,12 +19,13 @@
 <![endif]-->
 
 
-<script src="/js/jquery.min.js" ></script>
-<script src="/js/bootstrap.min.js" ></script>
-<script src="/js/device.min.js" ></script>
-<script src="/js/storage.js" ></script>
+<script src="js/jquery.min.js" ></script>
+<script src="js/bootstrap.min.js" ></script>
+<script src="js/device.min.js" ></script>
+<script src="js/storage.js" ></script>
+<script src="js/jquery-plugin/jquery.jqfeScrollTo.js" ></script>
 
-<script src="/js/document-ready.js" ></script> 
+<script src="js/document-ready.js" ></script> 
 <script>
 	$(document).ready(function() {
 		$('img').addClass('img-responsive');
@@ -74,6 +75,7 @@
 	})
 	
 </script>
+<script src="js/slider-fullpage.js" ></script> 
 	</head>
 	<body>
 		<nav class="navbar navbar-default">
@@ -86,15 +88,15 @@
 			<span class="hamb-bottom"></span>
 		</button>
 
-		<a class="navbar-brand" href="/"><img src="/img/logotip.png" alt=""></a>
+		<a class="navbar-brand" href="/"><img src="img/logotip.png" alt=""></a>
 	</div>
 	<div class="collapse navbar-collapse" id="navbarSite">
 		<ul class="nav navbar-nav navbar-right">
-			<li><a href="#">Продукция</a></li>
-			<li><a href="#">Производство</a></li>
-			<li><a href="#">Услуги</a></li>
-			<li><a href="#">Блог</a></li>
-			<li><a href="#">Контакты</a></li>
+			<li><a href="/production/">Продукция</a></li>
+			<li><a href="/proizvodstvo/">Производство</a></li>
+			<li><a href="/services/">Услуги</a></li>
+			<li><a href="/poleznaya_informaciya/">Блог</a></li>
+			<li><a href="/contacts/">Контакты</a></li>
 		</ul>
 	</div>
   </div>
@@ -121,17 +123,17 @@
 				<div class="col-xs-12">
 					<div > 
 						<ul class="nav calcite-navbar">
-							<li class="active"><a href="#">О кальции</a></li>
-							<li><a href="#">Послеродовой парез</a></li>
-							<li><a href="#">Кальцитоп БОЛЮС</a></li>
-							<li><a href="#">Контакты</a></li>
+							<li class="active"><a class="g-t-block" href="#calcite-header__content">О кальции</a></li>
+							<li><a class="g-t-block" href="#slider-fullpage">Послеродовой парез</a></li>
+							<li><a class="g-t-block" href="#calcite-reklama-block">Кальцитоп БОЛЮС</a></li>
+							<li><a class="g-t-block" href="#calcite-review-block">Контакты</a></li>
 						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="calcite-header__content">
+	<div class="calcite-header__content" id="calcite-header__content" >
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12">
@@ -153,15 +155,15 @@
 		</div>
 	</div>
 </header>		
-			<div class="slider-fullpage">
+			<div class="slider-fullpage" id="slider-fullpage" >
 	<div class="slider-item slider-item1">
 		<div class="slider-item__flex">
 			<div class="img-bolus img-bolus-left">
-				<img src="/img/calcite/bolus.png" alt="" class="hidden-xs">
-				<img src="/img/calcite/bolus1-xs.png" alt="" class="visible-xs">
+				<img src="img/calcite/bolus.png" alt="" class="hidden-xs">
+				<img src="img/calcite/bolus1-xs.png" alt="" class="visible-xs">
 			</div>
 			<div class="img-bolus img-bounce hidden-xs">
-				<img src="/img/calcite/bounce1.png" alt="">
+				<img src="img/calcite/bounce1.png" alt="">
 			</div>
 			<div class="heading-slide">Полностью растворяется в рубце и всасывается в кровь за</div>
 			<div class="slider-time"><span>20</span> минут</div>			
@@ -170,11 +172,11 @@
 	<div class="slider-item slider-item2">
 		<div class="slider-item__flex">
 			<div class="img-bolus img-bolus-right">
-				<img src="/img/calcite/bolus.png" alt="" class="hidden-xs">
-				<img src="/img/calcite/bolus2-xs.png" alt="" class="visible-xs">
+				<img src="img/calcite/bolus.png" alt="" class="hidden-xs">
+				<img src="img/calcite/bolus2-xs.png" alt="" class="visible-xs">
 			</div>
 			<div class="img-bolus img-bounce">
-				<img src="/img/calcite/bounce2.png" alt="">
+				<img src="img/calcite/bounce2.png" alt="">
 			</div>
 			<div class="slider-note__item2-left">
 				<div class="__heading">Ликвидирует</div>
@@ -187,11 +189,11 @@
 	<div class="slider-item slider-item3">
 		<div class="slider-item__flex">
 			<div class="img-bolus img-bolus-left">
-				<img src="/img/calcite/bolus.png" alt="" class="hidden-xs">
-				<img src="/img/calcite/bolus3-xs.png" alt="" class="visible-xs">
+				<img src="img/calcite/bolus.png" alt="" class="hidden-xs">
+				<img src="img/calcite/bolus3-xs.png" alt="" class="visible-xs">
 			</div>
 			<div class="img-bolus img-bounce hidden-xs">
-				<img src="/img/calcite/bounce3.png" alt="">
+				<img src="img/calcite/bounce3.png" alt="">
 			</div>
 			<div class="slider-note__item3-left">
 				<div class="__heading">
@@ -210,7 +212,7 @@
 		</div>		
 	</div>
 </div>		
-			<div class="calcite-reklama-block">
+			<div class="calcite-reklama-block" id="calcite-reklama-block" >
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12">
@@ -236,14 +238,14 @@
 	</div>
 	<div class="_c-reklama__inner"></div>
 </div>		
-			<div class="calcite-review-block">
+			<div class="calcite-review-block" id="calcite-review-block" >
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12">
 				<div class="_c-panel">
 					<div class="_c-panel__blog">
 						<div>Чтобы узнать больше, читайте<br>полную статью о «Кальцитоп Болюс»</div>
-						<div><a href="#" class="btn-blue _c-panel__blog-btn">Читать</a></div>
+						<div><a href="/production/bolyusy/kalcitop_bolyus/" class="btn-blue _c-panel__blog-btn">Читать</a></div>
 					</div>
 				</div>
 				<div class="_c-contacts">
@@ -251,7 +253,7 @@
 						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 hidden-sm hidden-xs">
 							<div class="_c-contacts__address">
 								<div class="_c-contacts__logotip">
-									<img src="/img/logotip-white.png" alt="">
+									<img src="img/logotip-white.png" alt="">
 								</div>
 								<div class="_c-contacts__orel">
 									<h5 class="_c-contacts__heading">Офис в г. Орёл</h5>
@@ -273,16 +275,16 @@
 								<h3 class="_c-reviews__heading">Закажите бесплатную консультацию нашего специалиста!</h3>
 								<form action="" class="_c-reviews__form">
 									<div>
-										<input type="text" class="form-control" placeholder="Ваше имя*" name="name">
+										<input type="text" id="send-name" class="form-control" placeholder="Ваше имя*" name="name">
 									</div>
 									<div>
-										<input type="text" class="form-control" placeholder="Телефон или e-mail*"  name="email">
+										<input type="text" id="send-email" class="form-control" placeholder="Телефон или e-mail*"  name="email">
 									</div>
 									<div>
-										<textarea name="note" class="form-control" placeholder="Комментарий"></textarea>
+										<textarea name="note" id="send-msg" class="form-control" placeholder="Комментарий"></textarea>
 									</div>
 									<div>
-										<button type="submite" class="btn-blue _c-reviews__btn">Отправить</button>
+										<button type="submite" class="btn-blue _c-reviews__btn" id="send-submit" >Отправить</button>
 									</div>
 								</form> 
 							</div>
@@ -301,7 +303,7 @@
 		<div class="container-fluid">
 			<div class="col-xs-12 _b-footer-nav__flex">
 				<div class="_b-footer-nav__contacts ">
-					<div class="_b-footer-nav__logotip"><img src="/img/logotip-footer.png" alt=""></div>
+					<div class="_b-footer-nav__logotip"><img src="img/logotip-footer.png" alt=""></div>
 					<div>
 						<div><b>305029</b>, г. Курск, ул. К.Маркса, 62/21, оф.523</div>
 						<div><b>302030</b>, г. Орел, ул. С.Шаумяна, 35, оф.202</div>
@@ -311,7 +313,7 @@
 						</div>
 						<div><a href="mailto:info@rkorma.ru">info@rkorma.ru</a></div>
 						<div class="_b-footer-nav__contacts-map">
-							<a href="#" class="btn-footer">Посмотреть на карте</a>
+							<a href="/contacts/" class="btn-footer">Посмотреть на карте</a>
 						</div>						
 					</div>
 				</div>
@@ -319,39 +321,39 @@
 					<div class="_b-nav__item-icon icon1"></div>
 					<ul>
 						<li class="__heading">Для КРС</li>
-						<li><a href="#">Продукты для дойных коров</a></li>
-						<li><a href="#">Продукты для сухостойных коров</a></li>
-						<li><a href="#">Продукты для молодняка</a></li>
-						<li><a href="#">Продукты для мясного скота</a></li>
-						<li><a href="#">Продукты для консервирования кормов</a></li>
+						<li><a href="/production/cattle/produkty_dlya_doynih_korov/">Продукты для дойных коров</a></li>
+						<li><a href="/production/cattle/produkty_dlya_suhostoinih_korov/">Продукты для сухостойных коров</a></li>
+						<li><a href="/production/cattle/produkty_dlya_volodnyaka/">Продукты для молодняка</a></li>
+						<li><a href="/production/cattle/produkty_dlya_myasnogo_skota/">Продукты для мясного скота</a></li>
+						<li><a href="/production/cattle/produkty_dlya_konservirovanya_kormov/">Продукты для консервирования кормов</a></li>
 					</ul>
 				</div>
 				<div class="_b-footer-nav__item item2">
 					<div class="_b-nav__item-icon icon2"></div>
 					<ul>
 						<li class="__heading">Для свиней</li>
-						<li><a href="#">Зинкофарм (Zincofarm)</a></li>
-						<li><a href="#">Фармагулятор жидкий (Farmagulator liquid)</a></li>
+						<li><a href="/production/pig/zinkofarm_zincofarm/">Зинкофарм (Zincofarm)</a></li>
+						<li><a href="/production/pig/farmagulyator_zhidkij_farmagulator_liquid1/">Фармагулятор жидкий (Farmagulator liquid)</a></li>
 					</ul>
 				</div>
 				<div class="_b-footer-nav__item item3">
 					<div class="_b-nav__item-icon icon3"></div>
 					<ul>
 						<li class="__heading">Для птицы</li>
-						<li><a href="#">Минеральные комплексы</a></li>
-						<li><a href="#">Повышение продуктивности</a></li>
-						<li><a href="#">Адсорбенты</a></li>
-						<li><a href="#">Ферментные комплексы</a></li>
-						<li><a href="#">Ингибиторы роста патогенных бактерий</a></li>
+						<li><a href="/production/poultry/mineralnye_kompleksy/">Минеральные комплексы</a></li>
+						<li><a href="/production/poultry/povyshenie_produktivnosti/">Повышение продуктивности</a></li>
+						<li><a href="/production/poultry/adsorbenty/">Адсорбенты</a></li>
+						<li><a href="/production/poultry/fermentnye_kompleksy/">Ферментные комплексы</a></li>
+						<li><a href="/production/poultry/ingibitory_rosta_patogennyh_bakterij/">Ингибиторы роста патогенных бактерий</a></li>
 					</ul>
 				</div>
 				<div class="_b-footer-nav__item item4">
 					<div class="_b-nav__item-icon icon4"></div>
 					<ul>
 						<li class="__heading">болюсы</li>
-						<li class="active"><a href="#">Кальцитоп болюс</a></li>
-						<li><a href="#">Higt Trace болюс</a></li>
-						<li><a href="#">Dry Plus болюс</a></li>
+						<li class="active"><a href="">Кальцитоп болюс</a></li>
+						<li><a href="/production/bolyusy/higt_trace_bolyus/">Higt Trace болюс</a></li>
+						<li><a href="/production/bolyusy/dry_plus_bolyus/">Dry Plus болюс</a></li>
 						<li><a href="#"></a></li>
 					</ul>
 				</div>
@@ -359,13 +361,13 @@
 					<div class="_b-nav__item-icon icon5"></div>
 					<ul>
 						<li class="__heading">кормопроизводство</li>
-						<li><a href="#">Многолетниее травосмеси</a></li>
-						<li><a href="#">Однолетние травосмеси</a></li>
-						<li><a href="#">Люцерна</a></li>
-						<li><a href="#">Клевер</a></li>
-						<li><a href="#">Травосмесь для мясного КРС</a></li>
-						<li><a href="#">Травосмесь для овец</a></li>
-						<li><a href="#">Травосмесь для лошадей</a></li>
+						<li><a href="/production/kormoproizvodstvo/mnogoletnie_travosmesi/">Многолетниее травосмеси</a></li>
+						<li><a href="/production/kormoproizvodstvo/odnoletnie_travosmesi/">Однолетние травосмеси</a></li>
+						<li><a href="/production/kormoproizvodstvo/lyucerna/">Люцерна</a></li>
+						<li><a href="/production/kormoproizvodstvo/klever/">Клевер</a></li>
+						<li><a href="/production/kormoproizvodstvo/travosmes_dlya_myasnogo_krs/">Травосмесь для мясного КРС</a></li>
+						<li><a href="/production/kormoproizvodstvo/travosmes_dlya_ovec/">Травосмесь для овец</a></li>
+						<li><a href="/production/kormoproizvodstvo/travosmes_dlya_loshadej/">Травосмесь для лошадей</a></li>
 					</ul>
 
 						
@@ -378,7 +380,7 @@
 			<div class="col-xs-12">
 				<div class="_b-footer-nav__flex">
 					<div>&copy; 2013-2015, ООО «РегионКорма»  Все права защищены</div>
-					<div class="dorohovdesign">Сделано в <a href="http://www.dorohovdesign.com/" target="_blank">Dorohovdesign</a></div>
+					<div class="dorohovdesign">Сделано в <a href="http://www.dorohovdesign.ru/" target="_blank">Dorohovdesign</a></div>
 				</div>
 			</div>		
 		</div>		
