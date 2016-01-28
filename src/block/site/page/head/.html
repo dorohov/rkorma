@@ -27,7 +27,47 @@
 		$('img').addClass('img-responsive');
 		var url = window.location.pathname;
 		$('.navbar-nav a[href="'+url+'"]').parent().addClass('active');
-		//$('.carousel .item').eq('0').addClass('active');
+		
+		var trigger = $('.navbar-hamburger'),
+		overlay = $('.overlay'),
+		isClosed = false;
+		var trigger1 = $('.calcite-hamburger'),
+		overlay1 = $('.overlay'),
+		isClosed1 = false;
 
+		trigger.click(function () {
+			hamburger_cross();      
+		});
+		trigger1.click(function () {
+			hamburger_cross1();      
+		});
+
+		function hamburger_cross() {
+			if (isClosed == true) {          
+				overlay.hide();
+				trigger.removeClass('is-open');
+				trigger.addClass('is-closed');
+				isClosed = false;
+			} else {   
+				overlay.show();
+				trigger.removeClass('is-closed');
+				trigger.addClass('is-open');
+				isClosed = true;
+			}
+		}
+		function hamburger_cross1() {
+			if (isClosed1 == true) {          
+				overlay1.hide();
+				trigger1.removeClass('is-open');
+				trigger1.addClass('is-closed');
+				isClosed1 = false;
+			} else {   
+				overlay1.show();
+				trigger1.removeClass('is-closed');
+				trigger1.addClass('is-open');
+				isClosed1 = true;
+			}
+		}
 	})
+	
 </script>

@@ -17,6 +17,14 @@ a{
 .calcite-page{
 	background: @black url(/img/calcite/bg-calcite.jpg) no-repeat center top;
 	padding-bottom: 75px;
+	@media @media-size-sm{
+		padding-bottom: 95px;
+		background:  url(/img/calcite/bg-calcite-sm-left.png) no-repeat left top, @black url(/img/calcite/bg-calcite-sm-right.png) no-repeat right top ;
+	}
+	@media @media-size-xs{
+		padding-bottom: 95px;
+		background: @black;
+	}
 	//opacity: @opacity;
 }
 .heading-block{
@@ -69,117 +77,3 @@ a{
 
 	}
  }
- /* 
- h1{	
- 	.mixin-headings(
- 		@font-family: @gotham-bold,
- 		@font-size: 32px, 
- 		@line-height: 36px, 
- 		@color: @black
- 	);
- 	margin: 0 0 40px;
- }
- h3{	
- 	.mixin-headings(
- 		@font-family: @proxima-bold,
- 		@font-size: 18px, 
- 		@line-height: 32px, 
- 		@color: @blue
- 	);
- 	margin: 0 0 15px;
- }
- ul{
- 	margin: 5px 0 5px 20px;
- }
- .nbsp{
- 	width: 53px;
- 	display: inline-block;
- }
- .soc-icon-main{}
- .soc-icon-item{
- 	.transition(@duration:0.2s, @ease:ease-out);
- 	display: inline-block;
- 	&:before{
- 		font-family: @icon-base;
- 		color: @blue;
- 		font-size: 28px;
- 		line-height: 28px;
- 		display: inline-block;
- 		margin-left: 5px;
- 	}
- 	&.item-yb:before{
- 		content: @icon-yb;
- 	}
- 	&.item-fb:before{
- 		content: @icon-fb;
- 	}
- 	&.item-linkd:before{
- 		content: @icon-linkd;
- 	}
- 	&:hover{
- 		.scale(@ratio:1.2);
- 	}
- }
- .btn-blue{
- 	text-decoration: none;
- 	color: @blue;
- 	border: 2px solid @blue;
- 	font-family: @proxima-bold;
- 	text-transform: uppercase;
- 	display: block;
- 	text-align: center;
- 	padding: 5px 15px 0;
- 	font-size: 15px;
- 	line-height: 29px;
- 	letter-spacing: 2px;
- 	background: transparent;
- 	&:hover,
- 	&:focus{
- 		text-decoration: none;
- 		color: @black;
- 		border-color: @black;
- 	}
- }
- .content-block{
- 	//opacity: @opacity;
- 	padding: 40px 0;
- 	background: @white;
- }
- .heading-block{	
- 	.mixin-headings(
- 		@font-family: @gotham-bold,
- 		@font-size: 32px, 
- 		@line-height: 36px, 
- 		@color: @black
- 	);
- 	text-transform: uppercase;
- 	margin-bottom: 40px;
- }
- .heading-pos{
- 	position: relative;
- }
- .list-flex{
- 	.flex-display(@display: flex);
- 	.justify-content(@justify: space-between);
- 	ul{
- 		margin-right: 25px;
- 		&:last-child{margin-right: 0}
- 	}
- }
- .play-btn{
- 	width: 81px;
-    height: 81px;
-    background: rgb(33, 30, 42);
-    color: white;
-    text-align: center;
-    line-height: 81px;
-    font-size: 40px;
-    padding-top: 10px;
-    border-radius: 50%;
-    padding-left: 8px;
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    z-index: 55;
-    cursor: pointer;
- } */

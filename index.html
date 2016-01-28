@@ -30,9 +30,49 @@
 		$('img').addClass('img-responsive');
 		var url = window.location.pathname;
 		$('.navbar-nav a[href="'+url+'"]').parent().addClass('active');
-		//$('.carousel .item').eq('0').addClass('active');
+		
+		var trigger = $('.navbar-hamburger'),
+		overlay = $('.overlay'),
+		isClosed = false;
+		var trigger1 = $('.calcite-hamburger'),
+		overlay1 = $('.overlay'),
+		isClosed1 = false;
 
+		trigger.click(function () {
+			hamburger_cross();      
+		});
+		trigger1.click(function () {
+			hamburger_cross1();      
+		});
+
+		function hamburger_cross() {
+			if (isClosed == true) {          
+				overlay.hide();
+				trigger.removeClass('is-open');
+				trigger.addClass('is-closed');
+				isClosed = false;
+			} else {   
+				overlay.show();
+				trigger.removeClass('is-closed');
+				trigger.addClass('is-open');
+				isClosed = true;
+			}
+		}
+		function hamburger_cross1() {
+			if (isClosed1 == true) {          
+				overlay1.hide();
+				trigger1.removeClass('is-open');
+				trigger1.addClass('is-closed');
+				isClosed1 = false;
+			} else {   
+				overlay1.show();
+				trigger1.removeClass('is-closed');
+				trigger1.addClass('is-open');
+				isClosed1 = true;
+			}
+		}
 	})
+	
 </script>
 	</head>
 	<body>
@@ -40,15 +80,15 @@
 	<div class="container-fluid">
 	
 	<div class="navbar-header">
-		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-			<span class="sr-only">Toggle navigation</span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
+		<button type="button" class="hamburger navbar-hamburger is-closed" data-toggle="collapse" data-target="#navbarSite">
+			<span class="hamb-top"></span>
+			<span class="hamb-middle"></span>
+			<span class="hamb-bottom"></span>
 		</button>
+
 		<a class="navbar-brand" href="/"><img src="/img/logotip.png" alt=""></a>
 	</div>
-	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	<div class="collapse navbar-collapse" id="navbarSite">
 		<ul class="nav navbar-nav navbar-right">
 			<li><a href="#">Продукция</a></li>
 			<li><a href="#">Производство</a></li>
@@ -62,16 +102,31 @@
 		<div class="calcite-page">	
 			<header class="calcite-header">
 	<div class="calcite-header__inner"></div>
-	<div class="calcite-navpage">
+
+	<div class="container hidden-xs">
+		<div class="row">
+			<div class="col-xs-12">
+				<button type="button" class="calcite-hamburger hamburger is-closed" data-toggle="collapse" data-target="#navbarCalcite">
+					<span class="hamb-top"></span>
+					<span class="hamb-middle"></span>
+					<span class="hamb-bottom"></span>
+				</button>
+			</div>
+		</div>
+	</div>
+	
+	<div class="calcite-navpage collapse calcite-collapse navbar-collapse" id="navbarCalcite" class="">
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12">
-					<ul class="nav calcite-navbar">
-						<li class="active"><a href="#">О кальции</a></li>
-						<li><a href="#">Послеродовой парез</a></li>
-						<li><a href="#">Кальцитоп БОЛЮС</a></li>
-						<li><a href="#">Контакты</a></li>
-					</ul>
+					<div > 
+						<ul class="nav calcite-navbar">
+							<li class="active"><a href="#">О кальции</a></li>
+							<li><a href="#">Послеродовой парез</a></li>
+							<li><a href="#">Кальцитоп БОЛЮС</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -80,7 +135,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12">
-					<div class="calcite-header__phone quote-block">
+					<div class="calcite-header__phone quote-block hidden-xs">
 						<div class="__phone"><a href="tel:+78005004765">8 (800) 500-47-65</a></div>
 						<div>Телефон для справок</div>
 						<div class="__phone"><a href="tel:+79155195444">+7 (915) 519-54-44</a></div>
@@ -101,10 +156,11 @@
 			<div class="slider-fullpage">
 	<div class="slider-item slider-item1">
 		<div class="slider-item__flex">
-			<div class="img-bolus">
-				<img src="/img/calcite/bolus.png" alt="">
+			<div class="img-bolus img-bolus-left">
+				<img src="/img/calcite/bolus.png" alt="" class="hidden-xs">
+				<img src="/img/calcite/bolus1-xs.png" alt="" class="visible-xs">
 			</div>
-			<div class="img-bolus img-bounce">
+			<div class="img-bolus img-bounce hidden-xs">
 				<img src="/img/calcite/bounce1.png" alt="">
 			</div>
 			<div class="heading-slide">Полностью растворяется в рубце и всасывается в кровь за</div>
@@ -113,8 +169,9 @@
 	</div>
 	<div class="slider-item slider-item2">
 		<div class="slider-item__flex">
-			<div class="img-bolus">
-				<img src="/img/calcite/bolus.png" alt="">
+			<div class="img-bolus img-bolus-right">
+				<img src="/img/calcite/bolus.png" alt="" class="hidden-xs">
+				<img src="/img/calcite/bolus2-xs.png" alt="" class="visible-xs">
 			</div>
 			<div class="img-bolus img-bounce">
 				<img src="/img/calcite/bounce2.png" alt="">
@@ -129,10 +186,11 @@
 	</div>
 	<div class="slider-item slider-item3">
 		<div class="slider-item__flex">
-			<div class="img-bolus">
-				<img src="/img/calcite/bolus.png" alt="">
+			<div class="img-bolus img-bolus-left">
+				<img src="/img/calcite/bolus.png" alt="" class="hidden-xs">
+				<img src="/img/calcite/bolus3-xs.png" alt="" class="visible-xs">
 			</div>
-			<div class="img-bolus img-bounce">
+			<div class="img-bolus img-bounce hidden-xs">
 				<img src="/img/calcite/bounce3.png" alt="">
 			</div>
 			<div class="slider-note__item3-left">
@@ -141,13 +199,14 @@
 					<span>Витамин</span>
 				</div>
 				<div>
-					<div class="__note">усиливает всасывание кальция в кишечнике</div>
-					<div class="__vit">D<sub>3</sub></div>
-
-					
+					<div class="__note hidden-sm hidden-xs">усиливает всасывание кальция в кишечнике</div>
+					<div class="__vit">D<sub>3</sub></div>					
 				</div>
 			</div>
-			<div class="slider-note__item3-right">Также содержит фосфор и магний</div>			
+			<div class="slider-note__item3-right">
+				<div class="__note visible-sm visible-xs">усиливает всасывание кальция в кишечнике</div>
+				Также содержит фосфор и магний
+			</div>			
 		</div>		
 	</div>
 </div>		
@@ -161,8 +220,12 @@
 					</div>
 					<div class="_c-reklama__note">
 						<div class="_c-reklama__note-number">20</div>
-						<div class="_c-reklama__note-desc">
-							<div class="blue">грамм</div>
+						<div class="_c-reklama__note-desc ">
+							<div class="blue hidden-xs">грамм</div>
+							<div class="hidden-xs">чистого</div>
+							<div class="hidden-xs">кальция</div>
+						</div>
+						<div class="_c-reklama__note-desc-xs visible-xs">				
 							<div>чистого</div>
 							<div>кальция</div>
 						</div>
@@ -185,7 +248,7 @@
 				</div>
 				<div class="_c-contacts">
 					<div class="row">
-						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 ">
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 hidden-sm hidden-xs">
 							<div class="_c-contacts__address">
 								<div class="_c-contacts__logotip">
 									<img src="/img/logotip-white.png" alt="">
@@ -205,7 +268,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+						<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
 							<div class="_c-reviews__block">
 								<h3 class="_c-reviews__heading">Закажите бесплатную консультацию нашего специалиста!</h3>
 								<form action="" class="_c-reviews__form">
@@ -223,7 +286,7 @@
 									</div>
 								</form> 
 							</div>
-							<div class="_c-btn__top"></div>
+							<div class="_c-btn__top hidden-sm hidden-xs"></div>
 						</div>
 					</div>
 				</div>
@@ -237,17 +300,19 @@
 	<div class="footer-nav-block">
 		<div class="container-fluid">
 			<div class="col-xs-12 _b-footer-nav__flex">
-				<div class="_b-footer-nav__contacts">
+				<div class="_b-footer-nav__contacts ">
 					<div class="_b-footer-nav__logotip"><img src="/img/logotip-footer.png" alt=""></div>
-					<div><b>305029</b>, г. Курск, ул. К.Маркса, 62/21, оф.523</div>
-					<div><b>302030</b>, г. Орел, ул. С.Шаумяна, 35, оф.202</div>
-					<div class="_b-footer-nav__contacts-phone">					
-						<div><a href="tel:+78005004765">+7 (800) 500-47-65</a> - офис-менеджер</div>
-						<div><a href="tel:+79155192779">+7 (915) 519-27-79</a> - тех. специалист</div>
-					</div>
-					<div><a href="mailto:info@rkorma.ru">info@rkorma.ru</a></div>
-					<div class="_b-footer-nav__contacts-map">
-						<a href="#" class="btn-footer">Посмотреть на карте</a>
+					<div>
+						<div><b>305029</b>, г. Курск, ул. К.Маркса, 62/21, оф.523</div>
+						<div><b>302030</b>, г. Орел, ул. С.Шаумяна, 35, оф.202</div>
+						<div class="_b-footer-nav__contacts-phone">					
+							<div><a href="tel:+78005004765">+7 (800) 500-47-65</a> - офис-менеджер</div>
+							<div><a href="tel:+79155192779">+7 (915) 519-27-79</a> - тех. специалист</div>
+						</div>
+						<div><a href="mailto:info@rkorma.ru">info@rkorma.ru</a></div>
+						<div class="_b-footer-nav__contacts-map">
+							<a href="#" class="btn-footer">Посмотреть на карте</a>
+						</div>						
 					</div>
 				</div>
 				<div class="_b-footer-nav__item item1">
