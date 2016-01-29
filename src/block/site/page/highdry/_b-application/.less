@@ -1,0 +1,91 @@
+.highdry-application{
+	background: url(/img/highdry/bg-application-top.jpg) no-repeat center top, #eeecec url(/img/highdry/bg-application-bottom.jpg) no-repeat center bottom;
+	min-height: 680px;
+	padding: 90px 0;
+	position: relative;
+}
+._hd-application__content{
+	.flex-display(@display: flex);
+	.justify-content(@justify: center);
+	.align-items(@align: center);
+	min-height: 520px;
+	position: relative;
+	.mixin-headings(
+		@font-family: @proxima, 
+		@font-size: 20px, 
+		@line-height: 29px, 
+		@color: lighten(@black, 20%));
+
+}
+.application-content__quest{
+	width: 100%;
+	max-width: 400px;
+	min-height: 440px;
+	background: url(/img/highdry/bg-application.png) no-repeat center right;
+}
+.application-content__list{
+	.flex-display(@display: flex);
+	.justify-content(@justify: space-between);
+	.flex-direction(@direction: column);
+	
+    min-height: 130px;
+    list-style: none;
+    transform: translateX(10px) translateY(52px);
+	.rotation-translate(@deg:0deg, @x:10px, @y:52px);
+	li{
+		padding-left: 25px;
+		.round-list()
+	}
+}
+.application-content__panel{
+	background: #96cde0;
+	position: absolute;
+	width: 600px;
+	top: 13%;
+    right: 43px;
+    border-left: 15px solid #0099cc;
+	.mixin-headings(
+		@font-family: @proxima-bold, 
+		@font-size: 30px, 
+		@line-height: 36px, 
+		@color: lighten(@black, 20%));
+	text-transform: uppercase;
+	padding: 5px 15px;
+	border-bottom: 1px solid #3a9dcd;
+	b{
+		font-family: @proxima-extrabold;
+	}
+}
+.round-blue{
+	.round(@WxH: 103px, @wh: 73px, @b-color: darken(@white, 27%), @back-color: #aed6e5,@margin: 15px);
+}
+.application-content__left-line{
+    position: absolute;
+    height: 1px;
+    width: 320px;
+    background: #94c0e9;
+    bottom: 20px;
+    left: 290px;
+	.rotation-translate(@deg:120deg, @x:0px, @y:0px);
+}
+.application-content__right-line{
+    position: absolute;
+    height: 1px;
+    width: 350px;
+    background: #94c0e9;
+    bottom: -3px;
+    left: 430px;
+	.rotation-translate(@deg:70deg, @x:0px, @y:0px);	
+}
+.bg-line1{ 
+	position: absolute;
+    top: -112px;
+    width: 270px;
+    height: 271px;
+    background: url(/img/highdry/bg-line1.png) no-repeat center top;
+    z-index: 20;
+    left: 815px;
+    @media (max-width: 1819px){
+    	display: none;
+    }
+}

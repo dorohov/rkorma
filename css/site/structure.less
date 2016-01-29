@@ -15,16 +15,19 @@ a{
 	}
 }
 .calcite-page{
-	background: @black url(../img/calcite/bg-calcite.jpg) no-repeat center top;
+	background: @black url(/img/calcite/bg-calcite.jpg) no-repeat center top;
 	padding-bottom: 75px;
 	@media @media-size-sm{
 		padding-bottom: 95px;
-		background:  url(../img/calcite/bg-calcite-sm-left.png) no-repeat left top, @black url(../img/calcite/bg-calcite-sm-right.png) no-repeat right top ;
+		background:  url(/img/calcite/bg-calcite-sm-left.png) no-repeat left top, @black url(/img/calcite/bg-calcite-sm-right.png) no-repeat right top ;
 	}
 	@media @media-size-xs{
 		padding-bottom: 95px;
 		background: @black;
 	}
+	//opacity: @opacity;
+}
+.highDry-page{
 	//opacity: @opacity;
 }
 .heading-block{
@@ -56,18 +59,18 @@ a{
  		background: fadeout(@blue, 40%);
  	}
  }
- .btn-footer{
- 	@color-btn: #ccffcc;
- 	display: block;
- 	text-transform: uppercase;
+.btn-footer{
+	@color-btn: #ccffcc;
+	display: block;
+	text-transform: uppercase;
 	.mixin-headings(
- 		@font-family: @din-bold,
- 		@font-size: 14px, 
- 		@line-height: 26px, 
- 		@color: @color-btn
- 	);
- 	color: @color-btn!important;
- 	border: 2px solid @color-btn;
+		@font-family: @din-bold,
+		@font-size: 14px, 
+		@line-height: 26px, 
+		@color: @color-btn
+	);
+	color: @color-btn!important;
+	border: 2px solid @color-btn;
 	text-align: center;
 	padding: 10px 15px;
 	&:hover{
@@ -76,4 +79,55 @@ a{
 		color: lighten(@color-btn, 5%);
 
 	}
- }
+}
+.bolus-img{
+	position: absolute;
+	z-index: 10;
+	@media (max-width: 1199px){
+		display: none;
+	}
+}
+.bolus-left-1{
+    top: -55px;
+    left: 170px;
+}
+.bolus-left-2{
+    bottom: -60px;
+    left: 700px;
+}
+.bolus-left-3{
+    bottom: 220px;
+    left: -50px;
+}
+.bolus-left-4{
+    bottom: 50px;
+    left: 700px;
+}
+.bolus-left-5{
+    top: 50px;
+    left: 320px;
+	@media (max-width: 1694px){
+		display: none;
+	}
+}
+.bolus-left-6{
+    top: 330px;
+    left: -50px;
+}
+
+
+.bolus-right-1{
+    top: 35px;
+    right: 120px;
+	@media (max-width: 1344px){
+		display: none;
+	}
+}
+.bolus-right-2{
+    top: 195px;
+    right: 60px;
+}
+.bolus-right-3{
+    bottom: -50px;
+    right: 430px;
+}
