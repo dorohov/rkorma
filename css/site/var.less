@@ -16,7 +16,8 @@
 @media-size-xs: ~"(max-width: 767px)";
 @media-size-sm: ~"(min-width: 768px) and (max-width: 991px)";
 @media-size-md: ~"(min-width: 992px) and (max-width: 1199px)";
-@media-size-lg: ~"(min-width: 1200px)";
+@media-size-lg: ~"(min-width: 1200px) and (max-width: 1399px)";
+@media-size-xl: ~"(min-width: 1400px)";
 @media-screen: ~"(min-width: 992px)";
 @media-size-portrait: ~"all and (orientation:portrait)";
 @media-size-landscape: ~"all and (orientation:landscape)";
@@ -30,6 +31,7 @@
 @white: #ffffff;
 @black: #000000;
 @green: #1C9542;
+@green-d: rgb(28, 149, 63);
 @blue: rgb(51, 153, 204);
 @base: inherit;
 #site {
@@ -86,6 +88,15 @@
 }
 .rotation-translate(@deg:0deg, @x:0px, @y:0px){
   .transform(rotate(@deg) translateX(@x) translateY(@y));
+}
+.rotation-translateX(@x:0px){
+  .transform(translateX(@x));
+}
+.rotation-translateY(@y:0px){
+  .transform(translateY(@y));
+}
+.rotation-rotate(@deg:0deg){
+  .transform(rotate(@deg));
 }
 .scale(@ratio:1.5){
   .transform(scale(@ratio));

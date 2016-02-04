@@ -80,6 +80,27 @@ a{
 
 	}
 }
+.btn-slider{
+	display: block;
+	padding: 20px 10px;
+	border: 2px solid @white;
+	text-transform: uppercase;
+	text-align: center;
+	text-decoration: none;
+	.mixin-headings(
+		@font-family: @din-bold,
+		@font-size: 14px, 
+		@line-height: 12px, 
+		@color: @white
+	);
+	&:hover,
+	&:focus{
+		text-decoration: none;
+		color: #3BAB47;
+		border-color: #3BAB47;
+	} 
+	
+}
 .bolus-img{
 	position: absolute;
 	z-index: 10;
