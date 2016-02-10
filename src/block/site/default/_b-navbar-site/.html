@@ -1,34 +1,34 @@
-<nav class="navbar navbar-default {class} about-position">
-	<div class="container-fluid">
-	
-	<div class="navbar-header">
-		<button type="button" class="hamburger navbar-hamburger is-closed" data-toggle="collapse" data-target="#navbarSite">
-			<span class="hamb-top"></span>
-			<span class="hamb-middle"></span>
-			<span class="hamb-bottom"></span>
-		</button>
-
-		<a class="navbar-brand" href="/"><img src="img/logotip.png" alt=""></a>
+<nav class="navbar navbar-default {class} bg-transparent">
+	<div class="container-fluid">	
+		<div class="navbar-header">
+			<!-- <button type="button" class="hamburger navbar-hamburger is-closed" data-toggle="collapse" data-target="#navbarSite"> -->
+			<button type="button" class="hamburger navbar-hamburger is-closed" data-toggle="body">
+				<span class="hamb-top"></span>
+				<span class="hamb-middle"></span>
+				<span class="hamb-bottom"></span>
+			</button>
+			<a class="navbar-brand" href="/"><img src="img/logotip.png" alt=""></a>
+		</div> 
+		<!-- <div class="collapse navbar-collapse" id="navbarSite"> -->
+		<div class="collapse-right" id="navbarSite">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="/production/">Продукция</a></li>
+				<li><a href="/proizvodstvo/">Производство</a></li>
+				<li><a href="/services/">Услуги</a></li>
+				<li><a href="/poleznaya_informaciya/">Блог</a></li>
+				<li><a href="/contacts/">Контакты</a></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle icon-magnifying" data-toggle="dropdown"></a>
+					<div class="dropdown-menu dropdown-form">
+						<form class="input-group">
+							<input type="text" class="form-control" placeholder="Введите слово для поиска">
+							<span class="input-group-btn"> 
+								<button class="btn" type="submit"></button>
+							</span>
+						</form>
+					</div>
+				</li>
+			</ul>
+		</div>
 	</div>
-	<div class="collapse navbar-collapse" id="navbarSite">
-		<ul class="nav navbar-nav navbar-right">
-			<li><a href="/production/">Продукция</a></li>
-			<li><a href="/proizvodstvo/">Производство</a></li>
-			<li><a href="/services/">Услуги</a></li>
-			<li><a href="/poleznaya_informaciya/">Блог</a></li>
-			<li><a href="/contacts/">Контакты</a></li>
-			<li class="dropdown">
-				<a href="#" class="dropdown-toggle icon-magnifying" data-toggle="dropdown"></a>
-				<div class="dropdown-menu dropdown-form">
-					<form class="input-group">
-						<input type="text" class="form-control" placeholder="Введите слово для поиска">
-						<span class="input-group-btn"> 
-							<button class="btn" type="submit"></button>
-						</span>
-					</form>
-				</div>
-			</li>
-		</ul>
-	</div>
-  </div>
 </nav>

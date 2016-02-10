@@ -3,6 +3,7 @@
 	<head>
 	<meta charset="utf-8">	
 <title>rkorma</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta HTTP-EQUIV="Cache-Control" content="no-cache" />
 
@@ -20,12 +21,32 @@
 
 
 <script src="/js/jquery.min.js" ></script>
+
 <script src="/js/bootstrap.min.js" ></script>
 <script src="/js/device.min.js" ></script>
 <script src="/js/storage.js" ></script>
 
 <script src="/js/document-ready.js" ></script> 
 <script>
+	$(window).load(function(){
+		$("[data-toggle]").click(function() {
+		  var toggle_el = $(this).data("toggle");
+		  $(toggle_el).toggleClass("open-sidebar");
+		});
+		/*$(".swipe-area").swipe({
+			  swipeStatus:function(event, phase, direction, distance, duration, fingers)
+				{
+					if (phase=="move" && direction =="left") {
+						   $("body").addClass("open-sidebar");
+						   return false;
+					}
+					if (phase=="move" && direction =="right") {
+						   $("body").removeClass("open-sidebar");
+						   return false;
+					}
+				}
+		});*/
+	});
 	$(document).ready(function() {
 		$('img').addClass('img-responsive');
 		var url = window.location.pathname;
@@ -74,42 +95,44 @@
 	})
 	
 </script>
-<script src="/js/slider-fullpage.js" ></script> 
+<!--
+<script src="/js/jquery.touchSwipe.min.js" ></script>
+<script src="/js/slider-fullpage.js" ></script>--> 
 	</head>
 	<body>
-		<nav class="navbar navbar-default _index__navbar about-position">
-	<div class="container-fluid">
-	
-	<div class="navbar-header">
-		<button type="button" class="hamburger navbar-hamburger is-closed" data-toggle="collapse" data-target="#navbarSite">
-			<span class="hamb-top"></span>
-			<span class="hamb-middle"></span>
-			<span class="hamb-bottom"></span>
-		</button>
-
-		<a class="navbar-brand" href="/"><img src="img/logotip.png" alt=""></a>
+		<nav class="navbar navbar-default _index__navbar bg-transparent">
+	<div class="container-fluid">	
+		<div class="navbar-header">
+			<!-- <button type="button" class="hamburger navbar-hamburger is-closed" data-toggle="collapse" data-target="#navbarSite"> -->
+			<button type="button" class="hamburger navbar-hamburger is-closed" data-toggle="body">
+				<span class="hamb-top"></span>
+				<span class="hamb-middle"></span>
+				<span class="hamb-bottom"></span>
+			</button>
+			<a class="navbar-brand" href="/"><img src="img/logotip.png" alt=""></a>
+		</div> 
+		<!-- <div class="collapse navbar-collapse" id="navbarSite"> -->
+		<div class="collapse-right" id="navbarSite">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="/production/">Продукция</a></li>
+				<li><a href="/proizvodstvo/">Производство</a></li>
+				<li><a href="/services/">Услуги</a></li>
+				<li><a href="/poleznaya_informaciya/">Блог</a></li>
+				<li><a href="/contacts/">Контакты</a></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle icon-magnifying" data-toggle="dropdown"></a>
+					<div class="dropdown-menu dropdown-form">
+						<form class="input-group">
+							<input type="text" class="form-control" placeholder="Введите слово для поиска">
+							<span class="input-group-btn"> 
+								<button class="btn" type="submit"></button>
+							</span>
+						</form>
+					</div>
+				</li>
+			</ul>
+		</div>
 	</div>
-	<div class="collapse navbar-collapse" id="navbarSite">
-		<ul class="nav navbar-nav navbar-right">
-			<li><a href="/production/">Продукция</a></li>
-			<li><a href="/proizvodstvo/">Производство</a></li>
-			<li><a href="/services/">Услуги</a></li>
-			<li><a href="/poleznaya_informaciya/">Блог</a></li>
-			<li><a href="/contacts/">Контакты</a></li>
-			<li class="dropdown">
-				<a href="#" class="dropdown-toggle icon-magnifying" data-toggle="dropdown"></a>
-				<div class="dropdown-menu dropdown-form">
-					<form class="input-group">
-						<input type="text" class="form-control" placeholder="Введите слово для поиска">
-						<span class="input-group-btn"> 
-							<button class="btn" type="submit"></button>
-						</span>
-					</form>
-				</div>
-			</li>
-		</ul>
-	</div>
-  </div>
 </nav>
 
 		<header class="index__header">
@@ -137,7 +160,7 @@
 					</div>
 					<div class="_i-about__item">
 						<div class="_i-about__icon icon3"></div>
-						<div>Идеально <b>качественное сырье</b> позволяет воплотить лучшие решения. Благодаря разветвленной сети и оперативной работе мы сотрудничаем с партнёрами                       из 15 регионов России.</div>
+						<div>Идеально <b>качественное сырье</b> позволяет воплотить лучшие решения. Благодаря разветвленной сети и оперативной работе мы сотрудничаем с партнёрами из 15 регионов России.</div>
 					</div>
 					<div class="_i-about__item">
 						<div class="_i-about__icon icon4"></div>
@@ -149,7 +172,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="partner-block">
+	<div class="partner-block hidden-xs">
 		<div class="partner__item">
 			<img src="/img/index/partner-item1.png" alt="">
 		</div>
@@ -157,10 +180,10 @@
 			<img src="/img/index/partner-item2.png" alt="">
 		</div>
 		<div class="partner__item">
-			<img src="/img/index/partner-item3.png" alt="">
+			<img src="/img/index/partner-item4.png" alt="">
 		</div>
 		<div class="partner__item">
-			<img src="/img/index/partner-item4.png" alt="">
+			<img src="/img/index/partner-item3.png" alt="">
 		</div>
 		<div class="partner__item">
 			<img src="/img/index/partner-item5.png" alt="">
@@ -200,10 +223,9 @@
 		<div class="row">
 			<div class="col-xs-12">
 				<div class="_inp__heading">Новинки и актуальные продукты</div>
-				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-					<div class="carousel-inner _inp-carousel__inner">
-						<div class="item">
-							<img src="/img/index/newProducts-slide1.jpg" alt="">
+				<div id="carousel-example-generic" class="_inp__carousel carousel slide" data-ride="carousel">
+					<div class="carousel-inner _inp-carousel__inner hidden-xs">
+						<div class="item" style="background: url(/img/index/newProducts-slide1.jpg) no-repeat center top;">
 							<div class="_inp-carousel__caption">
 								<div class="_inp-carousel__caption-logo"><img src="/img/index/slider-logo1.jpg" alt=""></div>
 								<div class="_inp-carousel__caption-heading">LC Heat Pro</div>
@@ -211,8 +233,7 @@
 								<div class="_inp-carousel__caption-btn"><a href="#" class="btn-slider">Подробнее</a></div>
 							</div>
 						</div>
-						<div class="item">
-							<img src="/img/index/newProducts-slide1.jpg" alt="">
+						<div class="item" style="background: url(/img/index/newProducts-slide1.jpg) no-repeat center top;">
 							<div class="_inp-carousel__caption">
 								<div class="_inp-carousel__caption-logo"><img src="/img/index/slider-logo1.jpg" alt=""></div>
 								<div class="_inp-carousel__caption-heading">LC Heat Pro</div>
@@ -220,8 +241,7 @@
 								<div class="_inp-carousel__caption-btn"><a href="#" class="btn-slider">Подробнее</a></div>
 							</div>
 						</div>
-						<div class="item">
-							<img src="/img/index/newProducts-slide1.jpg" alt="">
+						<div class="item" style="background: url(/img/index/newProducts-slide1.jpg) no-repeat center top;">
 							<div class="_inp-carousel__caption">
 								<div class="_inp-carousel__caption-logo"><img src="/img/index/slider-logo1.jpg" alt=""></div>
 								<div class="_inp-carousel__caption-heading">LC Heat Pro</div>
@@ -231,7 +251,8 @@
 						</div>
 						<a class="left _inp-carousel__control" href="#carousel-example-generic" data-slide="prev"></a>
 						<a class="right _inp-carousel__control" href="#carousel-example-generic" data-slide="next"></a>
-					
+						<div class="_inp-carousel__rect rect-left"></div>					
+						<div class="_inp-carousel__rect rect-right"></div>	
 					</div>
 					<ol class="_inp-carousel__carousel-indicators carousel-indicators">
 						<li data-target="#carousel-example-generic" data-slide-to="0" class="active">
@@ -241,6 +262,7 @@
 							<div class="__note"> 
 								<div class="_inp-indicators__heading">LC Heat Pro</div>
 								<div>Помощь на Вашей ферме в условиях теплового стресса</div>
+								<div class="_inp-carousel__caption-btn visible-xs"><a href="#" class="btn-slider">Подробнее</a></div>
 							</div>
 						</li>
 						<li data-target="#carousel-example-generic" data-slide-to="1">
@@ -250,6 +272,7 @@
 							<div class="__note"> 
 								<div class="_inp-indicators__heading">Кальцитоп болюс</div>
 								<div>Кормовая добавка в форме болюса для жвачных животных для снижения риска возникновения послеродового пареза.</div>
+								<div class="_inp-carousel__caption-btn visible-xs"><a href="#" class="btn-slider">Подробнее</a></div>
 							</div>
 						</li>
 						<li data-target="#carousel-example-generic" data-slide-to="2">
@@ -259,6 +282,7 @@
 							<div class="__note"> 
 								<div class="_inp-indicators__heading">Optigen II</div>
 								<div>Это кормовая добавка для балансирования рационов крупного рогатого скота по протеиновой питательности</div> 
+								<div class="_inp-carousel__caption-btn visible-xs"><a href="#" class="btn-slider">Подробнее</a></div>
 							</div>
 						</li>
 					</ol>					
@@ -274,6 +298,7 @@
 			<div class="col-blog-2">
 				<div class="_i-blog__item-box">					
 					<a href="#" class="_i-blog__item" style="background: url(/img/index/news-item1.jpg) no-repeat center">
+						<span class="_i-blog__item-bg"></span>
 						<span class="_i-blog__item-time">14 июля 2015</span>
 						<span class="_i-blog__item-header">Силосование люцерны - это<br> «миф» или реальность</span>	
 					</a>
@@ -281,14 +306,18 @@
 			</div>
 			<div class="col-blog-2">
 				<div class="_i-blog__heading">Блог</div> 
-				<div>
+				<div class="hidden-sm hidden-xs"> 
 					В этом разделе публикуются последние статьи и полезная информация от наших специалистов, которая включается в себя знания о ведении бизнеса, технологии кормления, информацию по содержанию скота, практические указания и многое другое.
 				</div>
-				<div class="_i-blog__btn"><a href="#" class="btn-slider">Читать все статьи</a></div>
+				<div class="visible-sm hidden-xs">
+					В этом разделе публикуются последние статьи и полезная информация от наших специалистов: знания о ведении бизнеса, технологии кормления и многое другое.
+				</div>
+				<div class="_i-blog__btn hidden-xs"><a href="#" class="btn-slider">Читать все статьи</a></div>
 			</div>
-			<div class="col-blog-4">
+			<div class="col-blog-4 hidden-sm hidden-md">
 				<div class="_i-blog__item-box">	
 					<a href="#" class="_i-blog__item" style="background: url(/img/index/news-item2.jpg) no-repeat center">
+						<span class="_i-blog__item-bg"></span>
 						<span class="_i-blog__item-time">14 июля 2015</span>
 						<span class="_i-blog__item-header">Концепция роботизированного доения: руководство от «А» до «Я»</span>	
 					</a> 
@@ -297,6 +326,7 @@
 			<div class="col-blog-2">	
 				<div class="_i-blog__item-box">				
 					<a href="#" class="_i-blog__item" style="background: url(/img/index/news-item3.jpg) no-repeat center">
+						<span class="_i-blog__item-bg"></span>
 						<span class="_i-blog__item-time">14 июля 2015</span>
 						<span class="_i-blog__item-header">Предупреждение теплового стресса</span>	
 					</a> 
@@ -307,12 +337,13 @@
 			<div class="col-blog-4">
 				<div class="_i-blog__item-box">				
 					<a href="#" class="_i-blog__item" style="background: url(/img/index/news-item4.jpg) no-repeat center">
+						<span class="_i-blog__item-bg"></span>
 						<span class="_i-blog__item-time">14 июля 2015</span>
 						<span class="_i-blog__item-header">Динамическое кормление: разработка, эффективность, результаты</span>	
 					</a> 
 				</div>
 			</div> 
-			<div class="col-blog-2">
+			<div class="col-blog-2 visible-lg">
 				<div class="_i-blog__list">
 					<div class="_i-blog__list-item">
 						<div class="_i-blog__item-time">14 июля 2015</div>
@@ -327,12 +358,14 @@
 			<div class="col-blog-4">				
 				<div class="_i-blog__item-box">				
 					<a href="#" class="_i-blog__item" style="background: url(/img/index/news-item5.jpg) no-repeat center">
+						<span class="_i-blog__item-bg"></span>
 						<span class="_i-blog__item-time">14 июля 2015</span>
 						<span class="_i-blog__item-header">Следите за состоянием вымени: возможные опасности, советы и рекомендации</span>
 					</a> 
 				</div>
 			</div>	
 		</div>
+		<div class="_i-blog__btn visible-xs"><a href="#" class="btn-slider">Читать все статьи</a></div>
 	</div>
 </div> 		    
 		<footer>

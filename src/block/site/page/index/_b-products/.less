@@ -5,18 +5,36 @@
 	.flex-display(@display: flex);
 	.justify-content(@justify: flex-start);
 	.align-items(@align: stretch);
+	@media @media-size-xs{		
+		.flex-direction(@direction: column);
+	}
 	.mixin-headings(
-		@font-family: @agora-black,
+		@font-family: @agoras-black,
 		@font-size: 18px, 
 		@line-height: 24px, 
 		@color: @white
-	); 	
+	); 
+	@media @media-size-sm{
+		min-height: 730px;			
+	}	
+	@media @media-size-xs{
+		font-size: 50px;
+		line-height: 76px;		
+	}	
+	@media @media-size-xs{
+		font-size: 30px;
+		line-height: 56px;		
+	}	
 }
 ._i-products__item{
 	width: 100%;
 	max-width: 33.33333%;
 	overflow: hidden;
 	position: relative;
+	@media @media-size-xs{
+		max-width: 100%;
+		height: 860px;
+	}
 	.item-bg{
 		position: absolute;
 		top: 0;
@@ -30,34 +48,76 @@
 		.align-items(@align: center);
 		&:hover{
 			.scale(@ratio:1.1);
-		}
+		}	
 		&.item1{
 			background: url(/img/index/product-item1.jpg) no-repeat center left;
+			@media @media-size-sm{				
+				background-size: 800px;
+			}
 		}
 		&.item2{
 			background: url(/img/index/product-item2.jpg) no-repeat center;
+			@media @media-size-sm{				
+				background-size: 800px;
+			}
 		}
 		&.item3{
 			background: url(/img/index/product-item3.jpg) no-repeat center right;
+			@media @media-size-sm{
+				background: url(/img/index/product-item3.jpg) 80% center no-repeat;
+				background-size: 800px;
+			}
 		}
 	}	
 	.item-bg__icon{
-		width: 158px;
-		height: 158px;
 		border: 1px solid #99ff99;
 		border-radius: 50%;
 		margin-bottom: 30px;
+		@media @media-no-phone{
+			width: 158px;
+			height: 158px;
+		}
+		@media @media-size-xs{
+			width: 325px;
+			height: 325px;
+			border: 4px solid #ccffcc;
+		}
+		@media @media-size-xxs{
+			width: 200px;
+			height: 200px;
+		}
 		&.icon1{
 			background: url(/img/index/products-icon1.png) no-repeat center;
+			@media @media-no-phone{
+				background-size: 71px;
+			}
+			@media @media-size-xxs{
+				background-size: 75px;
+			}	
 		}
 		&.icon2{
 			background: url(/img/index/products-icon2.png) no-repeat center;
+			@media @media-no-phone{
+				background-size: 63px;
+			}	
+			@media @media-size-xxs{
+				background-size: 68px;
+			}	
 		}
 		&.icon3{
 			background: url(/img/index/products-icon3.png) no-repeat center;
+			@media @media-no-phone{
+				background-size: 70px;
+			}	
+			@media @media-size-xxs{
+				background-size: 75px;
+			}	
 		}
 	}
 	.item-bg__header{
 		text-transform: uppercase;
+		@media @media-size-xs{
+			.rotation-translateY(@y:15px);
+		}
 	}
 }

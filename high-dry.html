@@ -3,6 +3,7 @@
 	<head>
 	<meta charset="utf-8">	
 <title>rkorma</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta HTTP-EQUIV="Cache-Control" content="no-cache" />
 
@@ -20,12 +21,32 @@
 
 
 <script src="/js/jquery.min.js" ></script>
+
 <script src="/js/bootstrap.min.js" ></script>
 <script src="/js/device.min.js" ></script>
 <script src="/js/storage.js" ></script>
 
 <script src="/js/document-ready.js" ></script> 
 <script>
+	$(window).load(function(){
+		$("[data-toggle]").click(function() {
+		  var toggle_el = $(this).data("toggle");
+		  $(toggle_el).toggleClass("open-sidebar");
+		});
+		/*$(".swipe-area").swipe({
+			  swipeStatus:function(event, phase, direction, distance, duration, fingers)
+				{
+					if (phase=="move" && direction =="left") {
+						   $("body").addClass("open-sidebar");
+						   return false;
+					}
+					if (phase=="move" && direction =="right") {
+						   $("body").removeClass("open-sidebar");
+						   return false;
+					}
+				}
+		});*/
+	});
 	$(document).ready(function() {
 		$('img').addClass('img-responsive');
 		var url = window.location.pathname;
@@ -74,42 +95,44 @@
 	})
 	
 </script>
-<script src="/js/slider-fullpage.js" ></script> 
+<!--
+<script src="/js/jquery.touchSwipe.min.js" ></script>
+<script src="/js/slider-fullpage.js" ></script>--> 
 	</head>
 	<body>
-		<nav class="navbar navbar-default {class} about-position">
-	<div class="container-fluid">
-	
-	<div class="navbar-header">
-		<button type="button" class="hamburger navbar-hamburger is-closed" data-toggle="collapse" data-target="#navbarSite">
-			<span class="hamb-top"></span>
-			<span class="hamb-middle"></span>
-			<span class="hamb-bottom"></span>
-		</button>
-
-		<a class="navbar-brand" href="/"><img src="img/logotip.png" alt=""></a>
+		<nav class="navbar navbar-default {class} bg-transparent">
+	<div class="container-fluid">	
+		<div class="navbar-header">
+			<!-- <button type="button" class="hamburger navbar-hamburger is-closed" data-toggle="collapse" data-target="#navbarSite"> -->
+			<button type="button" class="hamburger navbar-hamburger is-closed" data-toggle="body">
+				<span class="hamb-top"></span>
+				<span class="hamb-middle"></span>
+				<span class="hamb-bottom"></span>
+			</button>
+			<a class="navbar-brand" href="/"><img src="img/logotip.png" alt=""></a>
+		</div> 
+		<!-- <div class="collapse navbar-collapse" id="navbarSite"> -->
+		<div class="collapse-right" id="navbarSite">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="/production/">Продукция</a></li>
+				<li><a href="/proizvodstvo/">Производство</a></li>
+				<li><a href="/services/">Услуги</a></li>
+				<li><a href="/poleznaya_informaciya/">Блог</a></li>
+				<li><a href="/contacts/">Контакты</a></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle icon-magnifying" data-toggle="dropdown"></a>
+					<div class="dropdown-menu dropdown-form">
+						<form class="input-group">
+							<input type="text" class="form-control" placeholder="Введите слово для поиска">
+							<span class="input-group-btn"> 
+								<button class="btn" type="submit"></button>
+							</span>
+						</form>
+					</div>
+				</li>
+			</ul>
+		</div>
 	</div>
-	<div class="collapse navbar-collapse" id="navbarSite">
-		<ul class="nav navbar-nav navbar-right">
-			<li><a href="/production/">Продукция</a></li>
-			<li><a href="/proizvodstvo/">Производство</a></li>
-			<li><a href="/services/">Услуги</a></li>
-			<li><a href="/poleznaya_informaciya/">Блог</a></li>
-			<li><a href="/contacts/">Контакты</a></li>
-			<li class="dropdown">
-				<a href="#" class="dropdown-toggle icon-magnifying" data-toggle="dropdown"></a>
-				<div class="dropdown-menu dropdown-form">
-					<form class="input-group">
-						<input type="text" class="form-control" placeholder="Введите слово для поиска">
-						<span class="input-group-btn"> 
-							<button class="btn" type="submit"></button>
-						</span>
-					</form>
-				</div>
-			</li>
-		</ul>
-	</div>
-  </div>
 </nav>
 		<div class="highDry-page">
 			<header class="highdry-header">

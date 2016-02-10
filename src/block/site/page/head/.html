@@ -1,5 +1,6 @@
 <meta charset="utf-8">	
 <title>rkorma</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta HTTP-EQUIV="Cache-Control" content="no-cache" />
 
@@ -17,12 +18,32 @@
 
 
 <script src="/js/jquery.min.js" ></script>
+
 <script src="/js/bootstrap.min.js" ></script>
 <script src="/js/device.min.js" ></script>
 <script src="/js/storage.js" ></script>
 
 <script src="/js/document-ready.js" ></script> 
 <script>
+	$(window).load(function(){
+		$("[data-toggle]").click(function() {
+		  var toggle_el = $(this).data("toggle");
+		  $(toggle_el).toggleClass("open-sidebar");
+		});
+		/*$(".swipe-area").swipe({
+			  swipeStatus:function(event, phase, direction, distance, duration, fingers)
+				{
+					if (phase=="move" && direction =="left") {
+						   $("body").addClass("open-sidebar");
+						   return false;
+					}
+					if (phase=="move" && direction =="right") {
+						   $("body").removeClass("open-sidebar");
+						   return false;
+					}
+				}
+		});*/
+	});
 	$(document).ready(function() {
 		$('img').addClass('img-responsive');
 		var url = window.location.pathname;
@@ -71,4 +92,6 @@
 	})
 	
 </script>
-<script src="/js/slider-fullpage.js" ></script> 
+<!--
+<script src="/js/jquery.touchSwipe.min.js" ></script>
+<script src="/js/slider-fullpage.js" ></script>--> 
