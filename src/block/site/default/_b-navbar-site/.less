@@ -71,47 +71,18 @@
 					min-width: 400px;
 					padding: 20px;
 					background: @white;
-					border-radius: 0;
 				}
 				.form-control{
-					height: 44px;
 					border: 1px solid lighten(@black, 40%);
 					border-right: 0;
-					border-radius: 0;
 					background: @white; 
-					.mixin-headings(
-						@font-family: @din,
-						@font-size: 16px, 
-						@line-height: inherit, 
-						@color: @black
-					);
+					color: @black;				
 					&::-webkit-input-placeholder {
 						color: @black;
-						.mixin-headings(
-							@font-family: @din,
-							@font-size: 16px, 
-							@line-height: inherit, 
-							@color: @black
-						);
-
 					}
 					&:-moz-placeholder {
-						.mixin-headings(
-							@font-family: @din,
-							@font-size: 16px, 
-							@line-height: inherit, 
-							@color: @black
-						);
+						color: @black;
 
-					}
-					&:focus{
-						box-shadow: none;
-						border-color: @black;
-					}
-				}
-				.form-control:focus + .input-group-btn{
-					.btn{
-						border-color: @black;						
 					}
 				}
 				.btn{
@@ -119,34 +90,10 @@
 					background: @white;
 					border: 1px solid lighten(@black, 40%);
 					border-left: 0;
-					border-radius: 0; 
-					padding: 9px 12px;
-					margin-left: 0;
-					&:before{
-						font-family: @icon-base;
-						content: @icon-magnifying;
-						display: block;
-						font-size: 17px;
-						color: inherit;
-					}
-					&:focus,
-					&:active{
-						outline: none;
-						box-shadow: none;
-					}
 				}
 			}
 		}
 	}
-}
-._index__navbar{    
-	position: fixed;
-    width: 100%;
-    z-index: 999;
-    /* @media @media-size-sm{    	
-    		width: 340px;
-    		right: 0;
-    } */
     &.bg-transparent{
 		background: transparent;
 		.navbar-nav{
@@ -236,7 +183,7 @@
     }
     &.bg-white{
 		background: @white;
-		opacity: @opacity;
+		//opacity: @opacity;
 		.navbar-nav{
 			> li{
 				> a{
@@ -255,6 +202,20 @@
 			background-color: lighten(@black, 20%);
 		}
     }
+}
+._index__navbar{    
+	position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+.navbar-absolute{
+	@media @media-device{
+		position: absolute;
+		top: 0;
+		width: 100%;
+		left: 0;
+		z-index: 100;
+	}
 }
 .swipe-area{
 	position: fixed;

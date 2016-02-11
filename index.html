@@ -29,9 +29,13 @@
 <script src="/js/document-ready.js" ></script> 
 <script>
 	$(window).load(function(){
-		$("[data-toggle]").click(function() {
-		  var toggle_el = $(this).data("toggle");
+		$("[data-toggle-nav]").click(function() {
+		  var toggle_el = $(this).data("toggle-nav"); 
 		  $(toggle_el).toggleClass("open-sidebar");
+		});
+		$("[data-toggle-rub]").click(function() {
+		  var toggle_el = $(this).data("toggle-rub"); 
+		  $(toggle_el).toggleClass("open-sidebar-rub");
 		});
 		/*$(".swipe-area").swipe({
 			  swipeStatus:function(event, phase, direction, distance, duration, fingers)
@@ -100,11 +104,11 @@
 <script src="/js/slider-fullpage.js" ></script>--> 
 	</head>
 	<body>
-		<nav class="navbar navbar-default _index__navbar bg-transparent">
+		<nav class="navbar navbar-default _index__navbar ">
 	<div class="container-fluid">	
 		<div class="navbar-header">
 			<!-- <button type="button" class="hamburger navbar-hamburger is-closed" data-toggle="collapse" data-target="#navbarSite"> -->
-			<button type="button" class="hamburger navbar-hamburger is-closed" data-toggle="body">
+			<button type="button" class="hamburger navbar-hamburger is-closed" data-toggle-nav="body"> 
 				<span class="hamb-top"></span>
 				<span class="hamb-middle"></span>
 				<span class="hamb-bottom"></span>

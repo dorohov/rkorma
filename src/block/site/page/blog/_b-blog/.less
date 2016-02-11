@@ -1,0 +1,140 @@
+.blog__page{
+	//opacity: @opacity;		
+	padding: 10px 0 50px;
+	position: relative;
+	.mixin-headings(
+		@font-family: @din-med,
+		@font-size: 16px, 
+		@line-height: 24px, 
+		@color: @white
+	);
+}
+._blb__scroll-box{
+	.flex-display(@display: flex);
+	.align-items(@align: stretch);
+	.justify-content(@justify: space-between);	
+}
+._blb_scroll{
+	width: 100%;
+	padding-right: 15px;
+    height: 795px;
+    overflow-y: hidden;
+	@media @media-size-xs{
+		overflow-y: inherit;
+		height: auto; 
+		padding: 0;
+	}
+}
+@scroll: #d5d5d5;
+._blb_scroll-line{
+	position: relative;
+	width: 18px;
+	@media @media-size-xs{
+		display: none;
+	}
+	&:before{
+		content: '';
+		top: 0;
+		background: @scroll;
+		width: 2px;
+		bottom: 0;
+		position: absolute;
+		left: 50%;
+		.rotation-translateX(@x:-50%);
+	}
+	.scroll{
+		border-radius: 50%;
+		position: absolute;
+		background: @scroll;
+		width: 18px;
+		height: 18px;
+		top: 50%;
+	}
+}
+._blb__list-block{
+	display: none;
+	@media @media-size-xl{
+		display: block;
+	}
+}
+._i-blog__list{
+	@blb-list: rgb(133, 206, 136);
+	&._blb__list{
+		border-color: @blb-list;
+		color: @blb-list;
+		._i-blog__list-item{
+			border-bottom:none;
+		}
+	}
+}
+._blb__line{	
+	.flex-display(@display: flex);
+	.flex-direction(@direction: row);
+	.align-items(@align: stretch);
+	margin-bottom: 30px;
+	min-height: 493px;
+	&:last-child{
+		margin-bottom: 0px!important;
+	}
+	@media @media-size-lg{
+		.flex-wrap(@wrap: wrap);
+		> div{
+			width: 50%;
+		}
+	}	
+	@media @media-size-md{
+		.flex-wrap(@wrap: wrap);
+		min-height: 355px;
+		> div{
+			width: 50%;
+		}
+	}
+	@media @media-size-sm{
+		.flex-wrap(@wrap: wrap);
+		min-height: 285px;
+		> div{
+			width: 50%;
+		}
+	}
+	@media @media-size-xs{
+		margin-bottom: 0;
+		.flex-direction(@direction: column);
+		> div{
+			margin-bottom: 20px;
+			width: 100%; 
+			height: 400px;
+		}
+	}
+}
+.first-line{
+	@media @media-size-lg{
+		margin-bottom: 0;
+		> div{
+			height: 270px;
+			margin-bottom: 30px;
+		}
+	}
+	@media @media-size-md{
+		margin-bottom: 0;
+		> div{
+			height: 355px;
+			margin-bottom: 30px;
+		}
+	}
+	@media @media-size-sm{
+		margin-bottom: 0px;
+		> div{
+			margin-bottom: 30px;
+			height: 270px;
+		}
+	}
+}
+.second-line{
+	min-height: 330px;
+	@media @media-size-md{
+		min-height: 355px;		
+	}	
+	@media @media-size-sm{
+		min-height: 235px;
+	}
+}

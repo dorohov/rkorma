@@ -26,9 +26,13 @@
 <script src="/js/document-ready.js" ></script> 
 <script>
 	$(window).load(function(){
-		$("[data-toggle]").click(function() {
-		  var toggle_el = $(this).data("toggle");
+		$("[data-toggle-nav]").click(function() {
+		  var toggle_el = $(this).data("toggle-nav"); 
 		  $(toggle_el).toggleClass("open-sidebar");
+		});
+		$("[data-toggle-rub]").click(function() {
+		  var toggle_el = $(this).data("toggle-rub"); 
+		  $(toggle_el).toggleClass("open-sidebar-rub");
 		});
 		/*$(".swipe-area").swipe({
 			  swipeStatus:function(event, phase, direction, distance, duration, fingers)

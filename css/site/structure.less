@@ -1,5 +1,14 @@
 body{
 	//min-height: 5900px;
+	&.body-second{
+
+		@media @media-size-sm{
+			padding-top: 115px;
+		}
+		@media @media-size-xs{
+			padding-top: 155px;
+		}
+	}
 }
 a{
 	color: @blue;
@@ -151,4 +160,85 @@ a{
 .bolus-right-3{
     bottom: -50px;
     right: 430px;
+}
+.content-block{
+	background: @white;
+}
+.heading-block{	
+	.mixin-headings(
+		@font-family: @agoras-black,
+		@font-size: 48px, 
+		@line-height: 56px, 
+		@color: lighten(@black, 20%)
+	); 
+	@media @media-size-sm{
+		font-size: 36px;
+		line-height: 44px;
+	}
+}
+.dropdown-form{
+	@media @media-screen{
+		border-radius: 0;
+	}
+	.form-control{
+		height: 44px;
+		border: 1px solid @white;
+		border-right: 0;
+		border-radius: 0;
+		background: transparent; 
+		.mixin-headings(
+			@font-family: @din,
+			@font-size: 16px, 
+			@line-height: inherit, 
+			@color: @white
+		);
+		&::-webkit-input-placeholder {
+			.mixin-headings(
+				@font-family: @din,
+				@font-size: 16px, 
+				@line-height: inherit, 
+				@color: fadeout(@white, 30%)
+			);
+
+		}
+		&:-moz-placeholder {
+			.mixin-headings(
+				@font-family: @din,
+				@font-size: 16px, 
+				@line-height: inherit, 
+				@color: fadeout(@white, 30%)
+			);
+
+		}
+		&:focus{
+			box-shadow: none;
+			border-color: @black;
+		}
+	}
+	.form-control:focus + .input-group-btn{
+		.btn{
+			border-color: @black;						
+		}
+	}
+	.btn{
+		color: @white;
+		background: transparent;
+		border: 1px solid @white;
+		border-left: 0;
+		border-radius: 0; 
+		padding: 9px 12px;
+		margin-left: 0;
+		&:before{
+			font-family: @icon-base;
+			content: @icon-magnifying;
+			display: block;
+			font-size: 17px;
+			color: inherit;
+		}
+		&:focus,
+		&:active{
+			outline: none;
+			box-shadow: none;
+		}
+	}
 }
