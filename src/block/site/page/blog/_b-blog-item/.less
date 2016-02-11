@@ -1,5 +1,5 @@
 .blog-item__page{
-	opacity: @opacity;	
+	//opacity: @opacity;	
 	//min-height: 3500px;	
 	padding: 70px 0 60px; 
 	position: relative;
@@ -12,11 +12,22 @@
 	@media @media-size-sm{	
 		padding: 10px 0 45px; 
 	}
+	@media @media-size-xs{	
+		padding: 10px 0 75px; 
+		font-size: 36px; 
+		line-height: 56px;
+	}
+	@media @media-size-xxs{	
+		font-size: 26px; 
+		line-height: 36px;
+	}
 }
 ._bib__container{
 	@media @media-size-xl{width: 1200px;}
 	@media @media-size-lg{width: 1000px;}
 	@media @media-size-md{width: 830px;}
+	@media @media-size-xs{padding-right: 125px}
+	@media @media-size-xxs{padding-right: 15px}
 }
 ._bib__header-block{
 	text-align: center;
@@ -24,6 +35,10 @@
 	@media @media-size-sm{
 		text-align: left;
 		margin-bottom: 20px;
+	}
+	@media @media-size-xs{
+		text-align: left;
+		margin-bottom: 20px;	
 	}
 }
 ._bib__item-time{
@@ -34,11 +49,31 @@
 		@line-height: inherit, 
 		@color: #bababa
 	);
+	@media @media-size-xs{	
+		font-size: 30px;
+		line-height: 28px;
+		&:before{
+			width: 21px!important;
+			height: 21px!important;
+		}
+	}
+	@media @media-size-xxs{	
+		font-size: 20px;
+		line-height: 28px;
+		&:before{
+			width: 16px!important;
+			height: 16px!important;
+		}
+	}
 }
 ._bib_heading{
 	margin-bottom: 30px;
 	@media @media-size-sm{
 		margin-bottom: 25px;	 
+	}
+	@media @media-size-xs{	
+	    word-break: break-word;
+		margin-bottom: 40px;
 	}
 }
 ._bib__tags{		
@@ -47,7 +82,6 @@
 		max-width: 555px;
 		border-top: 1px solid #dadada;
 		text-align: center;
-		padding: 70px 0 60px;
 		padding-top: 20px; 
 	}
 }
@@ -95,6 +129,17 @@
 	@media @media-size-sm{
 		margin: 30px 0; 
 	}
+	@media @media-size-xs{
+		font-size: 36px;
+		line-height: 48px;
+		padding: 45px 0px;
+		margin: 40px 0 70px;
+	}
+	@media @media-size-xxs{
+		font-size: 26px;
+		line-height: 38px;
+		margin: 40px 0 50px;
+	}
 }
 ._bib__big-preview{
 	height: 660px;
@@ -102,6 +147,9 @@
 	@media @media-size-sm{    
 		height: 365px;
     	margin: 30px 0;
+    }
+	@media @media-size-xs{    
+		height: 300px;
     }
 }
 ._bib__note{
@@ -151,6 +199,9 @@
 	@media @media-size-sm{
 		padding-top: 35px;
 	} 
+	@media @media-size-xs{
+		margin-top: 40px;
+	}
 	.green{
 		display: inline-block;
 		margin-right: 20px;
@@ -164,6 +215,14 @@
 			font-size: 18px;
 			margin-right: 30px;
 		} 
+		@media @media-size-xs{
+			font-size: 36px;
+			display: block;
+			margin: 0 0 20px;
+		}
+		@media @media-size-xxs{
+			font-size: 26px;
+		}
 	}  
 }
 ._bib__tags-bottom{
@@ -176,6 +235,17 @@
 		@media @media-size-sm{
 			font-size: 18px;
 		} 
+		@media @media-size-xs{
+			font-size: 36px;
+			display: block;
+			margin: 0 0 15px;
+		}
+		@media @media-size-xxs{
+			font-size: 26px;
+		}
+	}
+	@media @media-size-xs{
+		margin: 0 0 55px;
 	}
 }
 ._bib__socnet{
@@ -197,11 +267,25 @@
 				width: 50px;
 				line-height: 50px;
 				font-size: 22px;
-			}   
+			} 
+			@media @media-size-xs{
+				width: 100px;
+				line-height: 98px;	
+				font-size: 45px;		
+			}  
 		}
 		@media @media-size-sm{
 			margin-right: 25px;
 		}
+		@media @media-size-xs{
+			margin-right: 40px;
+			margin-bottom: 20px;
+		}
+		@media @media-size-xxs{
+			display: block;
+			max-width: 100px;
+			margin: 0 auto 20px;
+		}  
 		&.icon-vk:before{content: @icon-vk;}
 		&.icon-fb:before{content: @icon-fb;}
 		&.icon-ok:before{content: @icon-ok;}
@@ -217,6 +301,7 @@
 	width: 395px;
 	height: 100%;
 	.transition(@duration:.5s, @ease:ease-out);
+	@media @media-size-xxs{display: none}
 }
 .nav-rub__block{
 	background: @green-d;
@@ -307,6 +392,9 @@
 }
 .nav-rub__form{
 	margin-bottom: 40px;
+	@media @media-size-xs{
+		line-height: 20px;
+	}
 }
 .nav-rub__rub-list{
 	list-style: none;
@@ -316,7 +404,10 @@
 		@font-size: 16px, 
 		@line-height: 28px, 
 		@color: fadeout(@white, 30%)
-	);
+	);	
+	@media @media-size-xs{
+		font-size: 24px;
+	}
 	> li{
 		margin-bottom: 15px;
 		&.__header{
