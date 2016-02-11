@@ -1599,6 +1599,7 @@ body.open-sidebar{
 .calcite-header__heading{
 	font-size: 48px;
 	line-height: 48px;
+	color: lighten(@black, 80%);
 	@media @media-size-sm{
 		margin-bottom: 25px
 	}
@@ -3422,12 +3423,14 @@ body.open-sidebar{
 		&.rect-left{
 			border-radius: 0 35px 0px 0;
 			width: 7%;
-			left: 0; 
+			left: 0; 			
+			transition:width 0.4s ease;
 		}
 		&.rect-right{
 			right: 0;
 			width: 93%;
 			border-radius: 35px 0 0px 0;
+			transition:width 0.4s ease;
 		}
 	}
 	@media @media-size-sm{
@@ -3447,6 +3450,36 @@ body.open-sidebar{
 }
 ._inp-carousel__inner{
 	margin-bottom: 45px;
+	&.l-arrow {
+		._inp-carousel__rect{
+			&.rect-left{
+				width: 7%;
+			}
+			&.rect-right{
+				width: 93%;
+			}
+		}
+	}
+	&.c-arrow {
+		._inp-carousel__rect{
+			&.rect-left{
+				width: 40%;
+			}
+			&.rect-right{
+				width: 60%;
+			}
+		}
+	}
+	&.r-arrow {
+		._inp-carousel__rect{
+			&.rect-left{
+				width: 72.5%;
+			}
+			&.rect-right{
+				width: 27.5%;
+			}
+		}
+	}
 	@media @media-screen{
 		.item{
 			height: 640px; 
