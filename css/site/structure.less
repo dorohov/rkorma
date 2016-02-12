@@ -68,6 +68,24 @@ a{
  		background: fadeout(@blue, 40%);
  	}
  }
+.btn-green{
+	display: block;
+	.mixin-headings(
+		@font-family: @din-bold,
+		@font-size: 14px, 
+		@line-height: 24px, 
+		@color: @white
+	);
+	background: @green-d;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 15px 10px;
+	&:hover{
+		text-decoration: none;
+		color: @white;
+		background: darken(@green-d, 10%);
+	}
+}
 .btn-footer{
 	@color-btn: #ccffcc;
 	display: block;

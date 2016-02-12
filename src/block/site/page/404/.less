@@ -1,0 +1,30 @@
+.error404__page{
+	//opacity: @opacity;
+	min-height:930px; 
+	position: relative;
+	padding-bottom: 50px;
+	.flex-display(@display: flex);
+	.justify-content(@justify: center);
+	.align-items(@align: center);
+	text-align: center;	
+	.mixin-headings(
+		@font-family: @din-med,
+		@font-size: 18px, 
+		@line-height: 24px, 
+		@color: inherit
+	);
+	@media @media-size-xs{
+		min-height: 650px;
+	}
+}
+._be404__content{
+	padding: 0 15px;
+	.rotation-translateY(@y:-40px);
+	img{
+		margin-bottom: 40px;
+	}
+}
+._be404-btn{
+	max-width: 200px;
+	margin: 20px auto;
+}
