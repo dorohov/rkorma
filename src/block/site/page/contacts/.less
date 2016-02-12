@@ -1,0 +1,109 @@
+.contacts__page{
+	//opacity: @opacity;
+	position: relative;
+	padding-bottom: 50px;
+	@media @media-size-xs{
+		padding-bottom: 0;
+	}
+}
+._cb__container{
+	width: 100%;
+}
+._cb__heading{
+	@media @media-size-xs{
+		font-size: 60px;
+		line-height: 72px;
+	}
+	@media @media-size-xxs{
+		font-size: 40px;
+		line-height: 52px;
+	}
+}
+._cb__map-block{
+	background: url('@{url-path-img}/contacts/bg-map.jpg') no-repeat center top;
+	.flex-display(@display: flex);
+	.justify-content(@justify: center);
+	.align-items(@align: center);	
+	height: 795px;
+	@media @media-size-sm{
+		height: 475px;
+	}
+	@media @media-size-xs{
+		.align-items(@align: flex-start);
+		margin: 0 -15px;
+		height: inherit;
+		padding-bottom: 280px;
+		background: url('@{url-path-img}/contacts/bg-map.jpg') no-repeat 8% 155%;
+	
+	}
+}
+._cb__panel{
+	.flex-display(@display: flex);
+	.align-items(@align: stretch);
+	max-width: 730px;
+	background: @white;
+	margin: 0 auto;
+	width: 100%;
+	min-height: 275px;
+	padding: 45px 60px;
+	.rotation-translateY(@y:-45px);    
+	box-shadow: 25px 25px 45px fadeout(@black, 85%);
+	@media @media-size-xs{
+		padding: 15px;
+		.rotation-translateY(@y:0px);  
+		.flex-direction(@direction: column);
+		.align-items(@align: flex-start);
+		box-shadow: none;
+	}
+}
+._cb__item{ 
+	.mixin-headings(
+		@font-family: @din-light,
+		@font-size: 16px, 
+		@line-height: 24px, 
+		@color: lighten(@black, 20%)
+	);
+	a{
+		color: inherit;
+	}
+	@media @media-size-xs{
+		font-size: 36px; 
+		line-height: 50px;
+		margin-bottom: 40px;
+	}
+	@media @media-size-xxs{
+		font-size: 18px; 
+		line-height: 28px;
+	}
+}
+._cb__line{
+	background: #e6e6e6;
+	width: 1px;
+    margin: 0 60px;
+	@media @media-size-xs{
+		display: none;
+	}
+}
+._cb__item-heading{
+	.mixin-headings(
+		@font-family: @din-bold,
+		@font-size: 24px, 
+		@line-height: 34px, 
+		@color: @green-d
+	);
+	margin-bottom: 15px;
+	@media @media-size-xs{
+		font-size: 36px; 
+		line-height: 44px;
+	}
+	@media @media-size-xs{
+		font-size: 26px; 
+		line-height: 30px;
+	}
+}
+._cb__item-address{
+	margin-bottom: 10px;
+	@media @media-size-xs{
+		margin-bottom: 30px;
+	}
+}
