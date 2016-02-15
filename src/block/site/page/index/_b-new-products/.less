@@ -15,6 +15,9 @@
 	@media @media-size-sm{
 		min-height: 730px;
 		padding: 135px 0 0; 
+	}		
+	@media @media-size-xs{
+		padding: 55px 0 20px ; 
 	}
 }
 ._inp__container{	
@@ -189,6 +192,20 @@
 		@color: inherit
 	);
 	margin-bottom: 10px;
+}
+._inp-carousel__caption-heading-small{
+	margin-bottom: 20px;
+}
+._inp-carousel__caption-note{
+	max-width: 660px;
+	width: 100%;
+	.mixin-headings(
+		@font-family: @din,
+		@font-size: 18px, 
+		@line-height: 24px, 
+		@color: inherit
+	);
+	text-align: center;
 }
 ._inp-carousel__caption-btn{
 	width: 160px;

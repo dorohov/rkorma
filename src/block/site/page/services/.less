@@ -237,6 +237,22 @@
 		);
 		margin-bottom: 10px;
 	}
+	ul{
+		list-style: none;
+		li{
+			margin-bottom: 10px;
+			&:before{
+				content: '';
+				width: 5px;
+				height: 5px;
+				border-radius: 50%;
+				background: @green-d;
+				display: inline-block;
+				margin-right: 5px;
+				vertical-align: middle;
+			}
+		}
+	}
 	@media @media-size-xs{
 		font-size: 36px;
 		line-height: 48px;
@@ -244,6 +260,7 @@
 	@media @media-size-xxs{
 		font-size: 26px;
 		line-height: 38px;
+		word-break: break-word;
 	}
 
 }
