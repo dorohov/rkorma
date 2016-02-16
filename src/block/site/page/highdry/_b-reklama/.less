@@ -1,6 +1,19 @@
 .highdry-reklama{
 	padding-top: 15px;
 	position: relative;
+	.round-grey{
+		@media @media-size-xs{
+			display: none;
+		}
+	}
+	@media @media-size-sm{
+		.round-grey{
+			display: none;
+		}
+	}
+	@media @media-size-xs{
+		padding-top: 45px;
+	}
 }
 ._hd-reklama__content{
 	.flex-display(@display: flex);
@@ -12,6 +25,9 @@
 		@font-size: 20px, 
 		@line-height: 29px, 
 		@color: lighten(@black, 20%));
+	@media @media-size-xs{
+		min-height: 340px;
+	}
  
 }
 .reklama-content__quest{
@@ -33,6 +49,19 @@
 		margin: 0 35px;		
 		//max-width: 350px;	
 	}
+	@media @media-size-sm{
+		margin: 0 10px;
+		background-position: center left;
+		max-width: 280px;
+	}
+	@media @media-size-xs{
+		margin: 0;
+		position: absolute;
+		left: -150px;
+		width: 280px;
+		top: 50%;
+		.rotation-translateY(@y:-50%);
+	}
 	._quest{
 		.mixin-headings(
 		@font-family: @proxima-bold, 
@@ -44,6 +73,13 @@
 	> div{
 		.rotation-translate(@deg:0deg, @x:-20px, @y:0px);
 		display: inline-block;
+		@media @media-size-sm{
+			.rotation-translate(@deg:0deg, @x:50px, @y:0px);
+		}
+		@media @media-size-xs{
+			display: none;
+		}
+
 	}
 }
 .reklama-content__note{	
@@ -54,6 +90,27 @@
 		margin: 0 0 0 35px;	 	
 		//max-width: 350px;	
 	} 
+	@media @media-size-xs{    
+		max-width: 100%;
+		margin: 0;
+		padding-left: 120px;
+	} 
+}
+.reklama-content__quest-device{
+	display: none;
+	.mixin-headings(
+		@font-family: @proxima-extrabold, 
+		@font-size: 36px, 
+		@line-height: 36px, 
+		@color: #1e93f6);
+	text-align: center;
+	text-transform: uppercase;
+	@media @media-size-xs{
+		display: block;
+	}
+	.white{
+		color: #1e93f6;
+	}
 }
 .reklama-content__list{
 	.flex-display(@display: flex);
@@ -88,6 +145,34 @@
 			}
 			&:nth-of-type(4){			
 				.rotation-translate(@deg:0deg, @x:-13%, @y:0%);
+			}
+		}
+		@media @media-size-sm{
+			&:nth-of-type(1){			
+			.rotation-translate(@deg:0deg, @x:-13%, @y:0%);
+			}
+			&:nth-of-type(2){			
+				.rotation-translate(@deg:0deg, @x:-6%, @y:0%);
+			}
+			&:nth-of-type(3){			
+				.rotation-translate(@deg:0deg, @x:-6%, @y:0%);
+			}
+			&:nth-of-type(4){			
+				.rotation-translate(@deg:0deg, @x:-13%, @y:0%);
+			}
+		}
+		@media @media-size-xs{
+			&:nth-of-type(1){			
+			.rotation-translate(@deg:0deg, @x:-3%, @y:0%);
+			}
+			&:nth-of-type(2){			
+				.rotation-translate(@deg:0deg, @x:4%, @y:0%);
+			}
+			&:nth-of-type(3){			
+				.rotation-translate(@deg:0deg, @x:4%, @y:0%);
+			}
+			&:nth-of-type(4){			
+				.rotation-translate(@deg:0deg, @x:-3%, @y:0%);
 			}
 		}
 	}

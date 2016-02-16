@@ -2,6 +2,7 @@
 @bg-answer:		#48b3d9;
 .highdry-header{
 	background: url(/img/highdry/bg-header-screen.jpg) no-repeat center top;
+	//opacity: @opacity;
 } 
 ._hd-header__content{
 	color: @color-header;
@@ -16,6 +17,10 @@
 	min-height: 515px;
     padding-top: 10px;
     padding-bottom: 10px;
+	@media @media-size-xs{
+		.justify-content(@justify: flex-end);
+
+	}
 }
 ._hd-header__phone{
 	div{
@@ -50,6 +55,9 @@
 			color: @base;
 		}
 	}
+	@media @media-size-xs{
+		display: none;
+	}
 }
 ._hd-header__heading{
 	.mixin-headings(
@@ -64,6 +72,10 @@
 	background: @bg-answer url(/img/highdry/bg-answer.png) no-repeat right bottom;
 	color: darken(@white, 2%); //#fafafa
 	padding: 40px 0;
+	@media @media-size-xs{
+		background-size: 530px;
+	}
+
 }
 ._hd-answer__content{
 	.mixin-headings(

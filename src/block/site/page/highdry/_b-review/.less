@@ -3,6 +3,11 @@
 	min-height: 1120px;
     padding-bottom: 70px;
     position: relative;
+    @media @media-size-xs {
+    	.bg-line{
+    		display: none;
+    	}
+    }
 } 
 ._hd-panel{
 	margin: 140px 0 130px;
@@ -23,7 +28,8 @@
 		line-height: 38px;
 	}
 	@media @media-size-xs{
-		padding: 30px 25px;
+		padding: 10px 15px;
+		font-size: 30px;
 	}
     
 }
@@ -74,8 +80,8 @@
     	text-align: center;
 	}
 	@media @media-size-xs{
-		font-size: 36px;
-		line-height: 44px;
+		font-size: 22px;
+		line-height: 34px;
     	max-width: 100%;
     	text-align: center;
 	}
@@ -131,7 +137,7 @@
     	background: lighten(#f44932, 5%);
     }
 	@media @media-size-sm{
-		margin: 65px auto 0;
+		margin: 25px auto 0;
 		padding: 17px 15px;
 		max-width: 240px;
 		text-transform: uppercase;

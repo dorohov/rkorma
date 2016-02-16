@@ -3,6 +3,11 @@
 	min-height: 680px;
 	padding: 90px 0;
 	position: relative;
+	@media @media-size-xs{
+		padding: 30px 0;
+    	min-height: inherit;
+		.round-blue{display: none}
+	}
 }
 ._hd-application__content{
 	.flex-display(@display: flex);
@@ -15,6 +20,9 @@
 		@font-size: 20px, 
 		@line-height: 29px, 
 		@color: lighten(@black, 20%));
+	@media @media-size-xs{
+		.flex-direction(@direction: column);
+	}
 
 }
 .application-content__quest{
@@ -22,6 +30,10 @@
 	max-width: 400px;
 	min-height: 440px;
 	background: url(/img/highdry/bg-application.png) no-repeat center right;
+	@media @media-size-xs{
+		display: none;
+	}
+
 }
 .application-content__list{
 	.flex-display(@display: flex);
@@ -30,11 +42,17 @@
 	
     min-height: 130px;
     list-style: none;
-    transform: translateX(10px) translateY(52px);
 	.rotation-translate(@deg:0deg, @x:10px, @y:52px);
 	li{
 		padding-left: 25px;
-		.round-list()
+		.round-list();	
+		@media @media-size-xs{
+			padding-left: 35px;
+			margin-bottom: 20px;
+		}
+	}
+	@media @media-size-xs{		
+		.rotation-translate(@deg:0deg, @x:0px, @y:52px);
 	}
 }
 .application-content__panel{
@@ -54,6 +72,13 @@
 	border-bottom: 1px solid #3a9dcd;
 	b{
 		font-family: @proxima-extrabold;
+	}
+	@media @media-size-xs {
+		width: 100%;
+		max-width: 100%;
+		right: 0;
+		position: relative;
+		order: -1;
 	}
 }
 .round-blue{
