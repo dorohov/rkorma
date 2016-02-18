@@ -1,6 +1,7 @@
 .index__header{
 	//opacity: @opacity;
 	background: url(/img/index/bg-header.jpg) no-repeat center -17px;
+	background-size: cover;
 	min-height: 1060px;
 	position: relative;
 	.flex-display(@display: flex);
@@ -70,9 +71,37 @@
 		line-height: 34px;
 	}
 }
+
+
+
+@keyframes animated-mouse {
+	0% {
+		bottom: 100px;
+		transform:scale(0.9);
+	}
+
+	50% {
+		bottom: 120px;
+		transform:scale(1);
+	}
+
+	100% {
+		bottom: 100px;
+		transform:scale(0.9);
+	}
+}
+
+
+
 ._ih__scroll-next{
+	animation-duration: 1s;
+	animation-fill-mode: both;
+	animation-iteration-count: infinite;
+	animation-name: animated-mouse;
+	transform-origin:center center;
+	
 	position: absolute;
-	bottom: 30px;
+	bottom: 100px;
 	left: 50%;
 	color: @white;
 	.rotation-translateX(@x:-50%);

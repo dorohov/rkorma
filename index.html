@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="ru-RU"> 
+<html class="fsvs" dir="ltr" lang="ru-RU"> 
 	<head>
 	<meta charset="utf-8">	
 <title>rkorma</title>
@@ -10,6 +10,7 @@
 <link type="image/x-icon" href="/favicon.ico" rel="shortcut icon" />
 <link type="image/x-icon" href="/favicon.ico" rel="icon" />
 
+<!--<link href="/css/FSVS.css" rel="stylesheet">-->
 <link href="/css/bootstrap/bootstrap.css" rel="stylesheet">
 <link href="/css/site.css" rel="stylesheet">
 
@@ -21,6 +22,13 @@
 
 
 <script src="/js/jquery.min.js" ></script>
+
+<!--<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>-->
+<!--<script src="/js/jquery-plugin/FSVS.js"></script>-->
+
+<!--<script src="/js/jquery-plugin/jquery.jqfeScrollTo.js"></script>-->
+<script src="/js/jquery-plugin/jquery-ui.min.js"></script>
+<script src="/js/jquery-plugin/scrollreveal.min.js"></script>
 
 <script src="/js/bootstrap.min.js" ></script>
 <script src="/js/device.min.js" ></script>
@@ -104,7 +112,7 @@
 <script src="/js/jquery.touchSwipe.min.js" ></script>
 <script src="/js/slider-fullpage.js" ></script>--> 
 	</head>
-	<body>
+	<body id="fsvs-body" >
 		<nav class="navbar navbar-default _index__navbar bg-white ">
 	<div class="container-fluid">	
 		<div class="navbar-header">
@@ -140,13 +148,13 @@
 	</div>
 </nav>
 
-		<header class="index__header">
+		<header class="index__header stepbystep">
 	<div class="_ih__heading">Важный элемент вашего бизнеса</div>
 	<div class="_ih__note">Наша миссия — содействовать российскому сельхозпроизводителю в повышении качества продукции, создавая оптимальные условия для развития новых гармонизированных стандартов производства.</div>
 	<a href="#" class="_ih__scroll-next"></a>
 </header> 
 
-		<div class="index__about">
+		<div class="index__about stepbystep">
 	<div class="container _i-about__container ">
 		<div class="row">
 			<div class="col-xs-12">
@@ -202,28 +210,28 @@
 	</div>
 </div> 
 
-		<div class="index__products">
-	<div class="_i-products__item ">
+		<div class="index__products stepbystep">
+	<a href="#1" class="_i-products__item ">
 		<div class="item-bg item1">
 			<div class="item-bg__icon icon1"></div>
 			<div class="item-bg__header">для птицы</div>
 		</div>
-	</div> 
-	<div class="_i-products__item ">
+	</a> 
+	<a href="#1" class="_i-products__item ">
 		<div class="item-bg item2">
 			<div class="item-bg__icon icon2"></div>
 			<div class="item-bg__header">для свиней</div>
 		</div>
-	</div> 
-	<div class="_i-products__item ">
+	</a> 
+	<a href="#1" class="_i-products__item ">
 		<div class="item-bg item3">
 			<div class="item-bg__icon icon3"></div>
 			<div class="item-bg__header">для коров</div>
 		</div>
-	</div> 
+	</a> 
 </div>
 
-		<div class="index__new-products">
+		<div class="index__new-products stepbystep">
 	<div class="container _inp__container ">
 		<div class="row">
 			<div class="col-xs-12">
@@ -297,7 +305,7 @@
 	</div>
 </div> 	
 
-		<div class="index__blog">
+		<div class="index__blog stepbystep">
 	<div class="container _i-blog__container ">
 		<div class="line row line-top">
 			<div class="col-blog-2">

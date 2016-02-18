@@ -199,7 +199,7 @@
 	//opacity: @opacity;
 	background: @white;
 	font-family: @din-bold;
-	min-height: 135px;/*175*/
+	min-height: 115px;/*175*/
 	padding: 10px 0;/*25 0*/
 	@media @media-size-sm{
 		min-height: 115px;
@@ -231,7 +231,7 @@
 		}		
 	}
 	.navbar-nav{
-		margin-top: 30px;
+		margin-top: 24px;
 		> li{
 			> a{
 				text-transform: uppercase;
@@ -1433,6 +1433,7 @@ body.open-sidebar{
 		list-style: none;
 		> li{
 			a{	
+				
 				.flex-display(@display: flex);
 				.align-items(@align: center);
 				height: 130px; 	
@@ -1445,6 +1446,10 @@ body.open-sidebar{
 				padding: 0 35px;
 				background-position: center;
 				background-repeat: no-repeat;
+				transform-origin:center center;
+				transition:background-size ease 0.75s;
+				cursor:pointer;
+				
 				background-size: 0;
 				@media @media-size-md{
 					height: 90px;
@@ -1465,14 +1470,26 @@ body.open-sidebar{
 					border-top: 1px solid #e6e6e6; 
 				}
 			}
-			&.active{
+			&.active {
 				a{
 					background-size: 100%;
 					color: @white;
 					&:hover{
 						text-decoration: none;
-						cursor: default;
 					}
+					@media @media-size-sm{
+						background: @green-d!important;
+					}
+					@media @media-size-xs{
+						background: @white!important;
+						color: @green-d;
+					}
+				}
+			}
+			&:hover{
+				a{
+					background-size: 100%;
+					color: @white;
 					@media @media-size-sm{
 						background: @green-d!important;
 					}
@@ -1654,6 +1671,7 @@ body.open-sidebar{
 	width: 100%;
 	padding-left: 15px;
     height: 800px;
+	position:relative;
     overflow: hidden;
 	@media @media-size-sm{
 		padding-left: 0;
@@ -1726,7 +1744,7 @@ body.open-sidebar{
 		background: @scroll;
 		width: 18px;
 		height: 18px;
-		top: 50%;
+		top: 0%;
 	}
 }
 ._blb__list-block{
@@ -4231,6 +4249,7 @@ body.open-sidebar{
 .index__header{
 	//opacity: @opacity;
 	background: url(/img/index/bg-header.jpg) no-repeat center -17px;
+	background-size: cover;
 	min-height: 1060px;
 	position: relative;
 	.flex-display(@display: flex);
@@ -4300,9 +4319,37 @@ body.open-sidebar{
 		line-height: 34px;
 	}
 }
+
+
+
+@keyframes animated-mouse {
+	0% {
+		bottom: 100px;
+		transform:scale(0.9);
+	}
+
+	50% {
+		bottom: 120px;
+		transform:scale(1);
+	}
+
+	100% {
+		bottom: 100px;
+		transform:scale(0.9);
+	}
+}
+
+
+
 ._ih__scroll-next{
+	animation-duration: 1s;
+	animation-fill-mode: both;
+	animation-iteration-count: infinite;
+	animation-name: animated-mouse;
+	transform-origin:center center;
+	
 	position: absolute;
-	bottom: 30px;
+	bottom: 100px;
 	left: 50%;
 	color: @white;
 	.rotation-translateX(@x:-50%);
@@ -4734,6 +4781,7 @@ body.open-sidebar{
 	max-width: 33.33333%;
 	overflow: hidden;
 	position: relative;
+	color:#ffffff;
 	@media @media-size-xs{
 		max-width: 100%;
 		height: 860px;
@@ -4751,6 +4799,7 @@ body.open-sidebar{
 		.align-items(@align: center);
 		&:hover{
 			.scale(@ratio:1.1);
+			color:#ffffff;
 		}	
 		&.item1{
 			background: url(/img/index/product-item1.jpg) no-repeat center left;
