@@ -307,14 +307,14 @@
 	}
 }
 .production-item__page{
-
+	padding-bottom: 40px;
 }
 ._prodib__flex-block{
 	.flex-display(@display: flex);
 	.align-items(@align: stretch);
-	min-height: 640px; 
+	min-height: 690px; 
 	margin-left: -15px;
-	margin-bottom: -15px;
+	margin-right: -15px;
 	@media @media-size-sm{
 		height: inherit;
 	}
@@ -353,11 +353,15 @@
 		display: none;
 	}
 }
+._prodb__container{
+	overflow-x: hidden; 
+}
 ._prodib__scroll{
-	width: 100%;
+	width: 105%;
+	padding-right: 55px;
 	padding-left: 15px;
-    height: 640px;
-    overflow: hidden;
+    height: 690px;
+    overflow: auto;
 	@media @media-size-sm{
 		padding-left: 0;
 		padding-right: 15px;
