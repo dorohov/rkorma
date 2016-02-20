@@ -110,14 +110,14 @@ $(document).ready(function() {
 		
 		
 		
-		if(steps.size()) {
+		if(steps.size() && $('body').eq(0).hasClass('window-width-lg')) {
 			$(
 				function() {
 					
 					var n;
 					
-					if(lastsbs.offset().top < pos) { //+ 120
-						n = lastsbs.next('.stepbystep');
+					if(lastsbs.offset().top + 120 < pos) { //
+						n = lastsbs.next('.stepbystep').eq(0);
 						if(n.size() && n.data('steping')) {
 							
 							n.data('steping', false);
@@ -133,8 +133,8 @@ $(document).ready(function() {
 								);
 							
 						}
-					} else if(lastsbs.offset().top > pos) {//- 120
-						n = lastsbs.prev('.stepbystep');
+					} else if(lastsbs.offset().top - 120 > pos) {//
+						n = lastsbs.prev('.stepbystep').eq(0);
 						if(n.size() && n.data('steping')) {
 							
 							n.data('steping', false);
