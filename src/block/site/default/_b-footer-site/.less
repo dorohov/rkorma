@@ -45,7 +45,7 @@
 		.flex-order(@order: 6);
 		padding-top: 35px;
 		border-top: 1px solid #ccffcc;
-		margin: 0 15px;
+		margin: 0;
 		.flex-display(@display: flex);
 		.flex-wrap(@wrap: wrap);
 		font-size: 18px;
@@ -102,6 +102,9 @@
 		li{
 			line-height: 18px;
 			margin-bottom: 8px;
+			@media @media-size-xs{
+				word-break: break-word; 
+			}
 			&.__heading{
 				text-transform: uppercase;
 				font-family: @din-bold;
