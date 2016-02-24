@@ -1,0 +1,122 @@
+.partners__page{
+	opacity: @opacity;
+	position: relative;
+	padding-bottom: 50px;
+	min-height: 800px; 
+}
+._partb__container{
+	width: 100%;
+}
+._partb__flex{
+	display: flex;
+	flex-wrap: wrap;
+}
+._partb__item{
+	width: 25%;
+	height: 375px;
+	text-decoration: none;
+	border: 1px solid #b5b5b5;
+	padding: 15px 30px;
+	position: relative;
+	z-index: 1;
+	margin: -1px 0 0 -1px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	filter: grayscale(100%);
+	&:hover{
+		filter: grayscale(0%);
+		border-color: @green-d;
+		z-index: 2;
+	}
+	@media @media-size-lg{
+		height: 350px
+	}
+	@media @media-size-md{
+		height: 290px
+	}
+	@media @media-size-sm{
+		width: 33%;
+		height: 265px;
+	}
+	@media @media-size-xs{
+		width: 100%;
+		height: 265px;
+	}
+}
+._partb__modal{
+	.modal-dialog{
+		width: 995px;
+		.mixin-headings(
+			@font-family: @din-light,
+			@font-size: 16px, 
+			@line-height: 24px, 
+			@color: inherit
+		);
+		@media @media-size-md{
+			width: auto;
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+		@media @media-device{
+			width: auto;
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+		a{
+			color: @green-d;
+			text-decoration: underline;
+			&:hover{
+				text-decoration: none;
+			}
+		}
+	}
+	._partb__modal-flex{
+		padding: 60px;
+		display: flex;
+		margin: 0 -25px;
+		@media @media-size-xs{
+			flex-direction: column;
+			padding: 60px 25px 25px;
+		}
+		> div{
+			padding: 0 25px;
+			width: 100%;
+			@media @media-size-xs{
+				max-width: inherit;
+			}
+		}
+	}
+	.close{
+		font-size: 40px;
+		padding: 20px;
+		line-height: 20px;
+		position: absolute;
+		right: 0;
+	}
+	._partb__modal-preview{
+		max-width: 260px;
+		a{
+			font-size: 18px;
+			line-height: 24px;
+		}
+		@media @media-size-xs{
+			margin-bottom: 20px;
+		}
+	}
+	._partb__modal-note{
+		max-width: 660px;
+	}
+	._partb__modal-heading{
+		.mixin-headings(
+			@font-family: @agoras-black,
+			@font-size: 36px, 
+			@line-height: 36px, 
+			@color: inherit
+		);
+		margin-bottom: 10px;
+	}
+	._partb__modal-img{
+		margin-bottom: 30px;
+	}
+}
