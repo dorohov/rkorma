@@ -20,7 +20,8 @@ $(document).ready(function() {
 	var steps = $('.stepbystep');
 	steps.data('steping', true);
 	var lastsbs = steps.eq(0);
-	$('html, body').css({scrollTop : 0});
+	//$('html, body').css({scrollTop : 0});
+	$('body').eq(0).data('lastpos', 0);
 	
 	
 	
@@ -109,12 +110,27 @@ $(document).ready(function() {
 		
 		
 		
+		steps.each(function(index){
+			
+			var st = $(this);
+			var mdl = (st.outerHeight(true) / 2) + st.offset().top;
+			
+			if((mdl > pos && mdl < (pos + $(window).height())) && ($('body').eq(0).data('lastpos') < pos)) {
+				lastsbs = $(this);
+			}
+			
+		})
+		
+		
+		
+		
 		
 		if(steps.size() && $('body').eq(0).hasClass('window-width-lg')) {
 			$(
 				function() {
-					
+					/*
 					var n;
+					
 					
 					if(lastsbs.offset().top + 120 < pos) { //
 						n = lastsbs.next('.stepbystep').eq(0);
@@ -153,6 +169,26 @@ $(document).ready(function() {
 					} else {
 						
 					}
+					*/
+					
+					//console.log('dfsdfsdfs');
+					
+					if((lastsbs.outerHeight(true) + lastsbs.offset().top) < (pos + $(window).height())) {
+						var n = lastsbs.next('.stepbystep').eq(0);
+						if(n.size() && n.data('steping')) {
+							n.data('steping', false);
+							$('html, body').animate(
+								{
+									scrollTop: (n.offset().top + 0)
+								},
+								900,
+								function(){
+									lastsbs = n;
+									n.data('steping', true);
+								}
+								);
+						}
+					}
 					
 				}
 			);
@@ -160,8 +196,8 @@ $(document).ready(function() {
 		
 		
 		
-		
-		return false;
+		$('body').eq(0).data('lastpos', pos);
+		//return false;
 		
 	}).trigger('scroll');
 	
