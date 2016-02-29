@@ -1,0 +1,120 @@
+.scroll-hide {
+	overflow:hidden;
+	
+	.scroll-element {
+		overflow:auto;
+		
+		.scroll-overflow {
+			overflow:auto;
+		}
+	}
+}
+
+.scroll-container {
+	position:absolute;
+	
+	&.horizontal {
+		#site.w(100%);
+		#site.h(5px);
+		left:0;
+		bottom:10px;
+		
+		&.top {
+			top:10px;
+		}
+		&.bottom {
+			bottom:10px;
+		}
+		
+		.scroll-line {
+			#site.w(96%);
+			#site.h(1px);
+			left:2%;
+			top:50%;
+			
+			.scroll {
+				#site.w(10%);
+				#site.h(500%);
+				top:-200%;
+				
+				&.ball {
+					& > .scroll-ball {
+						#site.w(1em);
+						#site.h(1em);
+						left:50%;
+						top:-0.2em;
+					}
+				}
+			}
+		}
+		
+	}
+	&.vertical {
+		#site.w(5px);
+		#site.h(100%);
+		left:10px;
+		top:0;
+		
+		&.left {
+			left:10px;
+			right:initial;
+		}
+		&.right {
+			left:initial;
+			right:10px;
+		}
+		
+		.scroll-line {
+			#site.w(1px);
+			#site.h(100%);
+			top:0%;
+			left:50%;
+			
+			.scroll {
+				#site.w(500%);
+				#site.h(10%);
+				left:-200%;
+				
+				&.ball {
+					& > .scroll-ball {
+						#site.w(1.5em);
+						#site.h(1.5em);
+						left:-.55em;
+						top:50%;
+					}
+				}
+			}
+		}
+		
+	}
+	
+	.scroll-line {
+		position:absolute;
+		#site.bg(#999999);
+		
+		.scroll {
+			position:absolute;
+			left:0;
+			top:0;
+			#site.bg(#999999);
+			border-radius:4px;
+			
+			& > .scroll-ball {
+				display:none;
+			}
+			
+			&.ball {
+				#site.bg(transparent);
+				
+				& > .scroll-ball {
+					display:block;
+					content:'';
+					position:absolute;
+					#site.bg(#999999);
+					border-radius:50%;
+				}
+			}
+		}
+	}
+	
+}
