@@ -174,9 +174,12 @@ $(document).ready(function() {
 					//console.log('dfsdfsdfs');
 					
 					if((lastsbs.outerHeight(true) + lastsbs.offset().top) < (pos + $(window).height())) {
+						
 						var n = lastsbs.next('.stepbystep').eq(0);
 						if(n.size() && n.data('steping')) {
 							n.data('steping', false);
+							$('body').eq(0).css({'overflow' : 'hidden'});
+							$('html').eq(0).css({'overflow' : 'auto'});
 							$('html, body').animate(
 								{
 									scrollTop: (n.offset().top + 0)
@@ -185,9 +188,12 @@ $(document).ready(function() {
 								function(){
 									lastsbs = n;
 									n.data('steping', true);
+									$('html').eq(0).css({'overflow' : 'initial'});
+									$('body').eq(0).css({'overflow' : 'auto'});
 								}
 								);
 						}
+						
 					}
 					
 				}
