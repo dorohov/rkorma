@@ -15,6 +15,8 @@
 	@media @media-size-sm{
 		font-size: 48px;
 		line-height: 54px;
+		font-size: 36px;
+		line-height: 44px;
 	}
 	@media @media-size-xs{
 		font-size: 34px;
@@ -124,7 +126,7 @@
 		> a{
 			.mixin-headings(
 				@font-family: @din-med,
-				@font-size: 20px, 
+				@font-size: 18px, 
 				@line-height: 32px, 
 				@color: @green-d
 			);	
@@ -294,6 +296,7 @@
 	@media @media-size-sm{
 		width: 33%;
 		height: 265px;
+		padding: 15px 22px;
 	}
 	@media @media-size-xs{
 		width: 100%;
@@ -312,6 +315,8 @@
 		text-decoration: none;
 		color: @black;
 		border-color: @black;
+		color: @green-d;
+		border-color: @green-d;
 		z-index: 2;
 	}
 	&.active{
@@ -338,6 +343,16 @@
 		@line-height: 42px, 
 		@color: inherit
 	);
+	@media @media-size-sm{
+		font-size: 22px;
+    	line-height: 32px;
+	    word-break: break-all;
+	}
+	@media @media-size-xs{
+		font-size: 25px;
+	    line-height: 37px;
+	    word-break: break-all;
+	}
 }
 ._prodb__item-heading-small{		
 	.mixin-headings(

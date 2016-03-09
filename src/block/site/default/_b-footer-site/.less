@@ -15,6 +15,12 @@
 	b{
 		font-family: @din-bold;
 	}
+	@media @media-size-xs{
+		.container-fluid{
+			padding-left: 20px!important;
+			padding-right: 20px!important;	
+		}
+	}
 }
 ._b-footer-nav__flex{
 	.flex-display(@display: flex);
@@ -95,7 +101,8 @@
 	@media @media-size-xs{
 		max-width: 100% !important;
 		margin-bottom: 30px;
-		.flex-display(@display: flex); 
+		.flex-display(@display: flex);
+		padding: 0; 
 	}
 	ul{
 		list-style: none;

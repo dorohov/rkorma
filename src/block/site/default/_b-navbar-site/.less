@@ -13,6 +13,7 @@
 	.navbar-brand{
 		display: inline-block;
 		max-width: 66px;
+		max-width: 45px;
 		margin-left: 0px!important;
 		margin-top: 20px;
 		@media @media-size-sm{
@@ -96,6 +97,9 @@
 	}
     &.bg-transparent{
 		background: transparent;
+		@media @media-size-xs{
+			background: fadeout(@white, 80%);
+		}
 		.navbar-nav{
 			> li{
 				> a{
@@ -319,22 +323,23 @@
 					font-size: 22px;
 					line-height: 28px;
 					text-align: center;
+					padding: 10px;
 				}			
 				&.dropdown{
 					a{    
 						margin: 0 auto;
 						width: 100px;
 						padding: 0;
-						margin-top: 30px;
+						margin-top: 15px;
 						&:before{
 							border-radius: 50%;
-							width: 100px;
-							height: 100px;
+							width: 90px;
+							height: 90px;
 							border: 1px solid @green-d;
 							color: @green-d;
 							margin: 0 auto;
-							font-size: 38px;
-							line-height: 100px;
+							font-size: 30px;
+							line-height: 90px;
 						}
 					} 
 					&.open{
@@ -433,7 +438,7 @@
 	}
 	@media @media-size-xxs{
 		//padding: 120px 20px 20px 20px;
-		padding: 80px 20px 20px 20px;
+		padding: 65px 20px 20px 20px;
 		.navbar-nav{
 			> li{
 				> a{
@@ -477,7 +482,7 @@ body.open-sidebar{
 	}
 	.hamburger{
 		@media @media-size-xxs{
-			margin: 0 20px;
+			margin: 10px;
 		}		
 	}
 }
