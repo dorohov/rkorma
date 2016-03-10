@@ -53,6 +53,7 @@
 		margin: 0 10px;
 		background-position: center left;
 		max-width: 280px;
+    	background-size: 250px;
 	}
 	@media @media-size-xs{
 		margin: 0;
@@ -69,12 +70,16 @@
 		@line-height: 120px, 
 		@color: darken(@white, 2.8%));//#f8f8f8;
 		vertical-align: middle;
+		@media @media-size-sm{
+			font-size: 70px;
+			line-height: 90px;
+		}
 	}
 	> div{
 		.rotation-translate(@deg:0deg, @x:-20px, @y:0px);
 		display: inline-block;
 		@media @media-size-sm{
-			.rotation-translate(@deg:0deg, @x:50px, @y:0px);
+			.rotation-translate(@deg:0deg, @x:50px, @y:10px);
 		}
 		@media @media-size-xs{
 			display: none;

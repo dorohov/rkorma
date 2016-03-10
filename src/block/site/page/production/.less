@@ -349,8 +349,10 @@
 	    word-break: break-all;
 	}
 	@media @media-size-xs{
-		font-size: 25px;
-	    line-height: 37px;
+		// font-size: 25px;
+	 //    line-height: 37px;
+		font-size: 20px;
+	    line-height: 32px;
 	    word-break: break-all;
 	}
 }
@@ -362,6 +364,9 @@
 		@color: inherit
 	);
 	margin-bottom: 15px;
+	@media @media-size-xs{
+		font-size: 16px;
+	}
 }
 ._prodb__item-note{
 	//height: 205px;
@@ -495,6 +500,10 @@
 	.btn-slider{
 		color: @green-d;
 		border-color: @green-d;
+		@media @media-size-xs{
+		    max-width: 200px;
+		    margin: 0 auto;
+		}
 		&:hover{
 			color: darken(@green-d, 10%);
 			border-color: darken(@green-d, 10%);
