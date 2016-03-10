@@ -2,20 +2,34 @@
 <html class="fsvs" dir="ltr" lang="ru-RU"> 
 	<head>
 	[snp tpl="src/block/site/page/head/.html" ]
+	<script src="plugins/fullPage.js/vendors/jquery.easings.min.js"></script>
+	<script src="plugins/fullPage.js/vendors/jquery.slimscroll.min.js"></script>
+	<script src="plugins/fullPage.js/jquery.fullPage.min.js" ></script>
 	</head>
-	<body id="fsvs-body" >
+	<body >
 		[snp tpl="src/block/site/default/_b-navbar-site/.html" class="_index__navbar bg-white" ]
+		<div id="fullpage" >
+			[snp tpl="src/block/site/page/index/_b-header/.html" class="index__header section" ] 
 
-		[snp tpl="src/block/site/page/index/_b-header/.html" class="index__header stepbystep" ] 
+			[snp tpl="src/block/site/page/index/_b-about/.html" class="index__about  section" ] 
 
-		[snp tpl="src/block/site/page/index/_b-about/.html" class="index__about stepbystep" ] 
+			[snp tpl="src/block/site/page/index/_b-products/.html" class="index__products section" ] 
+ 
+			[snp tpl="src/block/site/page/index/_b-new-products/.html" class="index__new-products section" ]  	
 
-		[snp tpl="src/block/site/page/index/_b-products/.html" class="index__products stepbystep" ]
+			[snp tpl="src/block/site/page/index/_b-blog/.html" class="index__blog section" ] 
 
-		[snp tpl="src/block/site/page/index/_b-new-products/.html" class="index__new-products stepbystep" ] 	
-
-		[snp tpl="src/block/site/page/index/_b-blog/.html" class="index__blog stepbystep" ] 		    
-		[snp tpl="src/block/site/default/_b-footer-site/.html" class=" stepbystep" ]		
-			
+			[snp tpl="src/block/site/default/_b-footer-site/.html" class=" section" ]
+		</div>	 
+		<script>			
+			if(device.desktop()) {
+				$('#fullpage').fullpage({
+					navigation: true,
+					navigationPosition: 'right',
+					//scrollOverflow: true
+				});
+			}
+		</script>
+		
 	</body>
 </html>

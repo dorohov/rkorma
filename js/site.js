@@ -25,13 +25,13 @@ $(document).ready(function() {
 	
 	
 	
-	window.sr = ScrollReveal({ reset: true });
+	/*window.sr = ScrollReveal({ reset: true });
 	for(var i = 1; i < ($('.index__products ._i-products__item').size() + 1); i++) {
 		window.sr.reveal('.index__products ._i-products__item:nth-child(' + i + ')', { delay : 100 * i, duration: 500 * i } );
 	}
 	for(var i = 1; i < ($('.index__blog ._i-blog__item').size() + 1); i++) {
 		window.sr.reveal('.index__blog ._i-blog__item', { delay : 100 , duration: 350 * i } );
-	}
+	}*/
 	
 	
 	
@@ -79,7 +79,7 @@ $(document).ready(function() {
 		
 		var pos = $(window).scrollTop();
 		
-		$(
+		/*$(
 			function() {
 				
 				var block = $('.navbar.navbar-default._index__navbar').eq(0);
@@ -104,7 +104,7 @@ $(document).ready(function() {
 					}
 				}
 			}
-		);
+		);*/
 		
 		
 		

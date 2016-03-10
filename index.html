@@ -111,12 +111,14 @@
 <!--
 <script src="/js/jquery.touchSwipe.min.js" ></script>
 <script src="/js/slider-fullpage.js" ></script>--> 
+	<script src="plugins/fullPage.js/vendors/jquery.easings.min.js"></script>
+	<script src="plugins/fullPage.js/vendors/jquery.slimscroll.min.js"></script>
+	<script src="plugins/fullPage.js/jquery.fullPage.min.js" ></script>
 	</head>
-	<body id="fsvs-body" >
+	<body >
 		<nav class="navbar navbar-default _index__navbar bg-white ">
 	<div class="container-fluid">	
 		<div class="navbar-header">
-			<!-- <button type="button" class="hamburger navbar-hamburger is-closed" data-toggle="collapse" data-target="#navbarSite"> -->
 			<button type="button" class="hamburger navbar-hamburger is-closed" data-toggle-nav="body"> 
 				<span class="hamb-top"></span>
 				<span class="hamb-middle"></span>
@@ -124,7 +126,6 @@
 			</button>
 			<a class="navbar-brand" href="/"><img src="img/logotip.png" alt=""></a>
 		</div> 
-		<!-- <div class="collapse navbar-collapse" id="navbarSite"> -->
 		<div class="collapse-right" id="navbarSite">
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="/production.html">Продукция</a></li>
@@ -147,14 +148,16 @@
 		</div>
 	</div>
 </nav>
-
-		<header class="index__header stepbystep">
-	<div class="_ih__heading">Важный элемент вашего бизнеса</div>
-	<div class="_ih__note">Наша миссия — содействовать российскому сельхозпроизводителю в повышении качества продукции, создавая оптимальные условия для развития новых гармонизированных стандартов производства.</div>
-	<a href="#" class="_ih__scroll-next"></a>
+		<div id="fullpage" >
+			<header class="index__header section">
+	<div class="_ih__flex">
+		<div class="_ih__heading">Важный элемент вашего бизнеса</div>
+		<div class="_ih__note">Наша миссия — содействовать российскому сельхозпроизводителю в повышении качества продукции, создавая оптимальные условия для развития новых гармонизированных стандартов производства.</div>
+		<a href="#" class="_ih__scroll-next"></a>
+	</div>	
 </header> 
 
-		<div class="index__about stepbystep">
+			<div class="index__about  section">
 	<div class="container _i-about__container ">
 		<div class="row">
 			<div class="col-xs-12">
@@ -210,35 +213,37 @@
 	</div>
 </div> 
 
-		<div class="index__products stepbystep">
-	<a href="#1" class="_i-products__item ">
-		<div class="item-bg item1">
-			<div class="item-bg__icon icon1"></div>
-			<div class="item-bg__header">для птицы</div>
-		</div>
-	</a> 
-	<a href="#1" class="_i-products__item ">
-		<div class="item-bg item2">
-			<div class="item-bg__icon icon2"></div>
-			<div class="item-bg__header">для свиней</div>
-		</div>
-	</a> 
-	<a href="#1" class="_i-products__item ">
-		<div class="item-bg item3">
-			<div class="item-bg__icon icon3"></div>
-			<div class="item-bg__header">для коров</div>
-		</div>
-	</a> 
-</div>
-
-		<div class="index__new-products stepbystep">
-	<div class="container _inp__container ">
+			<div class="index__products section">
+	<div class="_i-products__flex">
+		<a href="#1" class="_i-products__item ">
+			<div class="item-bg item1">
+				<div class="item-bg__icon icon1"></div>
+				<div class="item-bg__header">для птицы</div>
+			</div>
+		</a> 
+		<a href="#1" class="_i-products__item ">
+			<div class="item-bg item2">
+				<div class="item-bg__icon icon2"></div>
+				<div class="item-bg__header">для свиней</div>
+			</div>
+		</a> 
+		<a href="#1" class="_i-products__item ">
+			<div class="item-bg item3">
+				<div class="item-bg__icon icon3"></div>
+				<div class="item-bg__header">для коров</div>
+			</div>
+		</a> 
+	</div>
+</div> 
+ 
+			<div class="index__new-products section">
+	<div class="container _inp__cont ">
 		<div class="row">
 			<div class="col-xs-12">
 				<div class="_inp__heading">Новинки и актуальные продукты</div>
 				<div id="carousel-example-generic" class="_inp__carousel carousel slide" data-ride="carousel">
 					<div class="carousel-inner _inp-carousel__inner hidden-xs l-arrow">
-						<div class="item" style="background: url(/img/index/newProducts-slide1.jpg) no-repeat center top;">
+						<div class="item" style="background: url(/img/index/Kaltsitop.jpg) no-repeat center top;">
 							<div class="_inp-carousel__caption">
 								<div class="_inp-carousel__caption-logo"><img src="/img/index/slider-logo1.jpg" alt=""></div>
 								<div class="_inp-carousel__caption-heading">LC Heat Pro</div>
@@ -246,7 +251,7 @@
 								<div class="_inp-carousel__caption-btn"><a href="#" class="btn-slider">Подробнее</a></div>
 							</div>
 						</div>
-						<div class="item" style="background: url(/img/index/newProducts-slide1.jpg) no-repeat center top;">
+						<div class="item" style="background: url(/img/index/Kaltsitop.jpg) no-repeat center top;">
 							<div class="_inp-carousel__caption">
 								<div class="_inp-carousel__caption-logo"><img src="/img/index/slider-logo1.jpg" alt=""></div>
 								<div class="_inp-carousel__caption-heading">LC Heat Pro</div>
@@ -254,7 +259,7 @@
 								<div class="_inp-carousel__caption-btn"><a href="#" class="btn-slider">Подробнее</a></div>
 							</div>
 						</div>
-						<div class="item" style="background: url(/img/index/newProducts-slide1.jpg) no-repeat center top;">
+						<div class="item" style="background: url(/img/index/Kaltsitop.jpg) no-repeat center top;">
 							<div class="_inp-carousel__caption">
 								<div class="_inp-carousel__caption-logo"><img src="/img/index/slider-logo1.jpg" alt=""></div>
 								<div class="_inp-carousel__caption-heading">LC Heat Pro</div>
@@ -273,7 +278,7 @@
 								<img src="/img/index/newProducts-slide1-sm.jpg" alt="">
 							</div>
 							<div class="__note"> 
-								<div class="_inp-indicators__heading">LC Heat Pro</div>
+								<div class="_inp-indicators__heading">Драй Плюс болюс / Dry Plus</div>
 								<div>Помощь на Вашей ферме в условиях теплового стресса</div>
 								<div class="_inp-carousel__caption-btn visible-xs"><a href="#" class="btn-slider">Подробнее</a></div>
 							</div>
@@ -283,7 +288,7 @@
 								<img src="/img/index/newProducts-slide-lock-sm.png" alt="">
 							</div>
 							<div class="__note"> 
-								<div class="_inp-indicators__heading">Кальцитоп болюс</div>
+								<div class="_inp-indicators__heading">Кальцитоп болюс / Calcitop</div>
 								<div>Кормовая добавка в форме болюса для жвачных животных для снижения риска возникновения послеродового пареза.</div>
 								<div class="_inp-carousel__caption-btn visible-xs"><a href="#" class="btn-slider">Подробнее</a></div>
 							</div>
@@ -293,7 +298,7 @@
 								<img src="/img/index/newProducts-slide-lock-sm.png" alt="">
 							</div>
 							<div class="__note"> 
-								<div class="_inp-indicators__heading">Optigen II</div>
+								<div class="_inp-indicators__heading">Хай Трейс болюс / High Trace</div>
 								<div>Это кормовая добавка для балансирования рационов крупного рогатого скота по протеиновой питательности</div> 
 								<div class="_inp-carousel__caption-btn visible-xs"><a href="#" class="btn-slider">Подробнее</a></div>
 							</div>
@@ -303,9 +308,9 @@
 			</div>
 		</div>
 	</div>
-</div> 	
+</div>  	
 
-		<div class="index__blog stepbystep">
+			<div class="index__blog section">
 	<div class="container _i-blog__container ">
 		<div class="line row line-top">
 			<div class="col-blog-2">
@@ -377,11 +382,12 @@
 					</a> 
 				</div>
 			</div>	
-		</div>
+		</div> 
 		<div class="_i-blog__btn visible-xs"><a href="/blog.html" class="btn-slider">Читать все статьи</a></div>
 	</div>
-</div> 		    
-		<footer>
+</div> 
+
+			<footer class="section footer-site">
 	<div class="footer-nav-block">
 		<div class="container-fluid">
 			<div class="col-xs-12 _b-footer-nav__flex">
@@ -468,7 +474,17 @@
 			</div>		
 		</div>		
 	</div>
-</footer>		
-			
+</footer>
+		</div>	 
+		<script>			
+			if(device.desktop()) {
+				$('#fullpage').fullpage({
+					navigation: true,
+					navigationPosition: 'right',
+					//scrollOverflow: true
+				});
+			}
+		</script>
+		
 	</body>
 </html>

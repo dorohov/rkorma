@@ -1,7 +1,7 @@
 .index__about{
 	//opacity: @opacity;
 	background: @white;
-	min-height: 1080px;
+	//min-height: 1080px;
 	position: relative;
 	padding: 185px 0 20px;
 	.mixin-headings(
@@ -26,6 +26,14 @@
 		line-height: 28px;
 		font-family: @din-light;
 	}
+	//===
+	@media @media-screen-WSXGA900{
+		padding: 125px 0 20px;
+	}
+	@media @media-screen-FullHD-sm{
+		padding: 125px 0 20px;
+	}
+	//===
 }
 ._i-about__container{
 	@media @media-size-xs{
@@ -63,6 +71,16 @@
 		//font-size: 25px;
 		//line-height: 47px;
 	}
+	//===
+	@media @media-screen-WSXGA900{
+		font-size: 40px;
+		line-height: 52px;
+	}
+	@media @media-screen-FullHD-sm{
+		font-size: 40px;
+		line-height: 52px;
+	}
+	//===
 }
 ._i-about__note{		
 	.mixin-headings(
@@ -90,6 +108,14 @@
 		line-height: 38px;
 		word-break: break-word;		
 	}
+	//===
+	@media @media-screen-WSXGA900{
+		font-size: 16px;
+	}
+	@media @media-screen-FullHD-sm{
+		font-size: 16px;
+	}
+	//===
 }
 ._i-about__flex{
 	.flex-display(@display: flex);
@@ -141,6 +167,16 @@
 		height: 200px;
 		margin: 0 auto 40px;
 	}
+	//===
+	@media @media-screen-WSXGA900{
+		width: 150px;
+		height: 150px;
+	}
+	@media @media-screen-FullHD-sm{
+		width: 150px;
+		height: 150px;
+	}
+	//===
 	&.icon1{
 		background: url(/img/index/about-item1.png) no-repeat center;
 		@media @media-no-phone{
@@ -149,6 +185,11 @@
 		@media @media-size-xxs{
 			background-size: 95px;
 		}
+		//===
+		@media @media-screen-FullHD-sm{			
+			background-size: 60px;
+		}
+		//===
 	}
 	&.icon2{
 		background: url(/img/index/about-item2.png) no-repeat center;
@@ -158,6 +199,11 @@
 		@media @media-size-xxs{
 			background-size: 100px;
 		}
+		//===
+		@media @media-screen-FullHD-sm{			
+			background-size: 65px;
+		}
+		//===
 	}
 	&.icon3{
 		background: url(/img/index/about-item3.png) no-repeat center;
@@ -167,6 +213,11 @@
 		@media @media-size-xxs{
 			background-size: 100px;
 		}
+		//===
+		@media @media-screen-FullHD-sm{			
+			background-size: 65px;
+		}
+		//===
 	}
 	&.icon4{
 		background: url(/img/index/about-item4.png) no-repeat center;
@@ -176,6 +227,11 @@
 		@media @media-size-xxs{
 			background-size: 120px;
 		}
+		//===
+		@media @media-screen-FullHD-sm{			
+			background-size: 95px;
+		}
+		//===
 	}
 }
 .partner-block{
@@ -193,6 +249,11 @@
 		margin: 20px auto 0;
 		max-width: 850px;		
 	}
+	//===
+	@media @media-screen-FullHD-sm{	
+		margin: 50px auto 0;
+	}
+	//===
 }
 .partner__item{
 	margin-bottom: 20px;

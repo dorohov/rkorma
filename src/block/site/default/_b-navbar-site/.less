@@ -624,3 +624,26 @@ body.open-sidebar{
   -webkit-transform: translate3d(-100px,0,0);
   -webkit-transition: all .35s ease-in-out;
 }
+.fp-viewing-1,
+.fp-viewing-3-0{
+	.navbar-default{
+		background: @white;
+		.navbar-nav{
+			> li{
+				> a{
+					color: lighten(@black, 20%);
+				}
+			}
+		}
+		.hamburger.is-closed .hamb-top,
+		.hamburger.is-closed .hamb-middle,
+		.hamburger.is-closed .hamb-bottom {
+			background-color: @green-d;
+		}
+		.hamburger.is-open .hamb-top,
+		.hamburger.is-open .hamb-middle,
+		.hamburger.is-open .hamb-bottom {
+			background-color: lighten(@black, 20%);
+		}
+    }
+}
