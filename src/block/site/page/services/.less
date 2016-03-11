@@ -84,6 +84,8 @@
 	ul{
 		list-style: none;
 		> li{
+			overflow:hidden;
+			
 			a{	
 				
 				.flex-display(@display: flex);
@@ -96,13 +98,24 @@
 					@color: #b5b5b5
 				);
 				padding: 0 35px;
+				/*
 				background-position: center;
 				background-repeat: no-repeat;
 				transform-origin:center center;
 				transition:background-size ease 0.75s;
+				*/
+				
+				background-position: -500px center;
+				background-repeat: no-repeat;
+				background-size:cover;
+				transform-origin:center center;
+				transition:background-position ease 0.7s;
+				
+				
 				cursor:pointer;
 				
-				background-size: 0;
+				/*background-size: 100%;*/
+				
 				@media @media-size-md{
 					height: 90px;
 					padding: 0px 15px 0px 25px;
@@ -124,7 +137,8 @@
 			}
 			&.active {
 				a{
-					background-size: 100%;
+					
+					background-position: center center;
 					color: @white;
 					&:hover{
 						text-decoration: none;
@@ -140,7 +154,8 @@
 			}
 			&:hover{
 				a{
-					background-size: 100%;
+					
+					background-position: center center;
 					color: @white;
 					@media @media-size-sm{
 						background: @green-d!important;
