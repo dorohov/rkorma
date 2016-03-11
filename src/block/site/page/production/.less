@@ -13,13 +13,13 @@
 ._prodnav__heading{
 	display: inline-block;
 	@media @media-size-sm{
-		font-size: 48px;
+		font-size: 42px;
 		line-height: 54px;
 		font-size: 36px;
 		line-height: 44px;
 	}
 	@media @media-size-xs{
-		font-size: 34px;
+		font-size: 28px;
 		line-height: 42px;
 	}
 	
@@ -265,6 +265,8 @@
 		justify-content: center;
 		position: relative;
 		color: @white;
+		background-size:cover !important;
+		
 		.mixin-headings(
 			@font-family: @agoras-black,
 			@font-size: 24px, 
@@ -278,6 +280,7 @@
 			z-index: 5;
 			transform: translateY(30px);
 		}
+		/*
 		&:after{
 			content: '';
 			position: absolute;
@@ -289,6 +292,7 @@
 
     		transition: all 0.2s ease;
 		}
+		*/
 		&:before{
 			content: '';
 			background: url('@{url-path-img}/footer-snippit.png') no-repeat;
@@ -338,9 +342,14 @@
 
 		}
 		&:hover{
+			/*
 			&:after{
 				background: fadeout(@black, 50%);			
 			}
+			*/
+			outline:1px white solid;
+			position:relative;
+			z-index:5;
 		}
 		@media @media-size-sm-p{
 		 	width: 50%!important;
