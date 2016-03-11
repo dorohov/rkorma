@@ -24,6 +24,7 @@
 	}
 	
 	&:hover {
+		color: @green;
 		//text-decoration:underline;
 	}
 }
@@ -266,7 +267,7 @@
 		position: relative;
 		color: @white;
 		background-size:cover !important;
-		
+		transition: all 0.2s ease; 
 		.mixin-headings(
 			@font-family: @agoras-black,
 			@font-size: 24px, 
@@ -349,7 +350,11 @@
 			*/
 			outline:1px white solid;
 			position:relative;
-			z-index:5;
+			z-index:5; 
+			
+			//background-size: 110% cover!important;
+			//transition: all 0.2s ease; 
+			
 		}
 		@media @media-size-sm-p{
 		 	width: 50%!important;
