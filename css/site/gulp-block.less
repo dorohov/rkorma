@@ -2172,7 +2172,7 @@ body.open-sidebar{
 				background-repeat: no-repeat;
 				background-size:cover;
 				transform-origin:center center;
-				transition:background-position ease 0.7s;
+				transition:all ease 0.7s;
 				
 				
 				cursor:pointer;
@@ -5334,27 +5334,23 @@ body.open-sidebar{
 @media @media-screen-WXGA768{
 	@keyframes animated-mouse {
 		0% {
-			bottom: 30px;
-			transform:scale(0.95);
+			/*margin-top:5px;*/
+			transform:scale(0.65);
 		}
 
 		50% {
-			bottom: 35px;
+			/*margin-top:5px;*/
 			transform:scale(1);
 		}
 
 		100% {
-			bottom: 30px;
-			transform:scale(0.95);
+			/*margin-top:5px;*/
+			transform:scale(0.65);
 		}
 	}
 }
 ._ih__scroll-next{
-	animation-duration: 1s;
-	animation-fill-mode: both;
-	animation-iteration-count: infinite;
-	animation-name: animated-mouse;
-	transform-origin:center center;
+	
 	
 	position: absolute;
 	bottom: 60px;
@@ -5378,6 +5374,12 @@ body.open-sidebar{
 		margin-bottom: 10px;
 	}
 	&:after{
+		animation-duration: 1s;
+		animation-fill-mode: both;
+		animation-iteration-count: infinite;
+		animation-name: animated-mouse;
+		transform-origin:center top;
+		
 		font-family: @icon-base;
 		content: @icon-thin;
 		display: block;
