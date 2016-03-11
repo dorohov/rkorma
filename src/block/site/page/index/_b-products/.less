@@ -7,10 +7,7 @@
 		@font-size: 18px, 
 		@line-height: 24px, 
 		@color: @white
-	); 
-	@media @media-size-sm{
-		min-height: 730px;			
-	}	
+	);
 	@media @media-size-xs{
 		font-size: 50px;
 		line-height: 76px;		
@@ -24,7 +21,10 @@
 	height: 100%;
 	.flex-display(@display: flex);
 	.justify-content(@justify: flex-start);
-	.align-items(@align: stretch);
+	.align-items(@align: stretch); 
+	@media @media-size-sm{
+		height: 730px;			
+	}	
 	@media @media-size-xs{		
 		.flex-direction(@direction: column);
 	}

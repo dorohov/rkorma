@@ -10,16 +10,16 @@
 		@color: @white
 	); 
 	@media @media-size-sm{
-		min-height: 730px;
 		background: url(/img/index/bg-header-sm.jpg) no-repeat center 0px;
+	}
+	@media @media-size-sm-l{
+		//background: url(/img/index/bg-header-sm.jpg) no-repeat center 0px;
+		background-size: cover!important;
 	}
 	@media @media-size-xs{
 		background: url(/img/index/bg-header-xs.jpg) no-repeat center 0px;
-		//min-height: 1330px;
-		min-height: 950px;
     	background-size: 550px; 
 	}
-
 	//====
 	@media @media-screen-HD720{
 		background-size: 1100px;
@@ -41,6 +41,13 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	@media @media-size-sm{
+		height: 730px;
+	}
+	@media @media-size-xs{
+		//min-height: 1330px;
+		min-height: 950px;
+	}
 }
 ._ih__heading{
 	max-width: 710px;

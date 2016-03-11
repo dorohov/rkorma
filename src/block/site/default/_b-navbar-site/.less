@@ -6,6 +6,9 @@
 	padding: 10px 0;/*25 0*/
 	@media @media-size-sm{
 		min-height: 115px;
+		.navbar-header{
+			float: none;
+		}
 	}
 	@media @media-size-xs{		
 		min-height: 95px;
@@ -147,8 +150,11 @@
 		@media @media-device{
 			.collapse-right{
 				.navbar-nav{
+					margin: 7.5px -15px;
 					margin-top: 25px;
+    				float: none!important;
 					> li{
+   						float: none!important;
 						> a{
 							color: lighten(@black, 20%);
 						}
@@ -278,6 +284,8 @@
 						float: none;
 						padding: 0;
 						margin: 25px 10px 0;
+						min-width: inherit;
+						top: 0;
 						.form-control{
 							border-color: @green-d;
 							border-right: 0;
@@ -503,7 +511,7 @@ body.open-sidebar{
 	width: 36px;
 	height: 38px;
 	z-index: 100;
-	@media (min-width: 992px) {
+	@media (min-width: 1025px) {
 		display: none;
 	}
 	@media @media-size-xs{
@@ -625,6 +633,7 @@ body.open-sidebar{
   -webkit-transition: all .35s ease-in-out;
 }
 .fp-viewing-1,
+.fp-viewing-5,
 .fp-viewing-3-0{
 	.navbar-default{
 		background: @white;
