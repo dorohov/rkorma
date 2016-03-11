@@ -71,6 +71,26 @@
 	
 }
 ._inp__carousel{
+	
+	& .carousel-inner .item {
+		background-size:cover !important;
+		
+		._inp-carousel__caption {
+			z-index:5;
+		}
+		
+		&:after {
+			content:'';
+			z-index:4;
+			position:absolute;
+			left:0;
+			top:0;
+			width:100%;
+			height:100%;
+			background-color:rgba(0,0,0,0.15);
+		}
+	}
+	
 	@media @media-size-sm{		
 		.flex-display(@display: flex);
 	}
@@ -254,6 +274,15 @@
 }
 ._inp-carousel__caption-btn{
 	width: 160px;
+	
+	.btn-slider{
+			&:hover,
+			&:focus{
+				color: lighten(@green, 20%) !important;
+				border-color: lighten(@green, 20%) !important;
+			}
+		}
+	
 	@media @media-size-netbook{			
 		.rotation-translateY(@y:55px);
 	}
