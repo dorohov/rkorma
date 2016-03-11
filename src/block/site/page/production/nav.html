@@ -2,14 +2,15 @@
 	<div class="_prodnav__container container">
 		<div class="_prodnav__heading-block">
 			<div class="_prodnav__heading-dropdown">
-				<h1 class="heading-block _prodnav__heading" data-toggle="dropdown">Для птицы <span class="caret"></span></h1>
-				<ul class="_prodnav__heading-dropdown-menu" aria-labelledby="dLabel">
+				<!-- <h1 class="heading-block _prodnav__heading" data-toggle="dropdown">Для птицы <span class="caret"></span></h1> -->
+				<h1 class="heading-block _prodnav__heading" data-toggle="modal" data-target="#prod-modal">Для птицы <span class="caret"></span></h1>
+				<!-- <ul class="_prodnav__heading-dropdown-menu" aria-labelledby="dLabel">
 					<li><a href="#bolyusyi" data-filter="bolyusyi">Болюсы</a></li>
 					<li><a href="#dlya-korov" data-filter="dlya-korov">Для коров</a></li>
 					<li><a href="#dlya-ptits" data-filter="dlya-ptits">Для птиц</a></li>
 					<li><a href="#dlya-sviney" data-filter="dlya-sviney">Для свиней</a></li>
 					<li><a href="#kormoproizvodstvo" data-filter="kormoproizvodstvo">Кормопроизводство</a></li>
-				</ul>
+				</ul> -->
 			</div>
 			<div class="_prodnav__navbar">
 				<ul>
@@ -35,3 +36,17 @@
 		</div>
 	</div>
 </div> 
+<div class="modal _prodnav__modal fade" id="prod-modal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">	
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			<div class="_prodnav__modal-flex"> 
+				<a href="#bolyusyi" data-filter="bolyusyi"  class="_pn-modal__item icon-bolus" style="background: url(/img/index/news-item4.jpg) no-repeat center"><span>Болюсы</span></a>
+				<a href="#dlya-korov" data-filter="dlya-korov"  class="_pn-modal__item icon-krs" style="background: url(/img/index/news-item3.jpg) no-repeat center"><span>Для коров</span></a>
+				<a href="#dlya-ptits" data-filter="dlya-ptits" class="_pn-modal__item icon-bird"  style="background: url(/img/index/news-item4.jpg) no-repeat center"><span>Для птиц</span></a>
+				<a href="#dlya-sviney" data-filter="dlya-sviney"  class="_pn-modal__item icon-pig"  style="background: url(/img/index/news-item4.jpg) no-repeat center"><span>Для свиней</span></a>
+				<a href="#kormoproizvodstvo" data-filter="kormoproizvodstvo"  class="_pn-modal__item icon-korm"  style="background: url(/img/index/news-item2.jpg) no-repeat center"><span>Кормопроизводство</span></a>
+			</div>
+		</div>
+	</div>
+</div>

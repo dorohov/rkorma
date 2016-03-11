@@ -24,7 +24,7 @@
 	}
 	
 	&:hover {
-		text-decoration:underline;
+		//text-decoration:underline;
 	}
 }
 ._prodnav__navbar{
@@ -233,6 +233,129 @@
 			box-shadow: 20px 20px 50px fadeout(@black, 80%);
 		}
 	}	
+}
+._prodnav__modal{
+	padding: 0!important;
+	.modal-dialog{
+		margin: 0;
+		width: 100%;
+		height: 100%;
+	}
+	.modal-content{
+		height: 100%;
+		.close{
+			position: absolute;
+			top: 15px;
+			outline: none;
+			right: 15px;
+			z-index: 10;
+			color: @white;
+			font-size: 45px;
+		}
+	}
+}
+._prodnav__modal-flex{
+	display: flex;
+	height: 100%;
+	flex-wrap: wrap;
+	justify-content: center;
+	._pn-modal__item{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		color: @white;
+		.mixin-headings(
+			@font-family: @agoras-black,
+			@font-size: 24px, 
+			@line-height: 32px, 
+			@color: @white
+		);
+		text-decoration: none;
+		text-transform: uppercase;
+		span{
+			position: relative;
+			z-index: 5;
+			transform: translateY(30px);
+		}
+		&:after{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: fadeout(@black, 30%);
+
+    		transition: all 0.2s ease;
+		}
+		&:before{
+			content: '';
+			background: url('@{url-path-img}/footer-snippit.png') no-repeat;
+			width: 80px;
+			height: 80px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			z-index: 5;
+			transform: translateX(-50%) translateY(-100%);
+
+		}
+		&.icon-krs{
+			&:before{
+				background-position: 0 0;
+			}
+		}
+		&.icon-pig{
+			&:before{
+				background-position: -252px 0;
+			}
+		}
+		&.icon-bird{
+			&:before{
+				background-position: -504px 0;
+			}
+		}
+		&.icon-bolus{
+			&:before{
+				background-position: -756px 0;
+			}
+		}
+		&.icon-korm{
+			&:before{
+				background-position: -1008px 0;
+			}
+		}
+		&:nth-child(1),
+		&:nth-child(2),
+		&:nth-child(3){
+			width: 33.33333333%;
+			
+		}
+		&:nth-child(4),
+		&:nth-child(5){
+			width: 50%;
+
+		}
+		&:hover{
+			&:after{
+				background: fadeout(@black, 50%);			
+			}
+		}
+		@media @media-size-sm-p{
+		 	width: 50%!important;
+		 	&:nth-child(1){
+		 		width: 100%!important;
+
+		 	}
+		}
+		@media @media-size-xs{
+		 	width: 100%!important;
+		 	height: 250px;
+		 	font-size: 18px;
+		 	line-height: 24px;
+		}
+	}
 }
 .production__page{
 	//opacity: @opacity;

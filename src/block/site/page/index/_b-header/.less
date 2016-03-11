@@ -9,18 +9,19 @@
 		@line-height: 30px, 
 		@color: @white
 	); 
-	@media @media-size-sm{
-		background: url(/img/index/bg-header-sm.jpg) no-repeat center 0px;
-	}
-	@media @media-size-sm-l{
-		//background: url(/img/index/bg-header-sm.jpg) no-repeat center 0px;
-		background-size: cover!important;
-	}
 	@media @media-size-xs{
 		background: url(/img/index/bg-header-xs.jpg) no-repeat center 0px;
     	background-size: 550px; 
 	}
-	//====
+	@media @media-size-sm{
+		background: url(/img/index/bg-header-sm.jpg) no-repeat center 0px;
+	}
+	@media @media-size-sm-l{
+		background-size: cover!important;
+	}
+	@media @media-size-netbook{
+		background-size: 1100px;
+	}
 	@media @media-screen-HD720{
 		background-size: 1100px;
 	}
@@ -80,6 +81,12 @@
 	}
 
 	//====
+	@media @media-size-netbook{ 
+		max-width: 430px;
+		font-size: 32px;
+		line-height: 46px;
+		transform: translateY(-105px);
+	}
 	@media @media-screen-HD720{
 		max-width: 430px;
 		font-size: 32px;
@@ -127,8 +134,12 @@
 		transform: translateY(-165px);
 		padding: 0 15px;
 	}
-
 	//====
+	@media @media-size-netbook{
+		font-size: 16px;
+		line-height: 24px;
+		transform: translateY(-90px);		
+	}
 	@media @media-screen-HD720{
 		font-size: 16px;
 		line-height: 24px;
@@ -152,9 +163,6 @@
 	}
 	//====
 }
-
-
-
 @keyframes animated-mouse {
 	0% {
 		bottom: 60px;
@@ -207,9 +215,6 @@
 		}
 	}
 }
-
-
-
 ._ih__scroll-next{
 	animation-duration: 1s;
 	animation-fill-mode: both;

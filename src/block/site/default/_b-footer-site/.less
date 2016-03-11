@@ -1,15 +1,21 @@
 .footer-site{
 	height: 514px!important;
+	@media @media-size-netbook{
+		height: 600px!important
+	}
 	@media @media-screen-HD720{
 		height: 580px!important
 	}
 }
 .footer-nav-block{
-	background: url(../img/bg-footer.png) repeat center;
+	background: url('@{url-path-img}/bg-footer.png') repeat center;
 	padding: 50px 0 40px;
 	color: @white;
 	font-family: @din;
 	font-size: 14px;
+	@media @media-size-netbook{
+		padding-top: 145px;
+	}
 	//opacity: @opacity;
 	a{
 		color: lighten(@black, 60%);
@@ -42,6 +48,9 @@
 	max-width: 400px;
 	width: 100%;
 	//====
+	@media @media-size-netbook{
+		max-width: 320px;
+	}
 	@media @media-screen-WXGA768{
 		max-width: 340px;
 	}
@@ -110,7 +119,7 @@
 	padding: 0 15px;
 	width: 100%;
 	@media @media-size-sm{
-		max-width: 50% !important;
+		max-width: 49% !important;
 		margin-bottom: 40px;		
 	}
 	@media @media-size-xs{
