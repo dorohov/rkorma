@@ -1442,8 +1442,8 @@ body.open-sidebar{
 	}
 	
 	&:hover {
-		color: @green;
-		//text-decoration:underline;
+		color: black;
+		text-decoration:underline;
 	}
 }
 ._prodnav__navbar{
@@ -1685,6 +1685,7 @@ body.open-sidebar{
 	height: 100%;
 	flex-wrap: wrap;
 	justify-content: center;
+	
 	._pn-modal__item{
 		display: flex;
 		align-items: center;
@@ -1701,7 +1702,22 @@ body.open-sidebar{
 		);
 		text-decoration: none;
 		text-transform: uppercase;
-		span{
+		overflow:hidden;
+		
+		span.imaged {
+			position:absolute;
+			left:-10%;
+			top:-10%;
+			width:120%;
+			height:120%;
+			background-repeat:no-repeat;
+			background-position:center center;
+			background-size: auto 100%;
+			z-index: 4;
+			transition:all 0.5s ease;
+		}
+		
+		span.texted {
 			position: relative;
 			z-index: 5;
 			transform: translateY(30px);
@@ -1773,6 +1789,11 @@ body.open-sidebar{
 				background: fadeout(@black, 50%);			
 			}
 			*/
+			
+			span.imaged {
+				background-size: auto 130%;
+			}
+			
 			outline:1px white solid;
 			position:relative;
 			z-index:5; 
