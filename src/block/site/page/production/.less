@@ -24,8 +24,9 @@
 	}
 	
 	&:hover {
-		color: @green;
-		//text-decoration:underline;
+		color: black;
+		/*text-decoration:underline;*/
+		
 	}
 }
 ._prodnav__navbar{
@@ -80,6 +81,13 @@
 			&.active{
 				.icon:before{
 					color: @green-d;
+				}
+			}
+			
+			&:hover {
+				.icon {
+					outline: 2px #1c953f solid;
+					outline-offset: 3px;
 				}
 			}
 		}
@@ -260,6 +268,7 @@
 	height: 100%;
 	flex-wrap: wrap;
 	justify-content: center;
+	
 	._pn-modal__item{
 		display: flex;
 		align-items: center;
@@ -276,7 +285,22 @@
 		);
 		text-decoration: none;
 		text-transform: uppercase;
-		span{
+		overflow:hidden;
+		
+		span.imaged {
+			position:absolute;
+			left:-10%;
+			top:-10%;
+			width:120%;
+			height:120%;
+			background-repeat:no-repeat;
+			background-position:center center;
+			background-size: auto 100%;
+			z-index: 4;
+			transition:all 0.5s ease;
+		}
+		
+		span.texted {
 			position: relative;
 			z-index: 5;
 			transform: translateY(30px);
@@ -348,6 +372,11 @@
 				background: fadeout(@black, 50%);			
 			}
 			*/
+			
+			span.imaged {
+				background-size: auto 130%;
+			}
+			
 			outline:1px white solid;
 			position:relative;
 			z-index:5; 
