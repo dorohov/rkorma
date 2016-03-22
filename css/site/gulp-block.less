@@ -3318,6 +3318,147 @@ body.open-sidebar{
 	background: url(../img/calcite/bg-bolus.jpg) no-repeat center top;
 	position: relative;
 	margin-bottom: 50px;
+<<<<<<< HEAD
+=======
+	@media @media-size-sm{
+		min-height: 673px;
+		background: url(../img/calcite/bg-bolus-sm.jpg) no-repeat center top;
+		margin-bottom: 90px;
+	}
+	@media @media-size-xs{
+		min-height: 1023px;
+		background: url(../img/calcite/bg-bolus.jpg) no-repeat center top;
+		margin-bottom: 90px;
+		.container{
+			position: relative;
+			z-index: 2;
+		}
+	}
+}
+._c-reklama__inner{
+	background: url(../img/calcite/bg-bolus.png) no-repeat center bottom;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;	
+	@media @media-size-sm{
+		background: url(../img/calcite/bg-bolus-sm.png) no-repeat center bottom;
+	}
+	@media @media-size-xs{
+		display: none;
+	}
+}
+._c-reklama__content{
+	max-width: 805px;
+	margin: 220px auto 0;
+	text-align: center;
+	@media @media-size-sm{
+		margin: 155px auto 0;
+		max-width: 550px;
+	}
+	@media @media-size-xs{
+		margin: 150px auto 0;
+	}
+}
+._c-reklama__heading{
+	.mixin-headings(
+		@font-family: @proxima-bold, 
+		@font-size: 40px, 
+		@line-height: 86px, 
+		@color: @white);
+	span{
+		font-size: 100px;
+	}
+	@media @media-size-sm{
+		font-size: 30px;
+		line-height: 66px;
+		span{
+			font-size: 70px;
+		}
+	}
+	@media @media-size-xxs{
+		font-size: 30px;
+		line-height: 56px;
+		span{
+			font-size: 40px;
+		}
+	}
+}
+._c-reklama__note{
+	.mixin-headings(
+		@font-family: @proxima-bold, 
+		@font-size: 78px, 
+		@line-height: 62px, 
+		@color: @white);
+	.flex-display(@display: flex);
+	.blue{
+		font-size: 100px;
+		color: @blue;    
+		line-height: 74px;
+		margin-bottom: 5px;
+		@media @media-size-xs{
+			margin-top: 160px;
+		}
+	}
+	@media @media-size-sm{
+		font-size: 56px;
+		line-height: 47px;
+		.blue{
+			font-size: 70px;
+			line-height: 42px; 
+		}
+	}
+	@media @media-size-xs{
+		display: block;
+	}
+
+}
+._c-reklama__note-number{
+	.mixin-headings(
+		@font-family: @proxima-bold, 
+		@font-size: 400px, 
+		@line-height: 320px, 
+		@color: @blue);
+	@media @media-size-sm{
+		font-size: 285px;
+		line-height: 230px; 
+	}
+	@media @media-size-xs{
+		&:after{
+			content: 'г';
+    		font-size: 115px;
+		}
+	}
+	@media @media-size-xxs{
+		font-size: 200px;
+		line-height: 170px;
+		&:after{
+			content: 'г';
+    		font-size: 115px;
+		}
+	}
+}
+._c-reklama__note-desc{
+	padding-top: 20px;
+}
+@media @media-size-xs{
+	._c-reklama__note-desc-xs{
+		margin-top: 150px;
+	}
+}
+@media @media-size-xxs{
+	._c-reklama__note-desc-xs{
+		margin-top: -20px;
+		font-size: 65px;
+	}
+}
+.calcite-review-block{
+	padding-top: 20px;
+}
+._c-panel{
+	margin-bottom: 120px;
+>>>>>>> 8e32e54727c75d81b515325b28651badf3d333eb
 	@media @media-size-sm{
 		min-height: 673px;
 		background: url(../img/calcite/bg-bolus-sm.jpg) no-repeat center top;
@@ -4584,6 +4725,14 @@ body.open-sidebar{
 		max-width: 900px;
 		font-size: 18px;
 	}
+<<<<<<< HEAD
+=======
+	/* @media @media-size-xs{ 
+		font-size: 57px;
+		line-height: 72px;
+		margin-bottom: 25px;
+	} */
+>>>>>>> 8e32e54727c75d81b515325b28651badf3d333eb
 	@media @media-size-xs{
 		padding-left: 20px!important;
 		padding-right: 20px!important;
