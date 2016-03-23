@@ -77,3 +77,7 @@
 		
 	});
 	
+$('.modal').on('shown.bs.modal', function (event) {
+	$('.scroll-container').trigger('init');
+});
+	

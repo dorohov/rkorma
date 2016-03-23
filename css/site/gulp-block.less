@@ -1529,7 +1529,7 @@ body.open-sidebar{
 	}
 
 	&:hover{
-		._cb__region{fill: #1C953F;}
+		._cb__region{fill: #dedede;}
 		._cb__region-point{fill: @white;}
 	}
 	text{
@@ -1588,6 +1588,12 @@ body.open-sidebar{
 	font-size: 18px;
 	text-transform: none;
 	line-height: 20px;
+	
+	@media @media-size-xs{
+		& {
+			margin-top: 1em;
+		}
+	}
 }
 ._cb-tooltip__tel{	
 	a{
