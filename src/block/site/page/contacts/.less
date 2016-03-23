@@ -297,10 +297,12 @@
 			fill: #EBEBEB;
 			cursor: pointer;
 			&:hover{
+				/*
 				fill: #1C953F;
 				+ polygon{
 					fill: @white;
 				}
+				*/
 			}
 		}
 		@media @media-size-xs{
@@ -348,6 +350,7 @@
 	position: relative;
 	border: 1px solid rgb(230, 230, 230);
 	font-family: @din;
+	z-index:200;
 	&:before{
 		content: '';
 		position: absolute;
