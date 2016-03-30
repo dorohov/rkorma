@@ -21,6 +21,10 @@
 			var content = $('._sb__scroll ' + href);
 			var cont = content.closest('._sb__scroll');
 			var pos = parseInt(content.attr('data-position-top'));//content.position().top;
+			
+			var bigimg = btn.attr('data-decor-img');
+			$('#post-decor-img').css({'background-image': 'url(' + bigimg + ')', 'background-size': 'cover'});
+			
 			cont.animate({scrollTop : pos + 'px'}, 400);
 			
 			//pos = content.position().top;
