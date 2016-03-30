@@ -326,6 +326,7 @@
 	//====
 }
 ._inp-carousel__carousel-indicators{	
+	
 	.flex-display(@display: flex);
 	//.flex-wrap(@wrap: wrap);
 	list-style: none;
@@ -358,7 +359,6 @@
 		padding-right: 10px;
 		margin-left: -10px;
 		margin-right: -10px;
-		opacity: 0.5;
 		cursor: pointer;
 		.transition(@duration:0.2s, @ease:ease-out);
 		.flex-display(@display: flex);
@@ -368,12 +368,16 @@
 			@line-height: 21px, 
 			@color: lighten(@black, 20%)
 		);
-		&:hover{
-			opacity: 0.85;
+		
+		& .__preview, & .__note, & .__preview, & .__note {
+			opacity: .5;
+			transition:all 0.3s ease;
 		}
-		&.active{
+		
+		&:hover .__preview, &:hover .__note, &.active .__preview, &.active .__note {
 			opacity: 1;
-		} 
+		}
+		
 		@media @media-size-xl{
 			>div{
 				padding-left: 10px;

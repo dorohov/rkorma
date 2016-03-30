@@ -53,6 +53,22 @@ $(document).ready(function() {
 		
 	});
 	
+	$(document.body).on('click.fecss', '.header-arrow', function(event){
+		event.preventDefault();
+		
+		$('.index__header').toggleClass('mod-1');
+	});
+	
+	setInterval(function(){
+		
+		var ib = $('.index__header');
+		if(ib.hasClass('mod-1')) {
+			ib.removeClass('mod-1');
+		} else {
+			ib.addClass('mod-1');
+		}
+		
+	},7000);
 	
 	
 	
