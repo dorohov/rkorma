@@ -15,8 +15,8 @@
 	@media @media-size-sm{
 		font-size: 42px;
 		line-height: 54px;
-		font-size: 36px;
-		line-height: 44px;
+		font-size: 36px!important;
+		line-height: 44px!important;
 	}
 	@media @media-size-xs{
 		font-size: 28px;
@@ -627,6 +627,9 @@
 }
 ._prodb__container{
 	overflow-x: hidden; 
+	@media @media-size-xs{
+		overflow-x: inherit;
+	}
 }
 ._prodib__scroll{
 	width: 105%;

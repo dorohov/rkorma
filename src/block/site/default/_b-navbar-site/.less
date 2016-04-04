@@ -107,7 +107,8 @@
     &.bg-transparent{
 		background: transparent;
 		@media @media-size-xs{
-			background: fadeout(@white, 80%);
+			//background: fadeout(@white, 80%);
+			background: fadeout(@white, 0%);
 		}
 		.navbar-nav{
 			> li{
@@ -147,11 +148,43 @@
 		.hamburger.is-closed .hamb-middle,
 		.hamburger.is-closed .hamb-bottom {
 			background-color: @white;
+			//background-color: @green;
 		}
 		.hamburger.is-open .hamb-top,
 		.hamburger.is-open .hamb-middle,
 		.hamburger.is-open .hamb-bottom {
 			background-color: @green-d;
+			//background-color: @black;
+		}
+		@media @media-size-xs{
+			
+			.hamburger.is-closed .hamb-top,
+			.hamburger.is-closed .hamb-middle,
+			.hamburger.is-closed .hamb-bottom {
+				//background-color: @white;
+				background-color: @green!important;
+			}
+			.hamburger.is-open .hamb-top,
+			.hamburger.is-open .hamb-middle,
+			.hamburger.is-open .hamb-bottom {
+				//background-color: @green-d;
+				background-color: @black!important;
+			}
+		}
+		@media @media-size-sm{
+			
+			.hamburger.is-closed .hamb-top,
+			.hamburger.is-closed .hamb-middle,
+			.hamburger.is-closed .hamb-bottom {
+				//background-color: @white;
+				background-color: @green!important;
+			}
+			.hamburger.is-open .hamb-top,
+			.hamburger.is-open .hamb-middle,
+			.hamburger.is-open .hamb-bottom {
+				//background-color: @green-d;
+				background-color: @black!important;
+			}
 		}
 		@media @media-device{
 			.collapse-right{
