@@ -30,24 +30,51 @@ $(document).ready(function() {
 		
 		var i = $(this).find('.carousel-inner .item.active').index();
 		
-		switch(i) {
+		if(!$(document.body).hasClass('window-width-md') ) {
 			
-			case 0:{
-				$(this).find('._inp-carousel__inner').removeClass('c-arrow r-arrow').addClass('l-arrow');
-			}
-			break;
-			case 1:{
-				$(this).find('._inp-carousel__inner').removeClass('l-arrow r-arrow').addClass('c-arrow');
-			}
-			break;
-			case 2:{
-				$(this).find('._inp-carousel__inner').removeClass('c-arrow l-arrow').addClass('r-arrow');
-			}
-			break;
-			default:{
+			switch(i) {
+				
+				case 0:{
+					$(this).find('._inp-carousel__inner').removeClass('m-arrow b-arrow').addClass('t-arrow');
+				}
+				break;
+				case 1:{
+					$(this).find('._inp-carousel__inner').removeClass('t-arrow b-arrow').addClass('m-arrow');
+				}
+				break;
+				case 2:{
+					$(this).find('._inp-carousel__inner').removeClass('t-arrow m-arrow').addClass('b-arrow');
+				}
+				break;
+				default:{
+					
+				}
+				break;
 				
 			}
-			break;
+			
+		} else {
+			
+			switch(i) {
+				
+				case 0:{
+					$(this).find('._inp-carousel__inner').removeClass('c-arrow r-arrow').addClass('l-arrow');
+				}
+				break;
+				case 1:{
+					$(this).find('._inp-carousel__inner').removeClass('l-arrow r-arrow').addClass('c-arrow');
+				}
+				break;
+				case 2:{
+					$(this).find('._inp-carousel__inner').removeClass('c-arrow l-arrow').addClass('r-arrow');
+				}
+				break;
+				default:{
+					
+				}
+				break;
+				
+			}
 			
 		}
 		
