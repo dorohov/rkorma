@@ -154,7 +154,7 @@ $(document).ready(function() {
 		
 		if(b.size()) {
 			
-			var pos = -50;
+			var pos = -10;
 			
 			b.css({
 				'left' : pos + '%',
@@ -170,7 +170,7 @@ $(document).ready(function() {
 					pos++;
 					
 					if(b.data('fast-page-loading')) {
-						pos = pos + 9;
+						pos = pos + 6;
 					}
 					
 					var h = pos / 2;
