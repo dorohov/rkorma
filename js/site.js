@@ -147,4 +147,49 @@ $(document).ready(function() {
 	
 	});
 	
+	
+	$(function(){
+		var pl = $('div.page-loader.full-screen.rkorma-style.active');
+		var b = $('.blind', pl).eq(0);
+		
+		if(b.size()) {
+			
+			var pos = -50;
+			
+			b.css({
+				'left' : pos + '%',
+				'bottom' : pos + '%',
+				'top' : pos + '%',
+				'right' : pos + '%',
+			}).attr('data-pos', pos);
+			
+			var intr = setInterval(function() {
+				
+				var check = Math.random();
+				if(check > 0.5 && pos < 100) {
+					pos++;
+					
+					if(b.data('fast-page-loading')) {
+						pos = pos + 9;
+					}
+					
+					var h = pos / 2;
+					
+					b.css({
+						'left' : h + '%',
+						'bottom' : h + '%',
+						'top' : h + '%',
+						'right' : h + '%',
+					}).attr('data-pos', pos);//, 'height' : h + '%'
+				} else if(pos > 99) {
+					clearInterval(intr);
+					$('div.page-loader.full-screen.rkorma-style')
+						.data('counter-can-close-it', true)
+						.trigger('fecss.can-close-it');
+				}
+				
+			}, 55);
+		}
+	});
+	
 });
