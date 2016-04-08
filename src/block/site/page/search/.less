@@ -1,23 +1,50 @@
 .search-cont {
-	width:69%;
+	width:69% !important;
+	
+	@media @media-size-xs {
+		& {
+			width:100% !important;
+		}
+	}
+	
+	@media @media-size-sm {
+		& {
+			width:100% !important;
+		}
+	}
 	
 	.search-result-ol {
 		li {
 			margin:2em 0;
 			font-size:13px;
 			
-			h3 {
-				font-size:16px;
-				font-weight:bold;
-			}
 			
-			p {
-				font-size:13px;
-			}
-			
-			.search-result-a {
-				color:#1c953f;
-			}
+		}
+		
+		h3 {
+			font-size:16px;
+			font-weight:bold;
+		}
+		
+		p {
+			font-size:13px;
+		}
+		
+		.search-result-a {
+			color:#1c953f;
+		}
+	}
+}
+.search-right {
+	@media @media-size-xs {
+		& {
+			display:none !important;
+		}
+	}
+	
+	@media @media-size-sm {
+		& {
+			display:none !important;
 		}
 	}
 }
