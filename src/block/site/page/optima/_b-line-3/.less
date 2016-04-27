@@ -1,0 +1,112 @@
+.optima-composition{	
+	background: @white;
+	//opacity: @opacity;
+	font-family: Georgia;
+	color:  lighten(@black, 20%);
+	font-size: 24px;
+	line-height: 36px;
+	font-weight: 400;
+	letter-spacing: 0.24px;
+	padding: 105px 0 110px;
+	.container{
+		/*@media @media-size-xs{
+			padding-left: 15px !important;
+			padding-right: 15px !important;
+		}*/
+		@media @media-size-xl{
+			width: 1325px;
+		}
+	}
+	@media @media-size-xs{
+		padding: 35px 0;
+		font-size: 18px;
+		line-height: 28px;
+	}
+	@media @media-size-sm{
+		padding: 50px 0 75px; 
+		font-size: 20px;
+		line-height: 32px;
+	}
+}
+._op__com-heading{
+	color:  #ffc65b;
+	font-size: 48px;
+	line-height: 58px;
+	text-align: center;
+	font-weight: 700;
+	font-family: @open-sans;    
+	max-width: 500px;
+    margin: 0 auto 60px;
+    text-transform: uppercase;
+	@media @media-size-xs{
+		font-size: 26px;
+		line-height: 38px;
+		max-width: 100%;
+		br{display: none;}
+		margin-bottom: 25px;
+	}
+}
+._op__com-list{
+	list-style: none;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	counter-reset: list;
+	> li{
+		width: 50%;
+		padding-left: 40px;
+		padding-right: 15px;
+		padding-top: 35px;
+		position: relative;
+		margin-bottom: 65px;
+		span{
+			position: relative;
+			z-index: 2;
+		}
+		&:before{
+			counter-increment: list;
+			content: counter(list);
+			color: rgb(128, 200, 255);
+			font-size: 100px;
+			font-weight: 700;
+			font-family: @open-sans;  
+			position: absolute;
+			top: 10px;
+			left: 5px;
+			z-index: 1;
+		}
+		@media @media-size-xs{
+			width: 100%;
+			padding-top: 0;
+			padding-left: 45px;
+			margin-bottom: 30px;
+			&:before{
+				font-size: 60px;
+			}
+		}
+		@media @media-size-xs-l{
+    		padding-left: 65px;
+    	}
+		@media @media-size-sm{
+			&:before{
+				font-size: 80px;
+			}
+		}
+
+		@media @media-size-xl{
+			width: 45%;
+		}
+	}
+}
+._op__com-note{
+	font-family: @open-sans; 
+	color:  #609dd4;	
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 32px;
+	&:before{display: none;}
+	@media @media-size-xs{
+		padding-left: 15px!important;
+		font-size: 18px;
+		line-height: 28px;
+	}
+} 

@@ -1,0 +1,128 @@
+.livecow-header{
+	//opacity: @opacity;
+	background: url('@{url-path-img}/livecow/bg-header.jpg') no-repeat center -30px;
+	.container{
+		@media @media-size-xl{
+			width: 1460px;
+		}
+	}
+	@media @media-size-xs{
+		background-position: 45% -30px;
+	}
+	@media @media-size-sm-p{
+		background-size: 1400px;
+	}
+}
+._lch__block{
+	min-height: 707px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 125px;
+    padding-bottom: 55px; 
+	@media @media-size-xs{
+		padding-top: 35px;
+		min-height: 500px;
+	}
+	@media @media-size-sm-p{
+		padding-top: 45px;
+		min-height: 500px;
+	}
+	@media @media-size-xl{
+		max-width: 840px;
+	}
+}
+._lch__block-heading{
+	color: rgb(0, 173, 93);
+	font-family: @kel;
+	font-size: 180px;
+	line-height: 180px;
+	@media @media-size-xs{
+		font-size: 55px;
+		line-height: 65px;
+	}
+	@media @media-size-sm-p{
+		font-size: 105px;
+		line-height: 105px;
+	}
+	@media @media-size-sm-l{
+		font-size: 140px;
+    	line-height: 140px;
+	}
+	@media @media-size-md-new{
+		font-size: 150px;
+    	line-height: 150px;
+	}
+}
+._lch__block-heading-small{
+	color:  #333333;
+	font-size: 31px;
+	letter-spacing: 0.9px;
+	line-height: 70.258px;
+	padding-left: 8px;
+	text-transform: uppercase;
+	@media @media-size-xs{
+		font-size: 20px;
+		line-height: 32px;
+		padding-left: 0px;
+	}
+	@media @media-size-sm-p{
+		font-size: 25px;
+		line-height: 60px;
+		padding-left: 3px;
+	}
+	@media @media-size-sm-l{
+		padding-left: 5px;
+	}
+} 
+._lch__list-block{
+	margin-left: 12px;
+	@media @media-size-xs{
+		margin: 15px 0 0;
+	}
+}
+._lch__list{
+	margin-bottom: 0px;
+	list-style: none;
+	font-size: 16px;
+	font-family: @proxima;
+	text-transform: uppercase;
+	flex-wrap: wrap; 
+	margin-bottom: -35px;
+	@media @media-size-sm-p{
+		font-size: 14px;
+	}
+	> li{
+		width: 49%;
+		position: relative;
+		margin-bottom: 35px;
+		line-height: 21px;
+		&:nth-child(2n+1){
+			max-width: 42%;
+		}
+		@media @media-size-xs{
+			width: 100%;
+			margin-bottom: 15px;
+			&:nth-child(2n+1){
+				max-width: 100%;
+			}
+		}
+		@media @media-size-sm-p{
+			width: 53%;			
+			&:nth-child(2n+1){
+				max-width: 40%;
+			}
+		}
+		&:before{
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			width: 4px;
+			background:  #00ad5d;
+		}
+		span{
+			display: inline-block;
+			margin-left: 23px;
+		}
+	}
+}

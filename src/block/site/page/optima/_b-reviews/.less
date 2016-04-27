@@ -1,0 +1,105 @@
+.optima-reviews{
+	background: url('@{url-path-img}/optima/bg-reviews.jpg') no-repeat center 0px;
+	//opacity: @opacity;
+	//min-height: 500px;
+	color: @white;
+	padding: 110px 0;
+	.container{
+		@media @media-size-xl{
+			width: 1255px;
+		}
+	}
+	@media @media-size-xs{
+		padding: 35px 0;
+	}
+}
+._opr__form-heading{
+	font-family: @open-sans;
+	text-transform: uppercase;	
+	font-size: 48px;
+	line-height: 60px;
+	text-align: center;
+	color:  #1a1919;
+	font-weight: 700;
+	margin-bottom: 75px;
+	@media @media-size-xs{
+		font-size: 25px;
+    	line-height: 35px;
+		margin-bottom: 25px;
+	}
+	@media @media-size-sm-p{
+		font-size: 40px;
+    	line-height: 52px;
+	}
+	@media @media-size-sm-l{
+		font-size: 50px;
+    	line-height: 62px;
+	}
+	@media @media-size-md-new{
+		font-size: 44px;
+    	line-height: 56px;
+	}
+}
+._opr__form-area{
+	max-width: 555px; 
+	margin: 0 auto;
+	input, textarea{
+		width: 100%;
+		background: @white;
+		outline: none;
+		border: 1px solid @white;
+		height: 50px;
+		margin-bottom: 30px;    
+		padding: 10px 20px;
+    	color: black;
+		transition: all 0.3s ease;
+		font-size: 16px;
+		font-family: 'Open Sans', sans-serif;
+		&::-webkit-input-placeholder {
+			font-size: 16px;
+			color: lighten(@black, 20%); 
+			font-family: 'Open Sans', sans-serif;
+			transition: all 0.3s ease;
+			
+		}
+		&:-moz-placeholder {
+			font-size: 16px;
+			color: lighten(@black, 20%);	
+			font-family: 'Open Sans', sans-serif;
+			transition: all 0.3s ease;
+		}
+		&:focus{
+			background: @white;
+			border-color: #ffc65b;
+
+			&::-webkit-input-placeholder {
+				color: @black; 
+			}
+			&:-moz-placeholder {
+				color: @black; 
+			}
+		}
+	}
+	textarea{
+		height: 105px;
+	}
+	button{
+		&[type="submit"]{
+			display: block;
+			margin: 5px auto;
+			border-radius: 10px;
+			background-color:  #ffc65b;
+			font-size: 14px;    
+			line-height: 40px;
+			padding: 0 55px;
+			color: @white;
+			text-transform: uppercase;
+			border: none;
+			outline: none;
+			transition: all 0.3s ease;
+			&:hover{
+				background: darken(#ffc65b, 10%);
+			}
+		}
+	}
+}

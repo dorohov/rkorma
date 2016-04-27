@@ -1,10 +1,17 @@
+	@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=cyrillic);
 	@proxima: 		proxima_nova_regular-webfont;
 	@proxima-light: proxima_nova_light-webfont;
 	@proxima-black: proxima_nova_black-webfont;
 	@proxima-extrabold: proxima_nova_extrabold-webfont;
 	@proxima-semibold: proxima_nova_semibold-webfont;
 	@proxima-bold: proxima_nova_bold-webfont;
+	@bebas: bebasneueregular-webfont;
+	@kel: kel-webfont;
+	@intro-inline: intro_inline-webfont;
+	@intro: intro-webfont;
+	@optima: Optima LT Std Demi;
 
+	@open-sans: 'Open Sans',sans-serif;
 	@din: pfdindisplaypro-reg-webfont;
 	@din-med: pfdindisplaypro-med-webfont;
 	@din-bold: pfdindisplaypro-bold-webfont;
@@ -26,9 +33,11 @@
 			font-style: @style;		
 		}
 	}
+	.include-custom-font(@family: @bebas, @weight: normal, @style: normal);
 	.include-custom-font(@family: @proxima, @weight: normal, @style: normal);
 	.include-custom-font(@family: @proxima-light, @weight: normal, @style: normal);
 	.include-custom-font(@family: @proxima-extrabold, @weight: normal, @style: normal);
+	.include-custom-font(@family: @kel, @weight: normal, @style: normal);
 	.include-custom-font(@family: @proxima-semibold, @weight: normal, @style: normal);
 	.include-custom-font(@family: @proxima-black, @weight: normal, @style: normal);
 	.include-custom-font(@family: @proxima-bold, @weight: normal, @style: normal);
@@ -38,11 +47,15 @@
 	.include-custom-font(@family: @din-bold, @weight: normal, @style: normal);
 	.include-custom-font(@family: @din-light, @weight: normal, @style: normal);
 
+	.include-custom-font(@family: @intro, @weight: normal, @style: normal);
+	.include-custom-font(@family: @intro-inline, @weight: normal, @style: normal);
+
 	.include-custom-font(@family: @icon-base, @weight: normal, @style: normal);
 
 	.include-custom-font(@family: @agora-bolditalic, @weight: normal, @style: normal);
 	.include-custom-font(@family: @agoras-black, @weight: normal, @style: normal);
 	.include-custom-font(@family: @agora-black, @weight: normal, @style: normal);
+	.include-custom-font(@family: @optima, @weight: normal, @style: normal);
 
 	.mixin-headings(@font-family: @proxima, @font-size: 20px, @line-height: 26px, @color: @black){
 		font-family: @font-family;

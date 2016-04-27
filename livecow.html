@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU"> 
+	<head>
+	<meta charset="utf-8">	
+<title>rkorma</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta HTTP-EQUIV="Cache-Control" content="no-cache" />
+
+<link type="image/x-icon" href="/favicon.ico" rel="shortcut icon" />
+<link type="image/x-icon" href="/favicon.ico" rel="icon" />
+
+<!--<link href="/css/FSVS.css" rel="stylesheet">-->
+<link href="/css/bootstrap/bootstrap.css" rel="stylesheet">
+<link href="/css/site.css" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+
+<script src="/js/jquery.min.js" ></script>
+
+<!--<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>-->
+<!--<script src="/js/jquery-plugin/FSVS.js"></script>-->
+
+<!--<script src="/js/jquery-plugin/jquery.jqfeScrollTo.js"></script>-->
+<script src="/js/jquery-plugin/jquery-ui.min.js"></script>
+<script src="/js/jquery-plugin/scrollreveal.min.js"></script>
+
+<script src="/js/bootstrap.min.js" ></script>
+<script src="/js/device.min.js" ></script>
+<script src="/js/storage.js" ></script>
+<script src="/js/site.js" ></script>
+
+<script src="/js/document-ready.js" ></script> 
+<script>
+	$(window).load(function(){
+		$("[data-toggle-nav]").click(function() {
+		  var toggle_el = $(this).data("toggle-nav"); 
+		  $(toggle_el).toggleClass("open-sidebar");
+		});
+		$("[data-toggle-rub]").click(function() {
+		  var toggle_el = $(this).data("toggle-rub"); 
+		  $(toggle_el).toggleClass("open-sidebar-rub");
+		});
+		/*$(".swipe-area").swipe({
+			  swipeStatus:function(event, phase, direction, distance, duration, fingers)
+				{
+					if (phase=="move" && direction =="left") {
+						   $("body").addClass("open-sidebar");
+						   return false;
+					}
+					if (phase=="move" && direction =="right") {
+						   $("body").removeClass("open-sidebar");
+						   return false;
+					}
+				}
+		});*/
+	});
+	$(document).ready(function() {
+		$('img').addClass('img-responsive');
+		var url = window.location.pathname;
+		$('.navbar-nav a[href="'+url+'"]').parent().addClass('active');
+		$('.carousel .item').eq('0').addClass('active');	
+		var trigger = $('.navbar-hamburger'),
+		overlay = $('.overlay'),
+		isClosed = false;
+		var trigger1 = $('.calcite-hamburger'),
+		overlay1 = $('.overlay'),
+		isClosed1 = false;
+
+		trigger.click(function () {
+			hamburger_cross();      
+		});
+		trigger1.click(function () {
+			hamburger_cross1();      
+		});
+
+		function hamburger_cross() {
+			if (isClosed == true) {          
+				overlay.hide();
+				trigger.removeClass('is-open');
+				trigger.addClass('is-closed');
+				isClosed = false;
+			} else {   
+				overlay.show();
+				trigger.removeClass('is-closed');
+				trigger.addClass('is-open');
+				isClosed = true;
+			}
+		}
+		function hamburger_cross1() {
+			if (isClosed1 == true) {          
+				overlay1.hide();
+				trigger1.removeClass('is-open');
+				trigger1.addClass('is-closed');
+				isClosed1 = false;
+			} else {   
+				overlay1.show();
+				trigger1.removeClass('is-closed');
+				trigger1.addClass('is-open');
+				isClosed1 = true;
+			}
+		}
+	})
+	
+</script>
+<!--
+<script src="/js/jquery.touchSwipe.min.js" ></script>
+<script src="/js/slider-fullpage.js" ></script>--> 
+	</head>
+	<body>
+		<nav class="navbar navbar-default {class} ">
+	<div class="container-fluid">	
+		<div class="navbar-header">
+			<button type="button" class="hamburger navbar-hamburger is-closed" data-toggle-nav="body"> 
+				<span class="hamb-top"></span>
+				<span class="hamb-middle"></span>
+				<span class="hamb-bottom"></span>
+			</button>
+			<a class="navbar-brand" href="/"><img src="img/logotip.png" alt=""></a>
+		</div> 
+		<div class="collapse-right" id="navbarSite">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="/partners.html">Партнеры</a></li>
+				<li><a href="/production.html">Продукция</a></li>
+				<li><a href="/manufacture.html">Производство</a></li>
+				<li><a href="/services.html">Услуги</a></li>
+				<li><a href="/blog.html">Блог</a></li>
+				<li><a href="/contacts.html">Контакты</a></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle icon-magnifying" data-toggle="dropdown"></a>
+					<div class="dropdown-menu dropdown-form">
+						<form class="input-group">
+							<input type="text" class="form-control" placeholder="Введите слово для поиска">
+							<span class="input-group-btn"> 
+								<button class="btn" type="submit"></button>
+							</span>
+						</form>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+		<div class="livecow-page">	
+			<div class="livecow-header">
+	<div class="container">
+		<div class="_lch__block _land__flex">
+			<div class="_land__col" >
+				<div class="_lch__block-heading">LIVE COW</div>
+				<div class="_lch__block-heading-small">Витаминно-минеральный комплекс</div>
+			</div>
+			<div class="_land__col"> 
+				<div class="_lch__list-block"> 
+					<ul class="_lch__list _land__flex">
+						<li class="_land__col"><span>Реализация генетического 
+	потенциала животных</span></li>
+						<li class="_land__col"><span>Повышение молочной продуктивности 
+	у лактирующих коров</span></li>
+						<li class="_land__col"><span>Повышение сохранности 
+	молодняка </span></li>
+						<li class="_land__col"><span>Профилактика заболеваний 
+	обмена вещест</span></li>
+						<li class="_land__col"><span>Повышение среднесуточных 
+	приростов у молодняка</span></li>
+						<li class="_land__col"><span>Повышение эффективности 
+	осеменения</span></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+		
+			<div class="livecow-company">
+	<div class="container">
+		<div class="_lcc__heading">Предлагаем Вашему<br>вниманию новые продукты линейки <span>Live cow!</div>
+		<div>
+			Комплексная программа кормления LIVE COW направлена на здоровое физиологическое и продуктивное состояние крупного скота. Витаминно-минеральные комплексы являются оптимальным решением в кормлении как на привязном, так и на беспривязном содержании.
+		</div>
+	</div>
+</div>		
+			<div class="livecow-tabs-block">
+	<div class="container">
+		<ul class="_lct__tabs _land__flex"> 
+			<li class="_land__col active _lct__dry">
+				<a href="#dry" data-toggle="tab">LC Mineral-Complex DRY</a>
+			</li>
+			<li class="_land__col _lct__dairy">
+				<a href="#dairy" data-toggle="tab">LC Mineral-Complex DaiRY</a>
+			</li>
+			<li class="_land__col _lct__heifer">
+				<a href="#heifer" data-toggle="tab">LC Mineral-Complex heifer</a>
+			</li>
+		</ul>
+		<div class="tab-content">
+			<div class="tab-pane fade in active _lct__dry-item" id="dry">
+				<ul class="_lct__tabs-item _land__flex "> 
+					<li class="_land__col active">
+						<a href="#dry-item1" data-toggle="tab">Для сухостойных коров</a>
+					</li>
+					<li class="_land__col">
+						<a href="#dry-item2" data-toggle="tab">Для лактирующих коров</a>
+					</li>
+					<li class="_land__col">
+						<a href="#dry-item3" data-toggle="tab">Для телок и нетелей heifer</a>
+					</li>
+				</ul>
+				<div class="tab-content">
+					<div class="tab-pane fade in active" id="dry-item1">
+						<div class="_land__flex _lct__table-line">
+							<div class="_land__col _lct__col-table">
+								<table class="_lct__table">
+									<tr>
+										<td>Протеин сырой</td>
+										<td>8%</td>
+									</tr>
+									<tr>
+										<td>О.Э. КРС</td>
+										<td>9 МДж</td>
+									</tr>
+									<tr>
+										<td>Жир</td>
+										<td>1 %</td>
+									</tr>
+									<tr>
+										<td>Зольность</td>
+										<td>28 %</td>
+									</tr>
+									<tr>
+										<td>Кальций</td>
+										<td>2%</td>
+									</tr>
+									<tr>
+										<td>Фосфор</td>
+										<td>1%</td>
+									</tr>
+									<tr>
+										<td>Магний</td>
+										<td>8%</td>
+									</tr>
+									<tr>
+										<td>Натрий</td>
+										<td>0,1%</td>
+									</tr>
+									<tr>
+										<td>Сахар</td>
+										<td>37%</td>
+									</tr>
+									<tr>
+										<td>Витамин А</td>
+										<td>1000000 МЕ</td>
+									</tr>
+								</table>
+							</div>
+							<div class="_land__col _lct__col-table">
+								<table class="_lct__table">
+									<tr>
+										<td>Витамин Д3</td>
+										<td>350000 МЕ</td>
+									</tr>
+									<tr>
+										<td>Витамин Е</td>
+										<td>10000 мг</td>
+									</tr>
+									<tr>
+										<td>Марганец</td>
+										<td>2500 мг</td>
+									</tr>
+									<tr>
+										<td>Цинк</td>
+										<td>5250 мг</td>
+									</tr>
+									<tr>
+										<td>Медь</td>
+										<td>2500 мг</td>
+									</tr>
+									<tr>
+										<td>Йод</td>
+										<td>200 мг</td>
+									</tr>
+									<tr>
+										<td>Кобальт</td>
+										<td>60 мг</td>
+									</tr>
+									<tr>
+										<td>Селен</td>
+										<td>70</td>
+									</tr>
+									<tr>
+										<td>Антиоксидант</td>
+										<td>+</td>
+									</tr>
+									<tr>
+										<td>Сера</td>
+										<td>10 г</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<div class="_land__flex">
+							<div class="_land__col _lct__col-table">
+								<table class="_lct__table-no-border">
+									<tr>
+										<th>Масса</th>
+										<th>Норма потребления</th>
+									</tr>
+									<tr>
+										<td>40 кг</td>
+										<td>100-120 грамм на голову на сутки</td>
+									</tr>									
+								</table>
+							</div>
+							<div class="_land__col _lct__col-table _lct__tar">
+								<div>Содержатся все необходимые минералы и витамины</div>
+								<div>Селен представлен в органической форме</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade in active" id="dry-item2">
+					</div>
+					<div class="tab-pane fade in active" id="dry-item3">
+					</div>
+				</div>
+			</div>
+			<div class="tab-pane fade _lct__dairy-item" id="dairy">				
+				<ul class="_lct__tabs-item _land__flex "> 
+					<li class="_land__col active">
+						<a href="#dairy-item1" data-toggle="tab">Для сухостойных коров</a>
+					</li>
+					<li class="_land__col">
+						<a href="#dairy-item2" data-toggle="tab">Для лактирующих коров</a>
+					</li>
+					<li class="_land__col">
+						<a href="#dairy-item3" data-toggle="tab">Для телок и нетелей heifer</a>
+					</li>
+				</ul>
+				<div class="tab-content">
+					<div class="tab-pane fade in active" id="dairy-item1">
+						<div class="_land__flex">
+							<div class="_land__col _lct__col-table">
+								<table class="_lct__table">
+									<tr>
+										<td>Протеин сырой</td>
+										<td>8%</td>
+									</tr>
+									<tr>
+										<td>О.Э. КРС</td>
+										<td>9 МДж</td>
+									</tr>
+									<tr>
+										<td>Жир</td>
+										<td>1 %</td>
+									</tr>
+									<tr>
+										<td>Зольность</td>
+										<td>28 %</td>
+									</tr>
+									<tr>
+										<td>Кальций</td>
+										<td>2%</td>
+									</tr>
+									<tr>
+										<td>Фосфор</td>
+										<td>1%</td>
+									</tr>
+									<tr>
+										<td>Магний</td>
+										<td>8%</td>
+									</tr>
+									<tr>
+										<td>Натрий</td>
+										<td>0,1%</td>
+									</tr>
+									<tr>
+										<td>Сахар</td>
+										<td>37%</td>
+									</tr>
+									<tr>
+										<td>Витамин А</td>
+										<td>1000000 МЕ</td>
+									</tr>
+								</table>
+							</div>
+							<div class="_land__col _lct__col-table">
+								<table class="_lct__table">
+									<tr>
+										<td>Витамин Д3</td>
+										<td>350000 МЕ</td>
+									</tr>
+									<tr>
+										<td>Витамин Е</td>
+										<td>10000 мг</td>
+									</tr>
+									<tr>
+										<td>Марганец</td>
+										<td>2500 мг</td>
+									</tr>
+									<tr>
+										<td>Цинк</td>
+										<td>5250 мг</td>
+									</tr>
+									<tr>
+										<td>Медь</td>
+										<td>2500 мг</td>
+									</tr>
+									<tr>
+										<td>Йод</td>
+										<td>200 мг</td>
+									</tr>
+									<tr>
+										<td>Кобальт</td>
+										<td>60 мг</td>
+									</tr>
+									<tr>
+										<td>Селен</td>
+										<td>70</td>
+									</tr>
+									<tr>
+										<td>Антиоксидант</td>
+										<td>+</td>
+									</tr>
+									<tr>
+										<td>Сера</td>
+										<td>10 г</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade in active" id="dairy-item2">
+					</div>
+					<div class="tab-pane fade in active" id="dairy-item3">
+					</div>
+				</div>
+			</div>
+			<div class="tab-pane fade _lct__heifer-item" id="heifer">			
+				<ul class="_lct__tabs-item _land__flex "> 
+					<li class="_land__col active">
+						<a href="#heifer-item1" data-toggle="tab">Для сухостойных коров</a>
+					</li>
+					<li class="_land__col">
+						<a href="#heifer-item2" data-toggle="tab">Для лактирующих коров</a>
+					</li>
+					<li class="_land__col">
+						<a href="#heifer-item3" data-toggle="tab">Для телок и нетелей heifer</a>
+					</li>
+				</ul>
+				<div class="tab-content">
+					<div class="tab-pane fade in active" id="heifer-item1">
+						<div class="_land__flex">
+							<div class="_land__col _lct__col-table">
+								<table class="_lct__table">
+									<tr>
+										<td>Протеин сырой</td>
+										<td>8%</td>
+									</tr>
+									<tr>
+										<td>О.Э. КРС</td>
+										<td>9 МДж</td>
+									</tr>
+									<tr>
+										<td>Жир</td>
+										<td>1 %</td>
+									</tr>
+									<tr>
+										<td>Зольность</td>
+										<td>28 %</td>
+									</tr>
+									<tr>
+										<td>Кальций</td>
+										<td>2%</td>
+									</tr>
+									<tr>
+										<td>Фосфор</td>
+										<td>1%</td>
+									</tr>
+									<tr>
+										<td>Магний</td>
+										<td>8%</td>
+									</tr>
+									<tr>
+										<td>Натрий</td>
+										<td>0,1%</td>
+									</tr>
+									<tr>
+										<td>Сахар</td>
+										<td>37%</td>
+									</tr>
+									<tr>
+										<td>Витамин А</td>
+										<td>1000000 МЕ</td>
+									</tr>
+								</table>
+							</div>
+							<div class="_land__col _lct__col-table">
+								<table class="_lct__table">
+									<tr>
+										<td>Витамин Д3</td>
+										<td>350000 МЕ</td>
+									</tr>
+									<tr>
+										<td>Витамин Е</td>
+										<td>10000 мг</td>
+									</tr>
+									<tr>
+										<td>Марганец</td>
+										<td>2500 мг</td>
+									</tr>
+									<tr>
+										<td>Цинк</td>
+										<td>5250 мг</td>
+									</tr>
+									<tr>
+										<td>Медь</td>
+										<td>2500 мг</td>
+									</tr>
+									<tr>
+										<td>Йод</td>
+										<td>200 мг</td>
+									</tr>
+									<tr>
+										<td>Кобальт</td>
+										<td>60 мг</td>
+									</tr>
+									<tr>
+										<td>Селен</td>
+										<td>70</td>
+									</tr>
+									<tr>
+										<td>Антиоксидант</td>
+										<td>+</td>
+									</tr>
+									<tr>
+										<td>Сера</td>
+										<td>10 г</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade in active" id="heifer-item2">
+					</div>
+					<div class="tab-pane fade in active" id="heifer-item3">
+					</div>
+				</div>	
+			</div>
+		</div>
+	</div>
+</div> 
+
+
+
+
+
+
+
+
+		
+			<div class="livecow-reviews">
+	<div class="container">
+		<form accept="" class="_lcr__form">
+			<div class="_lcr__form-inner">
+				<div class="_lcr__form-heading">
+					закажите бесплатную консультацию <br>у нашего специалиста
+				</div>
+				<div class="_lcr__form-area">
+					<div>
+						<input type="text" id="name" placeholder="Ваше имя"></input>
+					</div>
+					<div>
+						<input type="text" id="email" placeholder="E-mail или телефон"></input>
+					</div>
+					<div>
+						<textarea id="note" placeholder="Комментарий"></textarea>
+					</div>
+					<div>
+						<button type="submit">Отправить</button>
+					</div>
+				</div> 
+			</div>
+		</form>
+	</div>
+</div> 
+		</div>
+
+		<footer class="{class} footer-site">
+	<div class="footer-nav-block">
+		<div class="container-fluid">
+			<div class="col-xs-12 _b-footer-nav__flex">
+				<div class="_b-footer-nav__contacts ">
+					<div class="_b-footer-nav__logotip"><img src="img/logotip-footer.png" alt=""></div>
+					<div>
+						<div><b>305029</b>, г. Курск, ул. К.Маркса, 62/21, оф.523</div>
+						<div><b>302030</b>, г. Орел, ул. С.Шаумяна, 35, оф.202</div>
+						<div class="_b-footer-nav__contacts-phone">					
+							<div><a href="tel:+78005004765">+7 (800) 500-47-65</a> - офис-менеджер</div>
+							<div><a href="tel:+79155192779">+7 (915) 519-27-79</a> - тех. специалист</div>
+						</div>
+						<div><a href="mailto:info@rkorma.ru">info@rkorma.ru</a></div>
+						<div class="_b-footer-nav__contacts-map">
+							<a href="/contacts.html" class="btn-footer">Посмотреть на карте</a>
+						</div>						
+					</div>
+				</div>
+				<div class="_b-footer-nav__item item1">
+					<div class="_b-nav__item-icon icon1"></div>
+					<ul>
+						<li class="__heading">Для КРС</li>
+						<li><a href="/production/cattle/produkty_dlya_doynih_korov/">Продукты для дойных коров</a></li>
+						<li><a href="/production/cattle/produkty_dlya_suhostoinih_korov/">Продукты для сухостойных коров</a></li>
+						<li><a href="/production/cattle/produkty_dlya_volodnyaka/">Продукты для молодняка</a></li>
+						<li><a href="/production/cattle/produkty_dlya_myasnogo_skota/">Продукты для мясного скота</a></li>
+						<li><a href="/production/cattle/produkty_dlya_konservirovanya_kormov/">Продукты для консервирования кормов</a></li>
+					</ul>
+				</div>
+				<div class="_b-footer-nav__item item2">
+					<div class="_b-nav__item-icon icon2"></div>
+					<ul>
+						<li class="__heading">Для свиней</li>
+						<li><a href="/production/pig/zinkofarm_zincofarm/">Зинкофарм (Zincofarm)</a></li>
+						<li><a href="/production/pig/farmagulyator_zhidkij_farmagulator_liquid1/">Фармагулятор жидкий (Farmagulator liquid)</a></li>
+					</ul>
+				</div>
+				<div class="_b-footer-nav__item item3">
+					<div class="_b-nav__item-icon icon3"></div>
+					<ul>
+						<li class="__heading">Для птицы</li>
+						<li><a href="/production/poultry/mineralnye_kompleksy/">Минеральные комплексы</a></li>
+						<li><a href="/production/poultry/povyshenie_produktivnosti/">Повышение продуктивности</a></li>
+						<li><a href="/production/poultry/adsorbenty/">Адсорбенты</a></li>
+						<li><a href="/production/poultry/fermentnye_kompleksy/">Ферментные комплексы</a></li>
+						<li><a href="/production/poultry/ingibitory_rosta_patogennyh_bakterij/">Ингибиторы роста патогенных бактерий</a></li>
+					</ul>
+				</div>
+				<div class="_b-footer-nav__item item4">
+					<div class="_b-nav__item-icon icon4"></div>
+					<ul>
+						<li class="__heading">болюсы</li>
+						<li class="active"><a href="/calcite.html">Кальцитоп болюс</a></li>
+						<li><a href="/high-dry.html">Higt Trace болюс</a></li>
+						<li><a href="/production/bolyusy/dry_plus_bolyus/">Dry Plus болюс</a></li>
+						<li><a href="#"></a></li>
+					</ul>
+				</div>
+				<div class="_b-footer-nav__item item5">
+					<div class="_b-nav__item-icon icon5"></div>
+					<ul>
+						<li class="__heading">кормопроизводство</li>
+						<li><a href="/production/kormoproizvodstvo/mnogoletnie_travosmesi/">Многолетниее травосмеси</a></li>
+						<li><a href="/production/kormoproizvodstvo/odnoletnie_travosmesi/">Однолетние травосмеси</a></li>
+						<li><a href="/production/kormoproizvodstvo/lyucerna/">Люцерна</a></li>
+						<li><a href="/production/kormoproizvodstvo/klever/">Клевер</a></li>
+						<li><a href="/production/kormoproizvodstvo/travosmes_dlya_myasnogo_krs/">Травосмесь для мясного КРС</a></li>
+						<li><a href="/production/kormoproizvodstvo/travosmes_dlya_ovec/">Травосмесь для овец</a></li>
+						<li><a href="/production/kormoproizvodstvo/travosmes_dlya_loshadej/">Травосмесь для лошадей</a></li>
+					</ul>
+
+						
+				</div>
+			</div>			 
+		</div>		 
+	</div>
+	<div class="footer-autor-block">
+		<div class="container-fluid">
+			<div class="col-xs-12">
+				<div class="_b-footer-nav__flex">
+					<div>&copy; 2013-2015, ООО «РегионКорма»  Все права защищены</div>
+					<div class="dorohovdesign">Сделано в <a href="http://www.dorohovdesign.ru/" target="_blank">Dorohovdesign</a></div>
+				</div>
+			</div>		
+		</div>		
+	</div>
+</footer>		
+			
+	</body>
+</html>
