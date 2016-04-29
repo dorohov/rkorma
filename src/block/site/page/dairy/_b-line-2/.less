@@ -1,333 +1,42 @@
-.optima-info{
+.dairy-info2{
 	background: @white;
 	//opacity: @opacity;
-	font-family: Georgia, 'Century Schoolbook L', Serif;
+	font-family: @proxima-light;
 	color: lighten(@black, 20%);
 	font-size: 24px;
 	line-height: 36px;
-	padding: 35px 0 0;
+	padding: 120px 0 160px;
 	//min-height: 1900px;
-	.container{
+	/*.container{
 		//@media @media-size-xl{
 			width: 100%;
 			padding: 0!important;
 		//}
+	}*/
+	@media @media-size-xs {
+		padding: 35px 0;
+		font-size: 18px;
+		line-height: 28px;
+	}
+	@media @media-size-sm {
+		padding: 50px 0;
+		font-size: 18px;
+		line-height: 28px;
 	}
 }
-._opi__item1{
-	color: lighten(@black, 40%);
-	font-size: 20px;
-	line-height: 26px;	
-	background: url('@{url-path-img}/optima/bg-info-item1.png') no-repeat;
-	max-width: 1450px;
-	background-position: 145px 90px;
-    min-height: 550px;
-    padding-bottom: 35px;
-    margin-bottom: 90px;
-    @media @media-size-xs{
-		background: none;
-		min-height: inherit;
-		padding-left: 25px;
-		padding-right: 25px;
-		font-size: 18px;
-		line-height: 24px;
-		margin-bottom: 35px;
-		padding-bottom: 0;
-    	max-width: 100%;
-    }
-    @media @media-size-sm-p{
-		background-size: 300px;
-		background-position: 10px 30px;
-		min-height: 440px;
-    }
-    @media @media-size-md{
-		background-size: 400px;
-		background-position: 30px 30px;
-		min-height: 440px;
-    }
-    @media @media-size-lg{
-		background-size: 510px;
-		background-position: 30px 30px;
-		min-height: 500px;
-    }
-    @media @media-size-xl-step{
-    	background-position: 70px 90px;
-    }
-}
-._opi__item1-inner{
-    max-width: 805px;
-    margin-left: auto;    
-    padding-top: 230px;
-    @media @media-size-xs{
-		max-width: 565px;
-		padding-top: 0px;
-		padding-right: 0px;
-    	max-width: 100%;
-    }
-    @media @media-size-sm-p{
-		max-width: 565px;
-		padding-top: 100px;
-		padding-right: 35px;
-    }
-    @media @media-size-md{
-		max-width: 715px;
-		padding-top: 130px;
-    }	
-    @media @media-size-lg{		
-	    padding-top: 150px;
-	    padding-right: 70px;
-    }
-    @media @media-size-xl-step{
-    	padding-right: 150px;
-    	max-width: 905px;
-    }
-}
-._opi__item1-heading{
-	color:  #ffc65b;
-	font-size: 24px;
-	line-height: 28px;
-	font-weight: 700;
-	font-family: @open-sans;
-	margin-bottom: 10px;
-    @media @media-size-xs{
-    	text-align: center;
-		font-size: 20px;
-		line-height: 24px;
-    }
-}
-._opi__item1-note{
-	margin-left: 65px;
-    @media @media-size-xs{
-    	margin: 0;
-    }
-}
-._opi__item2{
-	padding-bottom: 50px;
-	background: url('@{url-path-img}/optima/bg-info-item3.png') no-repeat;
-	background-position: 100% 120%;
-    @media @media-size-xs{
-    	padding-left: 25px;
-    	padding-right: 25px;
-		padding-bottom: 35px;
-    }
-    @media @media-size-xs-l{
-		padding-bottom: 15px;    
-		background-position: 100% center;
-    	background-size: 200px;
-    }
-
-}
-._opi__item2-heading{
-	font-family: @open-sans;
-	color:  #ffc65b;
-	font-size: 48px;
-	font-weight: 700;
-	line-height: 72px;    
-	max-width: 885px;
-    margin: 0 auto;    
-	background: url('@{url-path-img}/optima/bg-info-item2.png') no-repeat;
-	background-position: -270px 40px;
-	overflow: hidden;
-	span{
+._daii2__note{
+	text-align: center;
+	max-width: 800px;
+	margin: 0 auto;
+	&:before{
+		content: '';
 		display: block;
-		&:nth-child(1){
-			letter-spacing: 3px;
-		}
-		&:nth-child(2){
-			transform: translateX(150px);
-			letter-spacing: 2px;
-		}
-		&:nth-child(3){    
-			transform: translateX(300px);
-			letter-spacing: 2.5px;
-		}
+		width: 70px;
+		height: 45px;
+		background: url('@{url-path-img}/dairy/cow-icon.png') no-repeat center;
+		margin: 0 auto 55px;
 	}
-    @media @media-size-xs{
-		font-size: 26px;
-		line-height: 32px;
-		text-align: center;
-		background: none;
-		span{
-			display: inline-block;
-			&:nth-child(2),
-			&:nth-child(3){
-				transform: none;
-			}
-		}
-    }
-    @media @media-size-sm-p{
-		font-size: 36px;
-		line-height: 60px;	
-		padding: 0 115px;	    	
-		span{
-
-			&:nth-child(2){
-				transform: translateX(50px);
-			}
-			&:nth-child(3){    
-				transform: translateX(100px);
-			}
-		}
-    }
-}
-._opi__item3{
-	background: url('@{url-path-img}/optima/bg-info-item4.png') no-repeat;
-	background-position: -40px 10px;
-	min-height: 700px;
-    @media @media-size-xs{
-    	padding-left: 25px;
-    	padding-right: 25px;    	
-		font-size: 18px;
-		line-height: 24px;
-		background-size: 210px;
-		padding-bottom: 190px;
-		background-position: -40px 100%;
-    }
-    @media @media-size-xs-l{
-    	min-height: 490px;
-    }
-    @media @media-size-xs-6-l{    	
-		background-position: -40px 50px;
-  		background-size: 180px;
-  		min-height: 300px;
-    	padding-bottom: 20px;
-    }
-    @media @media-size-sm-p{
-    	background-size: 300px;
-    	min-height: 500px;
-    	background-position: -40px 10px;
-    	font-size: 18px;
-    	line-height: 24px;
-    }
-    @media @media-size-md{
-    	background-size: 460px;
-    	min-height: 600px;
-    }
-    @media @media-size-lg{
-    	background-size: 460px;
-    	min-height: 600px;
-    }
-    @media @media-size-xl-step{
-    	background-size: 460px;
-    	min-height: 550px;
-    }
-}
-._opi__list{
-	display: flex;
-	flex-wrap: wrap;
-	list-style: none;
-	margin-left: auto;
-    max-width: 1170px;
-    padding-top: 100px;
-	> li {
-		width: 33.3333%;
-		padding-left: 40px;
-		padding-right: 15px;
-		position: relative;
-		padding-bottom: 65px;
-		&:before{
-			content: '';
-			border-radius: 50%;
-			background-color:  #42a6f3;
-			width: 13px;
-			height: 13px;
-			display: block;
-			position: absolute;
-			left: 0;
-			top: 0;
-			transform: translateY(100%);
-		}
+	@media @media-size-xs {
+		&:before{margin: 0 auto 35px;}
 	}
-    @media @media-size-xs{
-    	padding-top: 20px;
-		> li {
-			width: 100%;
-	    	padding-bottom: 35px;
-	    	padding-right: 0;
-			&:before{			
-				transform: translateY(50%);
-			}
-		}
-	}
-    @media @media-size-xs-l{
-		> li {
-	    	padding-bottom: 10px; 
-		}
-    }
-    @media @media-size-xs-6-l{
-    	max-width: 400px;
-    }
-    @media @media-size-sm-p{    
-    	max-width: 450px;
-    	padding-top: 20px;
-		> li {
-			width: 100%;
-			padding-bottom: 30px;
-		}
-    }
-    @media @media-size-md{
-    	max-width: 550px;
-    	padding-top: 90px;
-    	font-size: 18px;
-    	line-height: 24px;
-    	> li{
-    		width: 50%;
-    	}
-    }
-    @media @media-size-lg{
-    	max-width: 700px;
-    	padding-top: 40px;
-    	> li{
-    		width: 50%;
-    	}
-    }
-    @media @media-size-xl-step{
-    	max-width: 960px;
-    }
-}
-._opi__item4{
-	font-size: 30px;
-	line-height: 48px;
-	font-family: @open-sans;
-	color: lighten(@black, 40%);
-	background: url('@{url-path-img}/optima/bg-info-item5.png') no-repeat;
-	background-position: center bottom;
-	min-height: 710px;
-    @media @media-size-xs{
-		font-size: 26px;
-		line-height: 38px;
-		padding: 35px 25px 150px 25px;
-    	min-height: 600px;
-		background-position: 55% 0px;
-    }
-}
-._opi__item4-heading-note{
-	text-align: center;
-    max-width: 400px;
-    margin: 0 auto 30px;
-    transform: translateY(-65px);
-    @media @media-size-xs{
-    	transform: translateY(0px);
-    }
-}
-._opi__item4-heading{
-	font-family: @optima;    
-	text-align: center;
-    color: #151414;
-    font-size: 72px;
-    line-height: 90px;
-    max-width: 700px;
-    margin: 0 auto;
-    @media @media-size-xs{
-		font-size: 32px;
-		line-height: 50px;   	
-    }
-    @media @media-size-xs-6{
-		font-size: 38px;
-		line-height: 56px;   	
-    }
-}
-._opi__item4-heading-small{
-	text-align: center;
-	color: lighten(@black, 20%);
 }

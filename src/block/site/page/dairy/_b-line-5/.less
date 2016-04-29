@@ -1,0 +1,47 @@
+.dairy-info5{
+	background: rgb(227, 232, 222) ;
+	//opacity: @opacity;
+	font-family: @proxima-light;
+	color: #222121;
+	font-size: 24px;
+	line-height: 30px;
+	padding: 125px 0 160px;
+	//min-height: 1900px;
+	/*.container{
+		//@media @media-size-xl{
+			width: 100%;
+			padding: 0!important;
+		//}
+	}*/
+	@media @media-size-xs {
+		padding: 35px 0;
+		font-size: 18px;
+		line-height: 28px;
+	}
+	@media @media-size-sm {
+		padding: 50px 0;
+		font-size: 18px;
+		line-height: 28px;
+	}
+	@media @media-size-md {
+		padding: 75px 0;
+	}
+}
+._daii5__note{
+	text-align: center;
+	margin: 0 auto;
+	&:before{
+		content: '';
+		display: block;
+		width: 120px;
+		height: 120px;
+		background: url('@{url-path-img}/dairy/icon-petri.png') no-repeat center;
+		margin: 0 auto 110px;
+	}
+	@media @media-size-xs {
+		&:before{margin: 0 auto 35px;}
+	}
+	@media @media-size-sm {
+		&:before{margin: 0 auto 35px;}
+	}
+}

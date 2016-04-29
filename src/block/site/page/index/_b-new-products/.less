@@ -136,12 +136,13 @@
 		}
 	}
 	@media @media-size-sm{
-		width: 20px;
+		width: 20px!important;
 		right: 0;
 		&.rect-left{
 			border-radius: 0 0 0 35px;
 			height: 13%;
 			top: 0; 
+			left: inherit;
 		}
 		&.rect-right{
 			bottom: 0; 
@@ -239,6 +240,10 @@
 	.flex-direction(@direction: column);
 	.justify-content(@justify: center);
 	.align-items(@align: center) ;
+	@media @media-size-sm{
+		padding: 0 45px;
+		text-align: center;
+	}
 }
 ._inp-carousel__caption-logo{
 	.rotation-translateY(@y:-40px);
@@ -348,6 +353,9 @@
 	@media @media-size-netbook{
 		display: none;
 	}
+	@media @media-size-sm-l{
+		display: flex;
+	}	
 	@media @media-size-xs{
 		.flex-direction(@direction: column);
 		margin: 0;
