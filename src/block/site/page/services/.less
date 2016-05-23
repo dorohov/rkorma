@@ -20,7 +20,8 @@
 ._sb__flex-block{
 	.flex-display(@display: flex);
 	.align-items(@align: stretch);
-	height: 650px;
+	//height: 650px;
+	height: 720px;
 	margin-left: -15px;
 	margin-bottom: -15px;
 	@media @media-size-sm{
@@ -41,9 +42,7 @@
 ._sb__col-left{
 	max-width: 360px;
 	width: 100%;
-	.flex-display(@display: flex);
-	.flex-direction(@direction: column) ;
-	.justify-content(@justify: space-between);
+	height: 100%;
 	@media @media-size-md{
 		max-width: 270px;
 	}
@@ -53,6 +52,14 @@
 	@media @media-size-xs{
 		max-width: inherit;
 	}
+}
+._sb__bg-servise{
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	background-color:  #f9f9f9;
+	height: 100%;
+	padding-top: 40px;
 }
 ._sb__col-center{
 	width: 57%;
@@ -84,38 +91,34 @@
 	ul{
 		list-style: none;
 		> li{
-			overflow:hidden;
-			
-			a{	
-				
-				.flex-display(@display: flex);
-				.align-items(@align: center);
-				height: 130px; 	
+			overflow:hidden;			
+			a{					 	
 				.mixin-headings(
 					@font-family: @agoras-black,
 					@font-size: 16px, 
 					@line-height: 24px, 
 					@color: #b5b5b5
 				);
+				display: block;
 				padding: 0 35px;
 				/*
-				background-position: center;
-				background-repeat: no-repeat;
-				transform-origin:center center;
-				transition:background-size ease 0.75s;
-				*/
-				
 				background-position: -500px center;
 				background-repeat: no-repeat;
 				background-size:cover;
 				transform-origin:center center;
-				transition:all ease 0.7s;
-				
+				*/
+				//transition:all ease 0.7s;
 				
 				cursor:pointer;
 				
 				/*background-size: 100%;*/
-				
+				span{
+					border-bottom: 1px solid #e8e8e8;
+					display: flex;
+					align-items: center;
+					height: 120px;
+					//transition:all ease 0.7s;
+				}
 				@media @media-size-md{
 					height: 90px;
 					padding: 0px 15px 0px 25px;
@@ -136,10 +139,14 @@
 				}
 			}
 			&.active {
-				a{
-					
+				a{					
 					background-position: center center;
 					color: @white;
+					background-color:  #1c953f;
+					text-decoration: none;
+					span{
+						border-color: #1c953f;
+					}
 					&:hover{
 						text-decoration: none;
 					}
@@ -153,10 +160,9 @@
 				}
 			}
 			&:hover{
-				a{
-					
+				a{					
 					background-position: center center;
-					color: @white;
+					//color: @white;
 					@media @media-size-sm{
 						background: @green-d!important;
 					}
