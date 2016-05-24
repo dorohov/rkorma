@@ -25,6 +25,9 @@
 		max-width: 45px;
 		margin-left: 0px!important;
 		margin-top: 20px;
+		&.white{
+			display: none;
+		}
 		@media @media-size-sm{
 			float: left;
 		    display: block;
@@ -297,6 +300,16 @@
 			background-color: lighten(@black, 20%);
 		}
     }
+}
+.fp-viewing-0{
+	.navbar-brand{
+		&.white{
+			display: inline-block;
+		}
+		&.normal{
+			display: none;
+		}
+	}
 }
 ._index__navbar{    
 	position: fixed;
