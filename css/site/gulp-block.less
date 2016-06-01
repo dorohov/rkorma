@@ -1264,10 +1264,10 @@ body.open-sidebar{
 		
 		&.left {
 			left:10px;
-			right:initial;
+			right:inherit;
 		}
 		&.right {
-			left:initial;
+			left:inherit;
 			right:10px;
 		}
 		
@@ -1764,7 +1764,7 @@ body.open-sidebar{
 		background-size:cover;
 		background-repeat:no-repeat;
 		background-position:center center;
-		background-image:url(../img/fecss/.can-close/close-btn.png);
+		background-image:url(/img/fecss/.can-close/close-btn.png);
 	}
 	
 	&:before{
@@ -3422,7 +3422,7 @@ body.open-sidebar{
 }
 ._sb__col-center{
 	width: 57%;
-	.flex-display(@display: flex);
+	.flex-display(@display: block);
 	position:relative;
 	@media @media-size-md{
 		width: 100%;
