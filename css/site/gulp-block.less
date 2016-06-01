@@ -1639,7 +1639,7 @@ body.open-sidebar{
 	}
 }
 ._cb__map{
-	
+	margin-top:-6em;
 	
 	@media @media-size-xs{
 		& {
@@ -8775,17 +8775,17 @@ body.open-sidebar{
 	}
 } 
 ._lct__dry{
-	a{
+	a,span{
 		color: #0066ff;
 	}
 }
 ._lct__dairy{
-	a{
+	a,span{
 		color: #269a65;
 	}
 }
 ._lct__heifer{
-	a{
+	a,span{
 		color: #ffae00;
 	}
 }
@@ -8875,9 +8875,19 @@ body.open-sidebar{
 		&:after{
 			background: #0066ff;
 		}
-		> li.active {
+		> li.active:nth-child(1) {
 			> a{
 				border-color: #0066ff;
+			}
+		}
+		> li.active:nth-child(2) {
+			> a{
+				border-color: #269a65;
+			}
+		}
+		> li.active:nth-child(3) {
+			> a{
+				border-color: #ffae00;
 			}
 		}
 	}
