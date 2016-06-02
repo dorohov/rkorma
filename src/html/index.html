@@ -33,15 +33,15 @@
 						//if(index == 3){}
 						//if(anchorLink == 'secondSlide'){}
 								
-								if($('body').hasClass('fp-viewing-0')) {
-									$('.navbar .navbar-header .navbar-brand img').attr('src', '/wp-content/themes/azbnbasetheme/img/logo-main.png');
-								} else if($('body').hasClass('fp-viewing-2') || $('body').hasClass('fp-viewing-4') || $('body').hasClass('fp-viewing-6') || $('body').hasClass('fp-viewing-8')) {
-									$('.navbar .navbar-header .navbar-brand img').attr('src', '/wp-content/themes/azbnbasetheme/img/logo-white.png');
-									//$('.navbar.navbar-default').addClass('bg-transparent').removeClass('bg-white');
-								} else {
-									$('.navbar .navbar-header .navbar-brand img').attr('src', '/wp-content/themes/azbnbasetheme/img/logo-green.png');
-									//$('.navbar.navbar-default').addClass('bg-white').removeClass('bg-transparent');
-								}
+						if($('body').hasClass('fp-viewing-0')) {
+							$('.navbar .navbar-header .navbar-brand img').attr('src', '/wp-content/themes/azbnbasetheme/img/logo-main.png');
+						} else if($('body').hasClass('fp-viewing-2') || $('body').hasClass('fp-viewing-4') || $('body').hasClass('fp-viewing-6') || $('body').hasClass('fp-viewing-8')) {
+							$('.navbar .navbar-header .navbar-brand img').attr('src', '/wp-content/themes/azbnbasetheme/img/logo-white.png');
+							//$('.navbar.navbar-default').addClass('bg-transparent').removeClass('bg-white');
+						} else {
+							$('.navbar .navbar-header .navbar-brand img').attr('src', '/wp-content/themes/azbnbasetheme/img/logo-green.png');
+							//$('.navbar.navbar-default').addClass('bg-white').removeClass('bg-transparent');
+						}
 					},
 				});
 			} else {
