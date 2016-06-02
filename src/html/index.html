@@ -21,13 +21,34 @@
 
 			[snp tpl="src/block/site/default/_b-footer-site/.html" class=" section footer-site" ]
 		</div>	 
-		<script>			
+		<script>
 			if(device.desktop()) {
 				$('#fullpage').fullpage({
 					navigation: true,
 					navigationPosition: 'right',
-					scrollOverflow: true
+					scrollOverflow: true,
+					afterLoad: function(anchorLink, index){
+						var loadedSection = $(this);
+						//using index
+						//if(index == 3){}
+						//if(anchorLink == 'secondSlide'){}
+								
+								if($('body').hasClass('fp-viewing-0')) {
+									$('.navbar .navbar-header .navbar-brand img').attr('src', '/wp-content/themes/azbnbasetheme/img/logo-main.png');
+								} else if($('body').hasClass('fp-viewing-2') || $('body').hasClass('fp-viewing-4') || $('body').hasClass('fp-viewing-6') || $('body').hasClass('fp-viewing-8')) {
+									$('.navbar .navbar-header .navbar-brand img').attr('src', '/wp-content/themes/azbnbasetheme/img/logo-white.png');
+									//$('.navbar.navbar-default').addClass('bg-transparent').removeClass('bg-white');
+								} else {
+									$('.navbar .navbar-header .navbar-brand img').attr('src', '/wp-content/themes/azbnbasetheme/img/logo-green.png');
+									//$('.navbar.navbar-default').addClass('bg-white').removeClass('bg-transparent');
+								}
+					},
 				});
+			} else {
+				$(window).on('resize', function(){
+					$('.index__header.section').css({'height' : $(window).height()});
+				});
+				$(window).trigger('resize');
 			}
 		</script>
 		
