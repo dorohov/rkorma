@@ -365,6 +365,8 @@
 	min-height: 115px;/*175*/
 	padding: 10px 0;/*25 0*/
 	z-index: 50;
+	//transition: all 0.85s ease;
+	
 	@media @media-size-sm{
 		min-height: 115px;
 		.navbar-header{
@@ -381,8 +383,8 @@
 	}
 	.navbar-brand{
 		display: inline-block;
-		max-width: 66px;
-		max-width: 45px;
+		//max-width: 66px;
+		//max-width: 45px;
 		margin-left: 0px!important;
 		margin-top: 20px;
 		&.white{
@@ -663,7 +665,9 @@
 }
 .fp-viewing-0{
 	.navbar-brand{
-		max-width: 135px;
+		//transition:max-width 0.01s linear;
+		//transition-delay:0.5s;
+		//max-width: 135px;
 		&.white{
 			display: inline-block;
 		}
