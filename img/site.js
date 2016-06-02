@@ -157,7 +157,7 @@ $(document).ready(function() {
 		var ib = $('.index__header');
 		ib.find('.header-arrow.right').trigger('click');
 		
-		ib_slider = setTimeout(function(){
+		ib_slider = setInterval(function(){
 			
 			var ib = $('.index__header');
 			ib.find('.header-arrow.right').trigger('click');
