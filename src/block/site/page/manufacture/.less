@@ -90,7 +90,7 @@
 	&.active{
 		background-position: 0 center;
 		color: @white;    
-		box-shadow: 5px 5px 18px 2px rgba(0,0,0,.15);
+		//box-shadow: 5px 5px 18px 2px rgba(0,0,0,.15);
 	}
 	@media @media-size-xs{
 		border-right: 1px solid #e8e8e8; 
@@ -508,6 +508,36 @@
 			.noted{
 		   		max-width: 400px;
 				transform: translateY(130px);
+			}
+		}
+	}
+	&._servb__modal{
+		._pn-modal__item{
+			&:before{
+				display: none;
+			}
+			.texted{
+				text-transform: none;
+				font-size: 42px;
+				line-height: 50px; 
+				text-align: center;
+		    	transform: translateY(0px) !important;
+				@media @media-size-xs{
+					font-size: 24px;
+					line-height: 32px; 
+				}
+			}
+			@media @media-size-sm{
+				&:nth-child(1),
+				&:nth-child(2),
+				&:nth-child(3),
+				&:nth-child(4){
+					width: 50% !important;
+				}
+				.texted{
+					font-size: 30px;
+					line-height: 38px;
+				}				
 			}
 		}
 	}

@@ -125,6 +125,9 @@
 	color: @white;
 	font-family: @din;
 	font-size: 14px;
+	@media @media-size-xl{
+		min-height: 620px;
+	}
 	@media @media-size-netbook{
 		padding-top: 145px;
 	}
@@ -414,6 +417,7 @@
 			> a{
 				text-transform: uppercase;
 				color: lighten(@black, 20%);
+				letter-spacing: 0.5px;
 				&:hover{
 					text-decoration: underline;
 				}
@@ -2080,7 +2084,7 @@ body.open-sidebar{
 	&.active{
 		background-position: 0 center;
 		color: @white;    
-		box-shadow: 5px 5px 18px 2px rgba(0,0,0,.15);
+		//box-shadow: 5px 5px 18px 2px rgba(0,0,0,.15);
 	}
 	@media @media-size-xs{
 		border-right: 1px solid #e8e8e8; 
@@ -2498,6 +2502,36 @@ body.open-sidebar{
 			.noted{
 		   		max-width: 400px;
 				transform: translateY(130px);
+			}
+		}
+	}
+	&._servb__modal{
+		._pn-modal__item{
+			&:before{
+				display: none;
+			}
+			.texted{
+				text-transform: none;
+				font-size: 42px;
+				line-height: 50px; 
+				text-align: center;
+		    	transform: translateY(0px) !important;
+				@media @media-size-xs{
+					font-size: 24px;
+					line-height: 32px; 
+				}
+			}
+			@media @media-size-sm{
+				&:nth-child(1),
+				&:nth-child(2),
+				&:nth-child(3),
+				&:nth-child(4){
+					width: 50% !important;
+				}
+				.texted{
+					font-size: 30px;
+					line-height: 38px;
+				}				
 			}
 		}
 	}
@@ -3004,7 +3038,7 @@ body.open-sidebar{
 				background-size: auto 130%;
 			}
 			
-			outline:1px white solid;
+			//outline:1px white solid;
 			position:relative;
 			z-index:5; 
 			
@@ -6845,6 +6879,9 @@ body.open-sidebar{
 	@media @media-size-xl{
 		width: 1330px; 
 	}
+	@media @media-size-xl-step3{
+		width: 1500px; 
+	}
 }
 ._i-about__heading{		
 	.mixin-headings(
@@ -6854,7 +6891,7 @@ body.open-sidebar{
 		@color: @green-d
 	);
 	text-align: center;
-	margin-bottom: 40px;
+	margin-bottom: 25px;
 	text-transform: uppercase;
 	@media (min-width: 1900px){
     	transform: translateY(10px);
@@ -6896,7 +6933,7 @@ body.open-sidebar{
 	);
 	text-align: center;
 	max-width: 755px;
-	margin: 0 auto 65px;
+	margin: 0 auto 55px;
 	@media @media-size-sm{
 		margin: 0 auto 75px;
 	}
@@ -6928,6 +6965,10 @@ body.open-sidebar{
 	.flex-wrap(@wrap: wrap);
 	margin-left: -15px; 
 	margin-right: -15px; 	
+	@media @media-size-xl-step3{
+		margin-left: -30px; 
+		margin-right: -30px; 
+	}
 }
 ._i-about__item{
 	padding-left: 15px; 
@@ -6960,6 +7001,10 @@ body.open-sidebar{
 		padding-left: 60px; 
 		padding-right: 60px;
 		margin-bottom: 80px;
+	}
+	@media @media-size-xl-step3{
+		padding-left: 30px; 
+		padding-right: 30px;
 	}
 }
 ._i-about__icon{
@@ -7052,7 +7097,7 @@ body.open-sidebar{
 .partner-block{
 	border-top: 1px solid #e6e6e6;
 	max-width: 1800px;
-	margin: 40px auto 0;  
+	margin: 30px auto 0;  
 	padding: 20px 10px 0;
 	.flex-display(@display: flex);
 	.justify-content(@justify: space-between);
@@ -7065,7 +7110,7 @@ body.open-sidebar{
 	}
 	//===
 	@media @media-screen-FullHD-sm{	
-		margin: 40px auto 0;
+		margin: 30px auto 0;
 	}
 	//===
 }
@@ -7596,42 +7641,67 @@ body.open-sidebar{
 	
 	
 	.header-arrow {
-		display:block;
+		//display:block;
+		//height:100%;
+		//width:22px;
+		//top:0;
+		//background-position:center center;
+		//background-repeat:no-repeat;
+
 		position:absolute;
-		height:100%;
-		width:22px;
-		top:0;
-		background-position:center center;
-		background-repeat:no-repeat;
-		transition:all 0.3s ease;
-		
+		transition:all 0.3s ease;		
+		top: 50%;
+		width: 50px;
+		height: 50px;
+		//background: fadeout(@black, 85%);
+		text-align: center;
+		padding: 10px 0;
+		border-radius: 50%;
+		border: 2px solid fadeout(@white, 0%);
+		box-shadow: 1px 1px 2px fadeout(@black, 85%);
 		@media @media-size-xs{
 			& {
 				opacity:0;
 			}
 		}
+		&:before{
+			content: '';
+			border-top: 8px solid fadeout(@white, 100%);
+			border-bottom: 8px solid fadeout(@white, 100%);
+			display: inline-block;
+		}
 		
 		&.left {
-			left:50px;
-			background-image:url(../img/index/slider-prev.png);
-			background-position:left center;
+			left:40px;
+			padding-right: 4px;
+			//background-image:url(../img/index/slider-prev.png);
+			//background-position:left center;
 			
 			&:hover {
-				left:30px;
+				//left:30px;
+			}
+			&:before{
+				border-right: 8px solid @white;
 			}
 		}
 		&.right {
-			right:50px;
-			background-image:url(../img/index/slider-next.png);
-			background-position:right center;
+			right:40px;
+			padding-left: 4px;
+			//background-image:url(../img/index/slider-next.png);
+			//background-position:right center;
 			
+			&:before{
+				border-left: 8px solid @white;
+			}
 			&:hover {
-				right:30px;
+				//right:30px;
 			}
 		}
 		
 		&:hover {
-			width:42px;
+			//width:42px;
+			//background: fadeout(@black, 70%);
+			transform: scale(1.04);
 		}
 		
 	}
@@ -7999,7 +8069,7 @@ body.open-sidebar{
 }
 ._inp-carousel__control{
 	position: absolute;
-	top: 0;
+	/*top: 0;
 	bottom: 0;
 	width: 110px;
 	.transition(@duration:0.2s, @ease:ease-out);
@@ -8013,12 +8083,50 @@ body.open-sidebar{
 	&.right{
 		right: 0px;
 		background: url(/img/index/slider-next.png) no-repeat center;
+	}*/
+
+	transition:all 0.3s ease;
+	top: 50%;
+	width: 50px;
+	height: 50px;
+	//background: fadeout(@black, 85%);
+	text-align: center;
+	padding: 14px 0;
+	border-radius: 50%;
+	border: 2px solid fadeout(@white, 0%);
+	box-shadow: 1px 1px 2px fadeout(@black, 85%);
+	&:before{
+		content: '';
+		border-top: 8px solid fadeout(@white, 100%);
+		border-bottom: 8px solid fadeout(@white, 100%);
+		display: inline-block;
+		//vertical-align: middle;
+	}		
+	&.left {
+		left:40px;
+		padding-right: 4px;
+		&:before{
+			border-right: 8px solid @white;
+		}
+	}
+	&.right {
+		right:40px;
+		padding-left: 4px;		
+		&:before{
+			border-left: 8px solid @white;
+		}
+	}	
+	&:hover {
+		//background: fadeout(@black, 70%);
+		//border-color: fadeout(@white, 70%);
+		transform: scale(1.04);
 	}
 	@media @media-size-sm{
 		display: none;
 	}
 }
 ._inp-carousel__rect{
+	display: none;
 	position: absolute;
 	background: @white;
 	@media @media-screen{
@@ -8054,7 +8162,7 @@ body.open-sidebar{
 	}
 }
 ._inp-carousel__inner{
-	margin-bottom: 45px;
+	margin-bottom: 40px;
 	//====
 	@media @media-screen-WXGA768{
 		margin-bottom: 20px;
@@ -8280,7 +8388,7 @@ body.open-sidebar{
 		);
 		
 		& .__preview, & .__note, & .__preview, & .__note {
-			opacity: .5;
+			opacity: .35;
 			transition:all 0.3s ease;
 		}
 		
